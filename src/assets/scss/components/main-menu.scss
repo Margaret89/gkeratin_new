@@ -1,0 +1,227 @@
+/*-------------- main-menu -----------------*/
+.main-menu{
+	margin-top: 30px;
+	font-family: var(--font-evolventa);
+	position: relative;
+
+	&__list,
+	&__item,
+	&__sub,
+	&__sub-item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 53px;
+	}
+
+	&__link{
+		display: block;
+		@include font(none, none, 1.6rem, 1.3, var(--color-text));
+		padding-bottom: 10px;
+		position: relative;
+
+		&::after{
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background: var(--color-primary);
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			transition: width 0.2s ease 0s, color 0.2s ease 0s;
+		}
+	}
+
+	&__item{position: relative;}
+	&__item_static{position: static;}
+
+	&__item:hover &__link::after,
+	&__item.active &__link::after{
+		width: 100%;
+	}
+
+	&__sub{
+		display: block;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+		width: 290px;
+		background: #fff;
+		position: absolute;
+		top: calc(100% + 1.5px);
+		left: -45px;
+		padding: 27px 0;
+		box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+		transition: transform 0.3s ease 0s;
+	}
+
+	&__sub-link{
+		display: block;
+		padding: 15px 45px;
+		@include font(none, none, 1.6rem, 1.3, var(--color-text));
+		letter-spacing: 1.5px; 
+		transition: all 0.2s ease 0s;
+	}
+
+	&__sub-link:hover{
+		background: var(--color-primary);
+		color: #fff;
+	}
+
+	&__item:hover &__sub,
+	&__item:hover .catalog-menu-popup{
+		transform: scaleY(1);
+	}
+}
+
+.catalog-menu-popup{
+	width: 100%;
+	background: #fff;
+	box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+	position: absolute;
+	top: calc(100% + 1.5px);
+	left: 0;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	transform: scaleY(0);
+	transform-origin: 0 0;
+	transition: transform 0.2s ease 0s;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		height: 524px;
+		max-height: calc(100vh - 150px);
+		padding: 40px 0;
+	}
+}
+
+.catalog-info{
+	width: 290px;
+	flex-shrink: 0;
+	font-family: var(--font-site);
+
+	&__img-wrap{
+		width: 76%;
+		position: relative;
+		margin-left: 24%;
+	}
+
+	&__img{
+		padding-bottom: 100%;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 7px;
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		background: var(--color-primary);
+		border: 1px solid var(--color-primary);
+		color: #fff;
+		letter-spacing: 1.07px; 
+		margin-top: -60px;
+		position: relative;
+		z-index: 2;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__title{
+		@include font(none, 700, 2rem, 1.1, none);
+		text-transform: uppercase;
+	}
+
+	&__link{
+		@include font(none, 500, 1.2rem, 1.1, none);
+		text-transform: uppercase;
+	}
+
+	&__content:hover{
+		box-shadow: 0px 0px 0px 100px #fff inset;
+		color: var(--color-text);
+	}
+
+	&__content:hover &__link{text-decoration: none;}
+}
+
+.catalog-menu{
+	width: 100%;
+	position: relative;
+
+	&,
+	&__item,
+	&__sub,
+	&__sub-item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item{width: 30%;}
+	&__item:not(:last-child){margin-bottom: 30px;}
+
+	&__sub{
+		display: none;
+		width: 70%;
+		padding-left: 40px;
+		position: absolute;
+		top: 0;
+		left: 30%;
+	}
+
+	&__link{
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+		@include font(none, none, 1.6rem, 1.3, var(--color-text));
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__arr{
+		flex-shrink: 0;
+		opacity: 0;
+		transform: translateX(-10px);
+		transition: all 0.2s ease 0s;
+	}
+
+	&__sub{
+		max-height: 100%;
+		overflow-y: auto;
+		scrollbar-width: thin;
+	}
+
+	&__sub-link{
+		font-size: 1.6rem;
+		line-height: 1.3;
+		color: var(--color-text);
+		letter-spacing: 1.5px;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__sub-item:not(:last-child){margin-bottom: 30px;}
+
+	&__item:hover &__link{color: var(--color-primary);}
+	&__item:hover &__sub{display: block;}
+
+	&__item:hover &__arr{
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	&__sub-link:hover{color: var(--color-primary);}
+}

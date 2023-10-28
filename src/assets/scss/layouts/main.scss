@@ -136,7 +136,7 @@ button.btn{
 	}
 
 	&:hover{
-		background: transparent;
+		box-shadow: inset 0 -5.4em 0 0 #fff;
 		color: var(--color-text);
 
 		.icon{fill: var(--color-text);}
@@ -160,7 +160,7 @@ button.btn{
 	}
 
 	&_border:hover{
-		background: var(--color-primary);
+		box-shadow: inset 0 -5.4em 0 0 var(--color-primary);
 		color: #fff;
 
 		.icon{fill: #fff;}
