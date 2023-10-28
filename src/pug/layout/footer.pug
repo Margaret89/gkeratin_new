@@ -128,3 +128,42 @@ footer.footer
 
 							a(href="#").app__item
 								img(src="assets/img/google-play.svg", alt="Google play")
+
+#callback(style='display: none;')
+	.popup-form
+		.js-valid-form
+			form.form-site
+				.form-site__title Заказать обратный&nbsp;звонок
+				
+				.form-site__content
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", required="required", placeholder="Имя*")
+
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", placeholder="Удобное время для звонка")
+							
+				
+				.form-site__polit.js-form-site-polit
+					label.input-check
+						input(type='checkbox', required="required")
+						span.input-check__mark
+							+svg('ic-tick','ic-tick', '9', '6')
+						span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+				.form-site__btn
+					button(type="submit").btn.js-btn-submit
+						span отправить
+
+#msg-success(style='display: none;')
+	.success-alert.js-success-alert
+		.success-alert__icon
+			+svg('ic-tick-circle','iic-tick-circle ic-stroke', '75', '75')
+
+		.success-alert__title.js-success-alert-title Ваше сообщение отправлено!
+		.success-alert__text.js-success-alert-text В ближайшее время с вами свяжется наш менеджер и обсудит все детали.
