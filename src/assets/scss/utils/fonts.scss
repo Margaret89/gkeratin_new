@@ -1,0 +1,31 @@
+// Manrope
+@font-face {
+	font-family: 'Manrope';
+	src: local('Manrope Regular'), local('Manrope-Regular'),
+		url('#{$path-fonts}/manrope/Manrope-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/manrope/Manrope-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	src: local('Manrope Bold'), local('Manrope-Bold'),
+		url('#{$path-fonts}/manrope/Manrope-Bold.woff2') format('woff2'),
+		url('#{$path-fonts}/manrope/Manrope-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+//Evolventa
+@font-face {
+	font-family: 'Evolventa';
+	src: local('Evolventa Regular'), local('Evolventa-Regular'),
+		url('#{$path-fonts}/Evolventa/Evolventa-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/Evolventa/Evolventa-Regular.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
