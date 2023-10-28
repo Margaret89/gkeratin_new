@@ -1,0 +1,63 @@
+/*-------------- subscribe -----------------*/
+.subscribe{
+	&__title{
+		font-family: var(--font-header);
+		@include font(none, 700, 1.1rem, 1.3, var(--color-text));
+		text-transform: uppercase;
+		letter-spacing: 0.77px; 
+		margin-bottom: 0.8rem;
+	}
+
+	&__content{
+		display: flex;
+		gap: 20px;
+
+		input[type="text"],
+		input[type="email"]{
+			display: inline-flex;
+			align-items: center;
+			height: 5rem;
+			width: 100%;
+			font-family: var(--font-site);
+			@include font(none, 500, 1.2rem, 1, var(--color-text));
+			padding: 0 20px;
+			border: 1px solid var(--color-primary);
+			border-radius: 2.5rem;
+			outline: 0;
+			margin: 0;
+			background: transparent;
+			box-shadow: none;
+			transition: border 0.2s ease 0s;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus{
+			border-color: var(--color-text);
+		}
+
+		input[type="text"]::placeholder,
+		input[type="email"]::placeholder{
+			color: var(--color-primary);
+			opacity: 1;
+		}
+
+		.btn,
+		input[type="submit"].btn,
+		button.btn{
+			flex-shrink: 0;
+			height: 5rem;
+			min-width: 0;
+			border-radius: 2.5rem;
+			padding: 0 33px;
+		}
+	}
+
+	&__polit{
+		margin-top: 8px;
+
+		.input-check{
+			vertical-align: top;
+			font-size: 1rem;
+		}
+	}
+}

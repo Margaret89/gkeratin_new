@@ -70,6 +70,17 @@ block content
 
 				br
 				br
+				br
+				.h2 Нестандартный checkbox
+				label.input-check
+					input(type='checkbox')
+					span.input-check__mark
+						+svg('ic-tick','ic-tick', '9', '6')
+					span.input-check__text Текст
+
+
+				br
+				br
 				div.h2 Иконки
 				.type-icon
 					.type-icon__item
@@ -91,3 +102,23 @@ block content
 						.type-icon__img
 							+svg('ic-user','ic-user ic-stroke', '24', '27')
 						.type-icon__name ic-user
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-tick','ic-tick', '12', '8')
+						.type-icon__name ic-tick
+						
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-whatsapp','ic-whatsapp', '30', '30')
+						.type-icon__name ic-whatsapp
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-telegram','ic-telegram', '30', '30')
+						.type-icon__name ic-telegram
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-vk','ic-vk', '30', '30')
+						.type-icon__name ic-vk

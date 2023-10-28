@@ -8,6 +8,15 @@
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+	font-family: 'Manrope';
+	src: local('Manrope-Medium'), local('Manrope-Medium'),
+		url('#{$path-fonts}/manrope/Manrope-Medium.woff2') format('woff2'),
+		url('#{$path-fonts}/manrope/Manrope-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
 
 @font-face {
 	font-family: 'Manrope';
@@ -25,6 +34,16 @@
 	src: local('Evolventa Regular'), local('Evolventa-Regular'),
 		url('#{$path-fonts}/Evolventa/Evolventa-Regular.woff2') format('woff2'),
 		url('#{$path-fonts}/Evolventa/Evolventa-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Evolventa';
+	src: local('Evolventa Bold'), local('Evolventa-Bold'),
+		url('#{$path-fonts}/Evolventa/Evolventa-Bold.woff2') format('woff2'),
+		url('#{$path-fonts}/Evolventa/Evolventa-Bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
