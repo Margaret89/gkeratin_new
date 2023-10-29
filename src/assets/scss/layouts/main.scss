@@ -14,6 +14,8 @@
 	// --color-link-active: var(--color-semi-gold);
 
 	--color-dander: #E01E1E;
+	--margin-indent: 160px;
+	--bg-grey: #F2F2F2;
 }
 
 html,
@@ -51,12 +53,15 @@ p{
 	margin-bottom: 2rem;
 }
 
+p.font-big{margin-bottom: 5rem;}
+
 h1,.h1,
 h2,.h2,
 h3,.h3,
 h4,.h4,
 h5,.h5
 {
+	font-family: var(--font-header);
 	line-height: 1.1;
 	color: var(--color-text);
 }
@@ -84,6 +89,10 @@ h4,.h4{
 h5,.h5{
 	font-size: 3.2rem;
 	margin-bottom: 2rem;
+}
+
+.font-big{
+	font-size: 2.4rem;
 }
 
 .wrapper{
@@ -121,6 +130,7 @@ button.btn{
 	font-family: var(--font-btn);
 	@include font(normal, 700, 1.2rem, 1.2, #fff);
 	text-transform: uppercase;
+	letter-spacing: 2px;
 	text-decoration: none;
 	text-align: center;
 	padding: 0 36px;
@@ -171,6 +181,44 @@ button.btn{
 		}
 	}
 }
+
+.btn-circle{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 180px;
+	height: 180px;
+	padding: 10px;
+	border-radius: 50%;
+	background: var(--color-text);
+	@include font(none, 700, 2rem, none, #fff);
+	text-transform: uppercase;
+	transition: all 0.2s ease 0s;
+
+	&:hover{
+		box-shadow: 0px 0px 0px 100px var(--color-primary) inset;
+		color: #fff;
+	}
+}
+
+
+.m-indent{
+	margin-top: var(--margin-indent);
+	margin-bottom: var(--margin-indent);
+}
+
+.mt-indent{margin-top: var(--margin-indent);}
+.mb-indent{margin-bottom: var(--margin-indent);}
+
+.p-indent{
+	padding-top: var(--margin-indent);
+	padding-bottom: var(--margin-indent);
+}
+
+.pt-indent{padding-top: var(--margin-indent);}
+.pb-indent{padding-bottom: var(--margin-indent);}
+
+.bg-grey{background-color: var(--bg-grey);}
 
 .code{
 	background-color: #f7f7f7;

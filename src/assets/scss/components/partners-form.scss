@@ -1,0 +1,18 @@
+/*-------------- partners-form -----------------*/
+.partners-form{
+	&__content{
+		display: flex;
+		align-items: center;
+	}
+
+	&__img{
+		width: calc(48.5% + 100px);
+		margin-left: -100px;
+	}
+
+	.page-form{
+		width: 51.5%;
+		position: relative;
+		z-index: 2;
+	}
+}

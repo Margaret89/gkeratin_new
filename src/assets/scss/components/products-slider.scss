@@ -1,0 +1,51 @@
+/*-------------- products-slider -----------------*/
+.products-slider-wrap{
+	background: url(../img/bg-bottle.jpg) no-repeat center;
+	background-size: cover;
+
+	&__content{position: relative;}
+	h2, .h2{margin-bottom: 6.5rem;}
+	.swiper-pagination-bullets.swiper-pagination-horizontal{bottom: -63px;}
+
+	.swiper-button-prev,
+	.swiper-button-next{
+		margin-top: -100px;
+	}
+
+	.swiper-button-prev{left: -110px;}
+	.swiper-button-next{right: -110px;}
+}
+
+.products-slider{
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px 15px;
+	}
+
+	&__tag{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 17px 28px;
+		border: 2px solid var(--color-primary);
+		border-radius: 3.3rem;
+		font-size: 2rem;
+		font-weight: 500;
+		color: var(--color-text);
+		text-transform: uppercase;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__tag:hover{
+		// background: var(--color-primary);
+		box-shadow: inset 0 -5.4em 0 0 var(--color-primary);
+		color: #fff;
+	}
+
+	&__btn{
+		margin-top: 90px;
+		text-align: center;
+	}
+}

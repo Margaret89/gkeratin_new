@@ -1,5 +1,5 @@
-/*-------------- input-check -----------------*/
-.input-check{
+/*-------------- input-radio -----------------*/
+.input-radio{
 	display: inline-flex;
 	// align-items: center;
 	gap: 8px;
@@ -9,7 +9,7 @@
 	cursor: pointer;
 	transition: color 0.2s ease 0s;
 
-	input[type=checkbox]{display: none;}
+	input[type=radio]{display: none;}
 
 	&__mark{
 		display: inline-flex;
@@ -24,16 +24,19 @@
 		background: #fff;
 		position: relative;
 
-		.icon{
+		&::after{
+			content: '';
 			display: none;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: var(--color-primary);
 			position: absolute;
-			fill: var(--color-primary);
-			@include top-center;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 
-	input[type=checkbox]:checked ~ &__mark .icon{display: inline-block;}
+	input[type=radio]:checked ~ &__mark::after{display: inline-block;}
 }

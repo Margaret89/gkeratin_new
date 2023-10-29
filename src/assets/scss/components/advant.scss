@@ -1,0 +1,37 @@
+/*-------------- advant -----------------*/
+.advant{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 50px;
+	padding: 0 70px;
+
+	&__item{
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		width: calc(33.33% - 33.33px);
+		font-family: var(--font-evolventa);
+	}
+
+	&__val{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 1.5px solid var(--color-primary);
+		padding: 10px;
+		font-size: 4.5rem;
+		text-align: center;
+
+		img{max-height: 100%;}
+	}
+
+	&__label{
+		font-size: 2.4rem;
+		line-height: 1.15;
+	}
+}

@@ -1,0 +1,358 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная';
+
+block content
+	section.top-slider-wrap
+		.top-slider.js-top-slider.swiper.mb-indent
+			.swiper-wrapper
+				-
+					var list=[
+						{img:'top-slide1.jpg', title:'Дистрибьютор профессиональной косметики', text:'Для салонов красоты и магазинов косметики'},
+						{img:'top-slide2.jpg', title:'Дистрибьютор', text:'Для салонов красоты'},
+						{img:'top-slide3.jpg', title:'Дистрибьютор профессиональной косметики 2', text:'Для салонов красоты и магазинов косметики'},
+						{img:'top-slide4.jpg', title:'Дистрибьютор косметики'},
+						{img:'top-slide5.jpg', title:'Дистрибьютор профессиональной косметики 3', text:'Для салонов красоты и магазинов косметики'},
+					]
+				each item in list
+					.swiper-slide.top-slider__item(style="background-image: url(assets/img/"+item.img+")")
+						.container-fluid
+							.row
+								.col-6.offset-6
+									.top-slider__content
+										.h1= item.title
+
+										if(item.text)
+											.top-slider__text= item.text
+
+										a(href="#").btn-circle Перейти
+
+		.swiper-pagination.js-top-slider-pagination
+		
+	section.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.advant
+						-
+							var list=[
+								{num:'12', text:'Лет опыта'},
+								{num:'40%', text:'Бонусная поддержка клиентов'},
+								{img:'gk.jpg', text:'Мультибрендовая компания'},
+							]
+						each item in list
+							.advant__item
+								.advant__val
+									if(item.num)
+										=item.num
+
+									if(item.img)
+										img(src="assets/img/"+item.img, alt="")
+
+								.advant__label= item.text
+
+	section.catalog-sect-info-wrap.mb-indent.p-indent
+		.container-fluid
+			.row
+				.col-6.offset-1
+					.catalog-sect-info
+						-
+							var list=[
+								{text:'Интернет магазин'},
+								{text:'Сотрудничество'},
+								{text:'Записаться в салон'},
+							]
+						each item in list
+							a(href="#").catalog-sect-info__item
+								span.catalog-sect-info__text= item.text
+								span.catalog-sect-info__arr
+									+svg('ic-arrow-right','ic-arrow-right', '60', '40')
+	
+	section.catalog-main-sect.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Подборки товаров
+
+					.tabs-page.js-tabs-page
+						.tabs-page__top
+							.tabs-page__left.js-tabs-page-left.d-md-none
+								+svg('ic-arrow-left','ic-arrow-left', '12', '18')
+
+							.tabs-page__right.js-tabs-page-right.d-md-none
+								+svg('ic-arrow-right','ic-arrow-right', '12', '18')
+
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-new') Новинки
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-sale') Акции
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-popular') Популярное
+								
+
+						.tabs-page__content.js-tabs-page-content
+							#tab-new.tabs-page__content-item.js-tabs-page-content-item
+								.swiper.catalog-slider.js-catalog-slider
+									.swiper-wrapper
+										-
+											var list=[
+												{
+													img:'catalog-slide1.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+													old_price:'3500',
+												},
+												{
+													img:'catalog-slide2.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide3.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide4.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide5.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide1.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+													old_price:'3500',
+												},
+												{
+													img:'catalog-slide2.jpg',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide3.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide4.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide5.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+											]
+										each item in list
+											.swiper-slide
+												.catalog-slider-item
+													a(href="#").catalog-slider-item__img-wrap
+														span.catalog-slider-item__img
+															img(src="assets/img/"+item.img, alt="")
+
+														span.catalog-slider-item__sticker New
+														span.catalog-slider-item__wish
+															+svg('ic-wish','ic-wish ic-stroke', '26', '24')
+
+													.catalog-slider-item__content
+														.catalog-slider-item__label= item.label
+														.catalog-slider-item__title
+															a(href="#")= item.title
+
+														.catalog-slider-item__prices
+															span.catalog-slider-item__cur-prices= item.price
+																|&#8381;
+
+															if(item.old_price)
+																span.catalog-slider-item__old-prices= item.old_price
+																	|&#8381;
+
+														.catalog-slider-item__btn
+															a(href="#").btn добавить в корзину
+																+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+							#tab-sale.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
+
+							#tab-popular.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
+
+	section.products-slider-wrap.p-indent.mb-indent
+		.container-fluid
+			.row
+				.col-8.offset-2
+					h2.text-center Полная линейка продуктов
+
+					.products-slider-wrap__content
+						.swiper.products-slider.js-products-slider
+							.swiper-wrapper
+								.swiper-slide.products-slider__item
+									.products-slider__list
+										-
+											var list=[
+												{text:'Шампуни'},
+												{text:'КОНДИЦИОНЕРЫ'},
+												{text:'МАСКИ'},
+												{text:'СЫВОРОТКИ'},
+												{text:'ФЛЮИДЫ'},
+												{text:'ЛОСЬОНЫ'},
+												{text:'СТАЙЛИНГ'},
+												{text:'СПРЕИ'},
+												{text:'техника'},
+												{text:'расчески'},
+												{text:'ВЫПРЯМЛЕНИЕ И ВОССТАНОВЛЕНИЕ'},
+											]
+										each item in list
+											a(href="#").products-slider__tag= item.text
+									
+									.products-slider__btn
+										a(href="#").btn ДЛЯ профессионалов
+
+								.swiper-slide.products-slider__item
+									.products-slider__list
+										-
+											var list=[
+												{text:'Шампуни'},
+												{text:'КОНДИЦИОНЕРЫ'},
+												{text:'МАСКИ'},
+												{text:'СЫВОРОТКИ'},
+											]
+										each item in list
+											a(href="#").products-slider__tag= item.text
+									
+									.products-slider__btn
+										a(href="#").btn Для салонов
+
+						.swiper-pagination.js-products-slider-pagination
+
+						.swiper-button-prev.js-products-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '71', '48')
+						.swiper-button-next.js-products-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '71', '48')
+
+	section.about.mb-indent
+		.container-fluid
+			.row
+				.col-6
+					.logo-square
+						.logo-square__content
+							img(src="assets/img/logo-page.svg", alt="")
+				
+				.col-6
+					.about__content
+						h2 GKeratin
+							br
+							|Beauty Group
+
+						p.font-big Это только эффективные и проверенные временем профессиональные косметические бренды, которые дополняют друг друга.
+
+						p Мы видим свою миссию в том, чтобы наши знания и многолетний опыт помогли найти и представить на Российском рынке лучшее, что есть на мировом рынке индустрии красоты. Выбирая нашу компанию, Вы получаете возможность иметь в своем арсенале продукцию с новейшими технологиями для работы с любым типом и состоянием волос!
+
+						a.btn.btn_border Узнать больше
+
+	section.brands-wrap.mb-indent.p-indent.bg-grey
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Наши бренды
+
+					.brands
+						-
+							var list=[
+								{
+									img:'partner1.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+								{
+									img:'partner2.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+								{
+									img:'partner3.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+							]
+						each item in list
+							.brand-item
+								.brand-item__logo-wrap
+									.brand-item__logo
+										img(src="assets/img/"+item.img, alt="")
+
+								.brand-item__text= item.text 
+
+								a(href="#").btn.btn_border Узнать больше
+
+	section.partners-form
+		.container-fluid
+			.row
+				.col-12
+					.partners-form__content
+						.page-form
+							.js-valid-form
+								form.form-site
+									.form-site__title Стать партнером
+									
+									.form-site__content
+										.form-site__item.js-form-site-item
+											.form-site__field
+												.form-site__radio-list
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Салон красоты
+
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Магазин
+
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Частный мастер
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", required="required", placeholder="Имя*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="email", placeholder="Email")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", placeholder="Город")
+
+									
+									.form-site__polit.js-form-site-polit
+										label.input-check
+											input(type='checkbox', required="required")
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '9', '6')
+											span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+									.form-site__btn
+										button(type="submit").btn.js-btn-submit
+											span отправить
+
+						.partners-form__img
+							img(src="assets/img/products.jpg", alt="")

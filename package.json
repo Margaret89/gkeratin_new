@@ -67,6 +67,6 @@
     "inputmask": "^4.0.9",
     "jquery": "^3.6.0",
     "select2": "^4.0.13",
-    "slick-slider": "^1.8.2"
+    "swiper": "^8.4.5"
   }
 }

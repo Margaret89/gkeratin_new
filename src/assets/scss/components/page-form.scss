@@ -1,0 +1,11 @@
+/*-------------- page-form -----------------*/
+.page-form{
+	border: 3px solid var(--color-primary);
+	padding: 50px 38px;
+	background: #fff;
+
+	.form-site{
+		&__title{font-size: 3.6rem;}
+		&__btn .btn{width: 100%;}
+	}
+}
