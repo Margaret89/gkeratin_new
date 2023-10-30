@@ -69,6 +69,7 @@ block content
 								span.catalog-sect-info__arr
 									+svg('ic-arrow-right','ic-arrow-right', '60', '40')
 	
+	
 	section.catalog-main-sect.mb-indent
 		.container-fluid
 			.row
@@ -167,7 +168,7 @@ block content
 
 														span.catalog-slider-item__sticker New
 														span.catalog-slider-item__wish
-															+svg('ic-wish','ic-wish ic-stroke', '26', '24')
+															+svg('ic-heart','ic-heart ic-stroke', '26', '23')
 
 													.catalog-slider-item__content
 														.catalog-slider-item__label= item.label
@@ -176,15 +177,22 @@ block content
 
 														.catalog-slider-item__prices
 															span.catalog-slider-item__cur-prices= item.price
-																|&#8381;
+																| 
+																| &#8381;
 
 															if(item.old_price)
 																span.catalog-slider-item__old-prices= item.old_price
-																	|&#8381;
+																	| 
+																	| &#8381;
 
 														.catalog-slider-item__btn
 															a(href="#").btn добавить в корзину
 																+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+									.swiper-button-prev.js-catalog-slider-prev
+										+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+									.swiper-button-next.js-catalog-slider-next
+										+svg('ic-arrow-right','ic-arrow-right', '57', '38')
 
 							#tab-sale.tabs-page__content-item.js-tabs-page-content-item
 								| Текст

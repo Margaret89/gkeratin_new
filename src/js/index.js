@@ -106,31 +106,49 @@ const topSlider = new Swiper('.js-top-slider',
 		},
 });
 
-// Слайдер продуктов
+// Слайдер подборка товаров
 const catalogSlider = new Swiper('.js-catalog-slider',
 {
-	// lazy:{loadPrevNext:true},
 	loop:true,
-	slidesPerView: 5,
-	spaceBetween: 40,
-
-	// pagination:{
-	// 	el:".js-top-slider-pagination",
-	// 	// type:"bullets",
-	// 	clickable:true
-	// },
-	// navigation: {
-	// 	nextEl: '.js-top-slider-next',
-	// 	prevEl: '.js-top-slider-prev',
-	// },
+	effect: "coverflow",
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: "auto",
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 0,
+		depth: 200,
+		modifier: 1,
+		slideShadows: false,
+		scale: 0.8,
+		stretch: -30,
+	},
+	navigation: {
+		nextEl: '.js-catalog-slider-next',
+		prevEl: '.js-catalog-slider-prev',
+	},
 });
+
 
 // Слайдер продуктов
 const productSlider = new Swiper('.js-products-slider',
 {
 	// lazy:{loadPrevNext:true},
 	loop:true,
-	effect: "fade",
+	effect: "creative",
+	effect: "creative",
+	creativeEffect: {
+	  prev: {
+		shadow: false,
+		translate: [0, 0, -800],
+		rotate: [180, 0, 0],
+	  },
+	  next: {
+		shadow: false,
+		translate: [0, 0, -800],
+		rotate: [-180, 0, 0],
+	  },
+	},
 	pagination:{
 		el:".js-products-slider-pagination",
 		clickable:true
