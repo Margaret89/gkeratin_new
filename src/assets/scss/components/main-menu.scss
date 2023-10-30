@@ -59,6 +59,7 @@
 		padding: 27px 0;
 		box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 		transition: transform 0.3s ease 0s;
+		z-index: 10;
 	}
 
 	&__sub-link{
@@ -92,6 +93,7 @@
 	transform: scaleY(0);
 	transform-origin: 0 0;
 	transition: transform 0.2s ease 0s;
+	z-index: 10;
 
 	&__content{
 		display: flex;

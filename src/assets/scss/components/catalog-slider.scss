@@ -121,4 +121,14 @@
 	}
 }
 
-
+@media (max-width: 1279px) {
+	.catalog-slider-item{
+		&__btn{
+			.btn{
+				min-width: 0;
+				gap: 20px;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

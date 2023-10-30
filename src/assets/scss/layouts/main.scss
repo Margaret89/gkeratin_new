@@ -236,3 +236,15 @@ button.btn{
 .text-justify{text-align: justify !important;}
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
+
+@media (max-width: 767px) {
+	h1, .h1{
+		font-size: 2.7rem;
+	}
+
+	.btn-circle{
+		width: 85px;
+		height: 85px;
+		font-size: 1.1rem;
+	}
+}

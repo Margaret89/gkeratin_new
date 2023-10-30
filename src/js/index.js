@@ -93,17 +93,17 @@ const topSlider = new Swiper('.js-top-slider',
 		el:".js-top-slider-pagination",
 		clickable:true
 	},
-	grabCursor: true,
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
-			},
-				next: {
-				translate: ["100%", 0, 0],
-			},
-		},
+	// grabCursor: true,
+	// 	effect: "creative",
+	// 	creativeEffect: {
+	// 		prev: {
+	// 			shadow: true,
+	// 			translate: ["-20%", 0, -1],
+	// 		},
+	// 			next: {
+	// 			translate: ["100%", 0, 0],
+	// 		},
+	// 	},
 });
 
 // Слайдер подборка товаров
