@@ -1,142 +1,40 @@
 header.header
-	.d-none.d-lg-block
-		.container-fluid
-			.row.d-flex.align-items-center
-				.col-4
-					.header__info
-						.header__phone
-							a(href="tel:+78005050984") 8 (800) 505-09-84
+	.container-fluid.d-none.d-lg-block
+		.row.d-flex.align-items-center
+			.col-4
+				.header-contacts
+					.header-contacts__phone
+						a(href="tel:+78005050984") 8 (800) 505-09-84
 
-						.header__callback
-							a(href="#", data-fancybox="", data-src="#callback") заказать обратный звонок
+					.header-contacts__callback
+						a(href="#", data-fancybox="", data-src="#callback") заказать обратный звонок
 
-				.col-4
-					.header__logo
-						a(href="#")
-							img(src="assets/img/logo.svg", alt="Logo")
+			.col-4
+				.header__logo
+					a(href="#")
+						img(src="assets/img/logo.svg", alt="Logo")
 
-				.col-4
-					.header-actions
-						.header-actions__item
-							.header-actions__icon
-								+svg('ic-loop','ic-loop ic-stroke', '24', '24')
+			.col-4
+				.header-actions
+					.header-actions__item
+						.header-actions__icon
+							+svg('ic-loop','ic-loop ic-stroke', '24', '24')
 
-						.header-actions__item
-							.header-actions__icon
-								+svg('ic-wish','ic-wish ic-stroke', '26', '24')
+					.header-actions__item
+						.header-actions__icon
+							+svg('ic-wish','ic-wish ic-stroke', '26', '24')
 
-						.header-actions__item
-							.header-actions__icon
-								+svg('ic-cart','ic-cart ic-stroke', '23', '26')
-								.header-actions__count 0
+					.header-actions__item
+						.header-actions__icon
+							+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+							.header-actions__count 0
 
-						.header-actions__item
-							.header-actions__icon
-								+svg('ic-user','ic-user ic-stroke', '24', '27')
-
-		nav.main-menu
-			.container-fluid
-				.row
-					.col-12
-						ul.main-menu__list
-							-
-								var list=[
-									{text:'интернет магазин', catalog:'true'},
-									{
-										text:'бренды',
-										sub:[
-											'INNOVATIS',
-											'GKhair',
-											'Lookluxe',
-										]
-									},
-									{
-										text:'о нас',
-										sub:[
-											'о нас',
-											'новости',
-											'статьи',
-											'реквизиты',
-											'доставка',
-											'контакты',
-										]
-									},
-									{text:'сотрудничество'},
-									{text:'салон красоты'},
-									{text:'контакты'},
-								]
-							each item in list
-								li.main-menu__item(class=item.catalog?'main-menu__item_static':'')
-									a(href="#").main-menu__link= item.text
-
-									if(item.sub)
-										ul.main-menu__sub
-											each sub in item.sub
-												li.main-menu__sub-item
-													a(href="#").main-menu__sub-link= sub
-
-									if(item.catalog)
-										.catalog-menu-popup
-											.container
-												.row
-													.col-12
-														.catalog-menu-popup__content
-															ul.catalog-menu
-																-
-																	var catalog=[
-																		{
-																			text:'домашний уход',
-																			sub:[
-																				'шампуни',
-																				'маски',
-																				'Сыворотки',
-																				'Флюиды',
-																				'Спреи',
-																				'Наборы',
-																				'Лосьоны',
-																			]
-																		},
-																		{
-																			text:'салонный уход',
-																			sub:[
-																				'салонный уход 1',
-																				'салонный уход 2',
-																				'салонный уход 3',
-																				'салонный уход 4',
-																				'салонный уход 5',
-																			]
-																		},
-																		{
-																			text:'приборы и аксессуары для волос',
-																			sub:[
-																				'аксессуары 1',
-																				'аксессуары 2',
-																				'аксессуары 3',
-																			]
-																		},
-																	]
-																each catitem in catalog
-																	li.catalog-menu__item
-																		a(href="#").catalog-menu__link= catitem.text
-																			span.catalog-menu__arr
-																				+svg('ic-arrow-right','ic-arrow-right', '27', '19')
-
-																		if(catitem.sub)
-																			ul.catalog-menu__sub
-																				each catsub in catitem.sub
-																					li.catalog-menu__sub-item
-																						a(href="#").catalog-menu__sub-link= catsub
-
-															.catalog-info
-																.catalog-info__img-wrap
-																	.catalog-info__img(style="background-image: url(assets/img/catalog-info.jpg)")
-
-																a(href="#").catalog-info__content
-																	.catalog-info__title Каталог
-																	.catalog-info__link скачать
+					.header-actions__item
+						.header-actions__icon
+							+svg('ic-user','ic-user ic-stroke', '24', '27')
 
 	.mobile-header.d-lg-none
-		.container
+		.container-fluid
 			.row
 				.col-12
 					.mobile-header__content
@@ -157,6 +55,246 @@ header.header
 							+svg('ic-cart','ic-cart ic-stroke', '15', '17')
 								.mobile-header__count 0
 
+	
+	.main-menu-wrap
+		.container-fluid
+			.row
+				.col-12
+					.main-menu-back.js-main-menu-back.d-lg-none назад
 
+					.main-menu-wrap__content.js-main-menu-wrap-content
+						nav.main-menu
+							ul.main-menu__list
+								-
+									var list=[
+										{text:'интернет магазин', catalog:'true'},
+										{
+											text:'бренды',
+											sub:[
+												'INNOVATIS',
+												'GKhair',
+												'Lookluxe',
+											]
+										},
+										{
+											text:'о нас',
+											sub:[
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+												'о нас',
+												'новости',
+												'статьи',
+												'реквизиты',
+												'доставка',
+												'контакты',
+											]
+										},
+										{text:'сотрудничество'},
+										{text:'салон красоты'},
+										{text:'контакты'},
+									]
+								each item in list
+									li.main-menu__item(class=item.catalog?'main-menu__item_static':'')
+										a(href="#").main-menu__link.js-main-menu-link= item.text
+											if(item.sub || item.catalog)
+												span.main-menu__arr.js-main-menu-arr
+													+svg('ic-arrow-right','ic-arrow-right', '27', '19')
 
-						
+										if(item.sub)
+											ul.main-menu__sub.js-main-menu-sub
+												each sub in item.sub
+													li.main-menu__sub-item
+														a(href="#").main-menu__sub-link= sub
+
+										if(item.catalog)
+											.catalog-menu-popup.js-main-menu-sub
+												.container-fluid
+													.row
+														.col-12
+															.catalog-menu-popup__content
+																ul.catalog-menu
+																	-
+																		var catalog=[
+																			{
+																				text:'домашний уход',
+																				sub:[
+																					'шампуни',
+																					'маски',
+																					'Сыворотки',
+																					'Флюиды',
+																					'Спреи',
+																					'Наборы',
+																					'Лосьоны',
+																				]
+																			},
+																			{
+																				text:'салонный уход',
+																				sub:[
+																					'салонный уход 1',
+																					'салонный уход 2',
+																					'салонный уход 3',
+																					'салонный уход 4',
+																					'салонный уход 5',
+																				]
+																			},
+																			{
+																				text:'приборы и аксессуары для волос',
+																				sub:[
+																					'аксессуары 1',
+																					'аксессуары 2',
+																					'аксессуары 3',
+																				]
+																			},
+																		]
+																	each catitem in catalog
+																		li.catalog-menu__item
+																			a(href="#").catalog-menu__link= catitem.text
+																				span.catalog-menu__arr
+																					+svg('ic-arrow-right','ic-arrow-right', '27', '19')
+
+																			if(catitem.sub)
+																				ul.catalog-menu__sub
+																					each catsub in catitem.sub
+																						li.catalog-menu__sub-item
+																							a(href="#").catalog-menu__sub-link= catsub
+
+																.catalog-info
+																	.catalog-info__img-wrap
+																		.catalog-info__img(style="background-image: url(assets/img/catalog-info.jpg)")
+
+																	a(href="#").catalog-info__content
+																		.catalog-info__title Каталог
+																		.catalog-info__link скачать
+
+						.main-menu-wrap__info.d-lg-none
+							.header-contacts
+								.header-contacts__phone
+									a(href="tel:+78005050984") 8 (800) 505-09-84
+
+								.header-contacts__callback
+									a(href="#", data-fancybox="", data-src="#callback") заказать обратный звонок
+
