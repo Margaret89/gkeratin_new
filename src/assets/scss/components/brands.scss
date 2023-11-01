@@ -42,3 +42,8 @@
 
 	.btn{margin-top: 42px;}
 }
+
+@media (max-width: 991px) {
+	.brands{justify-content: center;}
+	.brand-item{width: calc(50% - 20px);}
+}

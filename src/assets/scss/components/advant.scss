@@ -52,3 +52,10 @@
 		&__label{font-size: 1.9rem;}
 	}
 }
+
+@media (max-width: 991px) {
+	.advant{
+		&__item{flex-direction: column;}
+		&__label{text-align: center;}
+	}
+}

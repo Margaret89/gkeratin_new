@@ -30,3 +30,16 @@
 	&__item:hover{color: var(--color-primary);}
 	&__item:hover &__arr{transform: translateX(10px);}
 }
+
+@media (max-width: 991px) {
+	.catalog-sect-info{
+		padding: 40px;
+
+		&__item{
+			font-size: 2.1rem;
+			padding: 20px;
+		}
+
+		&__arr{max-width: 40px;}
+	}
+}

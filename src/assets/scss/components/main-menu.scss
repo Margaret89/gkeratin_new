@@ -46,7 +46,7 @@
 	&__img{
 		padding-bottom: 100%;
 		background-repeat: no-repeat;
-		background-position: 0 0;
+		background-position: center;
 		background-size: cover;
 	}
 
@@ -100,9 +100,6 @@
 		list-style: none;
 	}
 
-	&__item{width: 30%;}
-	&__item:not(:last-child){margin-bottom: 30px;}
-
 	&__link{
 		display: flex;
 		justify-content: space-between;
@@ -112,12 +109,7 @@
 		transition: color 0.2s ease 0s;
 	}
 
-	&__arr{
-		flex-shrink: 0;
-		opacity: 0;
-		transform: translateX(-10px);
-		transition: all 0.2s ease 0s;
-	}
+	
 
 	&__sub-link{
 		font-size: 1.6rem;
@@ -128,6 +120,9 @@
 	}
 
 	&__sub-item:not(:last-child){margin-bottom: 30px;}
+
+
+	&__arr{flex-shrink: 0;}
 }
 
 @media (min-width: 992px) {
@@ -193,6 +188,7 @@
 		position: absolute;
 		top: calc(100% + 1.5px);
 		left: 0;
+		overflow-x: hidden;
 		overflow-y: auto;
 		scrollbar-width: thin;
 		transform: scaleY(0);
@@ -211,6 +207,16 @@
 	}
 
 	.catalog-menu{
+		&__item{width: 30%;}
+		&__item:not(:last-child){margin-bottom: 30px;}
+
+		&__arr{
+			flex-shrink: 0;
+			opacity: 0;
+			transform: translateX(-10px);
+			transition: all 0.2s ease 0s;
+		}
+
 		&__sub{
 			display: none;
 			width: 70%;
@@ -222,6 +228,7 @@
 
 		&__sub{
 			max-height: 100%;
+			overflow-x: hidden;
 			overflow-y: auto;
 			scrollbar-width: thin;
 		}
@@ -238,29 +245,35 @@
 	}
 }
 
-body{overflow: hidden;}
+.overflow-hidden{overflow: hidden!important;}
 
 @media (max-width: 991px) {
 	.main-menu-wrap{
 		width: 100%;
-		height: calc(100vh - 55px);
-		overflow: hidden;
+		height: calc(100vh - 54px);
 		background: #fff;
 		padding-top: 40px;
 		padding-bottom: 40px;
 		position: fixed;
-		left: 0;
+		right: 100%;
 		top: 55px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		transition: right 0.2s ease 0s;
+
+		&.open{right: 0;}
 		
 		&__content{
 			margin-left: -20px;
 			margin-right: -20px;
-			padding-left: 20px;
-			padding-right: 20px;
 			transition: transform 0.3s ease 0s;
 		}
 
-		&__info{margin-top: 62px;}
+		&__info{
+			margin-top: 62px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 
 
 		.header-contacts{
@@ -274,46 +287,41 @@ body{overflow: hidden;}
 	}
 
 	.main-menu-back{
-		display: none;
+		display: table;
 		height: 3.4rem;
 		border-radius: 1.7rem;
 		border: 1px solid var(--color-text);
 		@include font(none, none, 1rem, 1.2, var(--color-text));
 		padding: 10px 12px;
 		margin-top: -20px;
-		margin-bottom: 20px;
+		opacity: 0;
 		cursor: pointer;
+		transition: opacity 0.3s ease 0s;
 
-		&.active{display: table;}
-	}
-
-	.catalog-menu-popup{
-		display: none;
-		position: absolute;
-		top: 0;
-		left: 100%;
+		&.active{opacity: 1;}
 	}
 
 	.main-menu{
 		margin: 0;
 		position: relative;
 
-		&__item{
-			margin-bottom: 20px;
-			position: static;
-		}
-		
 		&__link,
 		&__sub-link{
+			padding: 0 20px;
 			font-size: 1.8rem;
 			letter-spacing: 0;
+		}
+
+		&__item,
+		&__sub-item{
+			margin-bottom: 20px;
+			position: static;
 		}
 
 		&__link{
 			display: flex;
 			justify-content: space-between;
 			gap: 15px;
-			padding: 0;
 		}
 
 		&__arr{
@@ -323,12 +331,94 @@ body{overflow: hidden;}
 
 		&__sub{
 			width: 100%;
+			height: calc(100vh - 108px);
+			overflow-x: hidden;
+			overflow-y: auto;
+			background: #fff;
+			padding-top: 20px;
 			position: absolute;
 			top: 0;
 			left: 100%;
-			visibility: hidden;
+			z-index: 10;
+			transition: left 0.3s ease 0s;
 
-			&.active{visibility: visible;}
+			&.active{left: 0;}
 		}
 	}
+
+	.catalog-menu-popup{
+		width: 100%;
+		height: calc(100vh - 108px);
+		background: #fff;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		z-index: 10;
+		transition: left 0.2s ease 0s;
+
+		&.active{left: 0;}
+	}
+
+	.catalog-menu{
+		width: auto;
+		margin-left: -20px;
+		margin-right: -20px;
+
+		&__sub{
+			width: 100%;
+			height: calc(100vh - 108px);
+			overflow-x: hidden;
+			overflow-y: auto;
+			background: #fff;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			z-index: 10;
+			transition: left 0.3s ease 0s;
+
+			&.active{left: 0;}
+		}
+
+		&__link,
+		&__sub-link{
+			padding: 0 20px;
+			font-size: 1.8rem;
+			letter-spacing: 0;
+		}
+
+		&__item,
+		&__sub-item{
+			margin-bottom: 20px;
+			position: static;
+		}
+	}
+
+	.catalog-info{
+		width: 100%;
+		max-width: 280px;
+		margin-top: 38px;
+
+		&__img-wrap{
+			width: 100%;
+			margin-left: 0;
+		}
+
+		&__img{padding-bottom: 64%;}
+
+		&__content{
+			width: 106px;
+			height: 106px;
+			margin: -52px 10px 0 auto;
+		}
+
+		&__title{font-size: 1.3rem;}
+		&__link{font-size: 0.8rem;}
+	}
 }
+

@@ -49,3 +49,25 @@
 		text-align: center;
 	}
 }
+
+@media (max-width: 991px) {
+	.products-slider-wrap{
+		.swiper-button-prev,
+		.swiper-button-next{
+			width: 40px;
+		}
+
+		.swiper-button-prev{left: 0;}
+		.swiper-button-next{right: 0;}
+	}
+
+	.products-slider{
+		margin-left: 60px;
+		margin-right: 60px;
+
+		&__tag{
+			font-size: 1.8rem;
+			padding: 15px 20px;
+		}
+	}
+}

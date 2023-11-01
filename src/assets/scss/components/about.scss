@@ -3,3 +3,9 @@
 	&__content{padding-left: 70px;}
 	.btn{margin-top: 23px;}
 }
+
+@media (max-width: 991px) {
+	.about{
+		&__content{padding-left: 40px;}
+	}
+}

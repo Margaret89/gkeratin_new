@@ -28,3 +28,13 @@
 		left: 40px;
 	}
 }
+
+@media (max-width: 991px) {
+	.logo-square{
+		&::after{
+			border-width: 1px;
+			top: 30px;
+			left: 30px;
+		}
+	}
+}

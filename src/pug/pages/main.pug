@@ -31,282 +31,384 @@ block content
 
 		.swiper-pagination.js-top-slider-pagination
 		
-	//- section.mb-indent
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-12
-	//- 				.advant
-	//- 					-
-	//- 						var list=[
-	//- 							{num:'12', text:'Лет опыта'},
-	//- 							{num:'40%', text:'Бонусная поддержка клиентов'},
-	//- 							{img:'gk.jpg', text:'Мультибрендовая компания'},
-	//- 						]
-	//- 					each item in list
-	//- 						.advant__item
-	//- 							.advant__val
-	//- 								if(item.num)
-	//- 									=item.num
+	section.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.advant
+						-
+							var list=[
+								{num:'12', text:'Лет опыта'},
+								{num:'40%', text:'Бонусная поддержка клиентов'},
+								{img:'gk.jpg', text:'Мультибрендовая компания'},
+							]
+						each item in list
+							.advant__item
+								.advant__val
+									if(item.num)
+										=item.num
 
-	//- 								if(item.img)
-	//- 									img(src="assets/img/"+item.img, alt="")
+									if(item.img)
+										img(src="assets/img/"+item.img, alt="")
 
-	//- 							.advant__label= item.text
+								.advant__label= item.text
 
-	//- section.catalog-sect-info-wrap.mb-indent.p-indent
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-lg-8.col-xl-6.offset-xl-1
-	//- 				.catalog-sect-info
-	//- 					-
-	//- 						var list=[
-	//- 							{text:'Интернет магазин'},
-	//- 							{text:'Сотрудничество'},
-	//- 							{text:'Записаться в салон'},
-	//- 						]
-	//- 					each item in list
-	//- 						a(href="#").catalog-sect-info__item
-	//- 							span.catalog-sect-info__text= item.text
-	//- 							span.catalog-sect-info__arr
-	//- 								+svg('ic-arrow-right','ic-arrow-right', '60', '40')
+	section.catalog-sect-info-wrap.mb-indent.p-indent
+		.container-fluid
+			.row
+				.col-lg-8.col-xl-6.offset-xl-1
+					.catalog-sect-info
+						-
+							var list=[
+								{text:'Интернет магазин'},
+								{text:'Сотрудничество'},
+								{text:'Записаться в салон'},
+							]
+						each item in list
+							a(href="#").catalog-sect-info__item
+								span.catalog-sect-info__text= item.text
+								span.catalog-sect-info__arr
+									+svg('ic-arrow-right','ic-arrow-right', '60', '40')
 	
 	
-	//- section.catalog-main-sect.mb-indent
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-12
-	//- 				h2.text-center Подборки товаров
+	section.catalog-main-sect.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Подборки товаров
 
-	//- 				.tabs-page.js-tabs-page
-	//- 					.tabs-page__top
-	//- 						.tabs-page__left.js-tabs-page-left.d-md-none
-	//- 							+svg('ic-arrow-left','ic-arrow-left', '12', '18')
+					.tabs-page.js-tabs-page
+						.tabs-page__top
+							.tabs-page__left.js-tabs-page-left.d-md-none
+								+svg('ic-arrow-left','ic-arrow-left', '12', '18')
 
-	//- 						.tabs-page__right.js-tabs-page-right.d-md-none
-	//- 							+svg('ic-arrow-right','ic-arrow-right', '12', '18')
+							.tabs-page__right.js-tabs-page-right.d-md-none
+								+svg('ic-arrow-right','ic-arrow-right', '12', '18')
 
-	//- 						ul.tabs-page__list.js-tabs-page-list
-	//- 							li.tabs-page__item.js-tabs-page-item(data-item='tab-new') Новинки
-	//- 							li.tabs-page__item.js-tabs-page-item(data-item='tab-sale') Акции
-	//- 							li.tabs-page__item.js-tabs-page-item(data-item='tab-popular') Популярное
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-new') Новинки
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-sale') Акции
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-popular') Популярное
 								
 
-	//- 					.tabs-page__content.js-tabs-page-content
-	//- 						#tab-new.tabs-page__content-item.js-tabs-page-content-item
-	//- 							.swiper.catalog-slider.js-catalog-slider
-	//- 								.swiper-wrapper
-	//- 									-
-	//- 										var list=[
-	//- 											{
-	//- 												img:'catalog-slide1.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 												old_price:'3500',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide2.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide3.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide4.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide5.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide1.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 												old_price:'3500',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide2.jpg',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide3.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide4.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 											{
-	//- 												img:'catalog-slide5.png',
-	//- 												label:'Шампунь для объема',
-	//- 												title:'Luxury Vol-Up Shampoo',
-	//- 												price:'2790',
-	//- 											},
-	//- 										]
-	//- 									each item in list
-	//- 										.swiper-slide
-	//- 											.catalog-slider-item
-	//- 												a(href="#").catalog-slider-item__img-wrap
-	//- 													span.catalog-slider-item__img
-	//- 														img(src="assets/img/"+item.img, alt="")
+						.tabs-page__content.js-tabs-page-content
+							#tab-new.tabs-page__content-item.js-tabs-page-content-item
+								.swiper.catalog-slider.js-catalog-slider
+									.swiper-wrapper
+										-
+											var list=[
+												{
+													img:'catalog-slide1.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+													old_price:'3500',
+												},
+												{
+													img:'catalog-slide2.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide3.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide4.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide5.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide1.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+													old_price:'3500',
+												},
+												{
+													img:'catalog-slide2.jpg',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide3.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide4.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide5.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+											]
+										each item in list
+											.swiper-slide
+												.catalog-slider-item
+													a(href="#").catalog-slider-item__img-wrap
+														span.catalog-slider-item__img
+															img(src="assets/img/"+item.img, alt="")
 
-	//- 													span.catalog-slider-item__sticker New
-	//- 													span.catalog-slider-item__wish
-	//- 														+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+														span.catalog-slider-item__sticker New
+														span.catalog-slider-item__wish
+															+svg('ic-heart','ic-heart ic-stroke', '26', '23')
 
-	//- 												.catalog-slider-item__content
-	//- 													.catalog-slider-item__label= item.label
-	//- 													.catalog-slider-item__title
-	//- 														a(href="#")= item.title
+													.catalog-slider-item__content
+														.catalog-slider-item__label= item.label
+														.catalog-slider-item__title
+															a(href="#")= item.title
 
-	//- 													.catalog-slider-item__prices
-	//- 														span.catalog-slider-item__cur-prices= item.price
-	//- 															| 
-	//- 															| &#8381;
+														.catalog-slider-item__prices
+															span.catalog-slider-item__cur-prices= item.price
+																| 
+																| &#8381;
 
-	//- 														if(item.old_price)
-	//- 															span.catalog-slider-item__old-prices= item.old_price
-	//- 																| 
-	//- 																| &#8381;
+															if(item.old_price)
+																span.catalog-slider-item__old-prices= item.old_price
+																	| 
+																	| &#8381;
 
-	//- 													.catalog-slider-item__btn
-	//- 														a(href="#").btn добавить в корзину
-	//- 															+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+														.catalog-slider-item__btn
+															a(href="#").btn добавить в корзину
+																+svg('ic-cart','ic-cart ic-stroke', '23', '26')
 
-	//- 								.swiper-button-prev.js-catalog-slider-prev
-	//- 									+svg('ic-arrow-left','ic-arrow-left', '57', '38')
-	//- 								.swiper-button-next.js-catalog-slider-next
-	//- 									+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+									.swiper-button-prev.js-catalog-slider-prev
+										+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+									.swiper-button-next.js-catalog-slider-next
+										+svg('ic-arrow-right','ic-arrow-right', '57', '38')
 
-	//- 						#tab-sale.tabs-page__content-item.js-tabs-page-content-item
-	//- 							| Текст
+							#tab-sale.tabs-page__content-item.js-tabs-page-content-item
+								.swiper.catalog-slider.js-catalog-slider
+									.swiper-wrapper
+										-
+											var list=[
+												{
+													img:'catalog-slide5.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide1.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+													old_price:'3500',
+												},
+												{
+													img:'catalog-slide2.jpg',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide3.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide4.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide5.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide1.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+													old_price:'3500',
+												},
+												{
+													img:'catalog-slide2.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide3.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+												{
+													img:'catalog-slide4.png',
+													label:'Шампунь для объема',
+													title:'Luxury Vol-Up Shampoo',
+													price:'2790',
+												},
+											]
+										each item in list
+											.swiper-slide
+												.catalog-slider-item
+													a(href="#").catalog-slider-item__img-wrap
+														span.catalog-slider-item__img
+															img(src="assets/img/"+item.img, alt="")
 
-	//- 						#tab-popular.tabs-page__content-item.js-tabs-page-content-item
-	//- 							| Текст
+														span.catalog-slider-item__sticker New
+														span.catalog-slider-item__wish
+															+svg('ic-heart','ic-heart ic-stroke', '26', '23')
 
-	//- section.products-slider-wrap.p-indent.mb-indent
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-8.offset-2
-	//- 				h2.text-center Полная линейка продуктов
+													.catalog-slider-item__content
+														.catalog-slider-item__label= item.label
+														.catalog-slider-item__title
+															a(href="#")= item.title
 
-	//- 				.products-slider-wrap__content
-	//- 					.swiper.products-slider.js-products-slider
-	//- 						.swiper-wrapper
-	//- 							.swiper-slide.products-slider__item
-	//- 								.products-slider__list
-	//- 									-
-	//- 										var list=[
-	//- 											{text:'Шампуни'},
-	//- 											{text:'КОНДИЦИОНЕРЫ'},
-	//- 											{text:'МАСКИ'},
-	//- 											{text:'СЫВОРОТКИ'},
-	//- 											{text:'ФЛЮИДЫ'},
-	//- 											{text:'ЛОСЬОНЫ'},
-	//- 											{text:'СТАЙЛИНГ'},
-	//- 											{text:'СПРЕИ'},
-	//- 											{text:'техника'},
-	//- 											{text:'расчески'},
-	//- 											{text:'ВЫПРЯМЛЕНИЕ И ВОССТАНОВЛЕНИЕ'},
-	//- 										]
-	//- 									each item in list
-	//- 										a(href="#").products-slider__tag= item.text
+														.catalog-slider-item__prices
+															span.catalog-slider-item__cur-prices= item.price
+																| 
+																| &#8381;
+
+															if(item.old_price)
+																span.catalog-slider-item__old-prices= item.old_price
+																	| 
+																	| &#8381;
+
+														.catalog-slider-item__btn
+															a(href="#").btn добавить в корзину
+																+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+									.swiper-button-prev.js-catalog-slider-prev
+										+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+									.swiper-button-next.js-catalog-slider-next
+										+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+
+
+							#tab-popular.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
+
+	section.products-slider-wrap.p-indent.mb-indent
+		.container-fluid
+			.row
+				.col-lg-8.offset-lg-2
+					h2.text-center Полная линейка продуктов
+
+					.products-slider-wrap__content
+						.swiper.products-slider.js-products-slider
+							.swiper-wrapper
+								.swiper-slide.products-slider__item
+									.products-slider__list
+										-
+											var list=[
+												{text:'Шампуни'},
+												{text:'КОНДИЦИОНЕРЫ'},
+												{text:'МАСКИ'},
+												{text:'СЫВОРОТКИ'},
+												{text:'ФЛЮИДЫ'},
+												{text:'ЛОСЬОНЫ'},
+												{text:'СТАЙЛИНГ'},
+												{text:'СПРЕИ'},
+												{text:'техника'},
+												{text:'расчески'},
+												{text:'ВЫПРЯМЛЕНИЕ И ВОССТАНОВЛЕНИЕ'},
+											]
+										each item in list
+											a(href="#").products-slider__tag= item.text
 									
-	//- 								.products-slider__btn
-	//- 									a(href="#").btn ДЛЯ профессионалов
+									.products-slider__btn
+										a(href="#").btn ДЛЯ профессионалов
 
-	//- 							.swiper-slide.products-slider__item
-	//- 								.products-slider__list
-	//- 									-
-	//- 										var list=[
-	//- 											{text:'Шампуни'},
-	//- 											{text:'КОНДИЦИОНЕРЫ'},
-	//- 											{text:'МАСКИ'},
-	//- 											{text:'СЫВОРОТКИ'},
-	//- 										]
-	//- 									each item in list
-	//- 										a(href="#").products-slider__tag= item.text
+								.swiper-slide.products-slider__item
+									.products-slider__list
+										-
+											var list=[
+												{text:'Шампуни'},
+												{text:'КОНДИЦИОНЕРЫ'},
+												{text:'МАСКИ'},
+												{text:'СЫВОРОТКИ'},
+											]
+										each item in list
+											a(href="#").products-slider__tag= item.text
 									
-	//- 								.products-slider__btn
-	//- 									a(href="#").btn Для салонов
+									.products-slider__btn
+										a(href="#").btn Для салонов
 
-	//- 					.swiper-pagination.js-products-slider-pagination
+						.swiper-pagination.js-products-slider-pagination
 
-	//- 					.swiper-button-prev.js-products-slider-prev
-	//- 						+svg('ic-arrow-left','ic-arrow-left', '71', '48')
-	//- 					.swiper-button-next.js-products-slider-next
-	//- 						+svg('ic-arrow-right','ic-arrow-right', '71', '48')
+						.swiper-button-prev.js-products-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '71', '48')
+						.swiper-button-next.js-products-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '71', '48')
 
-	//- section.about.mb-indent
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-6
-	//- 				.logo-square
-	//- 					.logo-square__content
-	//- 						img(src="assets/img/logo-page.svg", alt="")
+	section.about.mb-indent
+		.container-fluid
+			.row
+				.col-md-4.col-lg-6
+					.logo-square
+						.logo-square__content
+							img(src="assets/img/logo-page.svg", alt="")
 				
-	//- 			.col-6
-	//- 				.about__content
-	//- 					h2 GKeratin
-	//- 						br
-	//- 						|Beauty Group
+				.col-md-8.col-lg-6
+					.about__content
+						h2 GKeratin
+							br
+							|Beauty Group
 
-	//- 					p.font-big Это только эффективные и проверенные временем профессиональные косметические бренды, которые дополняют друг друга.
+						p.font-big Это только эффективные и проверенные временем профессиональные косметические бренды, которые дополняют друг друга.
 
-	//- 					p Мы видим свою миссию в том, чтобы наши знания и многолетний опыт помогли найти и представить на Российском рынке лучшее, что есть на мировом рынке индустрии красоты. Выбирая нашу компанию, Вы получаете возможность иметь в своем арсенале продукцию с новейшими технологиями для работы с любым типом и состоянием волос!
+						p Мы видим свою миссию в том, чтобы наши знания и многолетний опыт помогли найти и представить на Российском рынке лучшее, что есть на мировом рынке индустрии красоты. Выбирая нашу компанию, Вы получаете возможность иметь в своем арсенале продукцию с новейшими технологиями для работы с любым типом и состоянием волос!
 
-	//- 					a.btn.btn_border Узнать больше
+						a.btn.btn_border Узнать больше
 
-	//- section.brands-wrap.mb-indent.p-indent.bg-grey
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-12
-	//- 				h2.text-center Наши бренды
+	section.brands-wrap.mb-indent.p-indent.bg-grey
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Наши бренды
 
-	//- 				.brands
-	//- 					-
-	//- 						var list=[
-	//- 							{
-	//- 								img:'partner1.png',
-	//- 								text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
-	//- 							},
-	//- 							{
-	//- 								img:'partner2.png',
-	//- 								text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
-	//- 							},
-	//- 							{
-	//- 								img:'partner3.png',
-	//- 								text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
-	//- 							},
-	//- 						]
-	//- 					each item in list
-	//- 						.brand-item
-	//- 							.brand-item__logo-wrap
-	//- 								.brand-item__logo
-	//- 									img(src="assets/img/"+item.img, alt="")
+					.brands
+						-
+							var list=[
+								{
+									img:'partner1.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+								{
+									img:'partner2.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+								{
+									img:'partner3.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+							]
+						each item in list
+							.brand-item
+								.brand-item__logo-wrap
+									.brand-item__logo
+										img(src="assets/img/"+item.img, alt="")
 
-	//- 							.brand-item__text= item.text 
+								.brand-item__text= item.text 
 
-	//- 							a(href="#").btn.btn_border Узнать больше
+								a(href="#").btn.btn_border Узнать больше
 
-	//- section.partners-form
+	section.partners-form
 		.container-fluid
 			.row
 				.col-12

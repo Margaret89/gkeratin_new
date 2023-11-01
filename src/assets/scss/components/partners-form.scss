@@ -16,3 +16,9 @@
 		z-index: 2;
 	}
 }
+
+@media (max-width: 991px) {
+	.partners-form{
+		.page-form{width: 75%;}
+	}
+}

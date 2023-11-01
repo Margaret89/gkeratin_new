@@ -1,133 +1,133 @@
 footer.footer
-	//- .footer__main
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-2
-	//- 				.footer__logo
-	//- 					img(src="assets/img/logo-footer.svg", alt="Logo")
+	.footer__main
+		.container-fluid
+			.row
+				.col-md-4.col-lg-2
+					.footer__logo
+						img(src="assets/img/logo-footer.svg", alt="Logo")
 
-	//- 			.col-6
-	//- 				.footer-nav
-	//- 					.footer-nav__item
-	//- 						.footer-nav__title Gkeratin beauty
+				.col-md-8.col-lg-6
+					.footer-nav
+						.footer-nav__item
+							.footer-nav__title Gkeratin beauty
 							
-	//- 						ul.footer-menu
-	//- 							-
-	//- 								var list=[
-	//- 									{text:'Бренды'},
-	//- 									{text:'Салон красоты'},
-	//- 									{text:'Доставка и оплата'},
-	//- 								]
-	//- 							each item in list
-	//- 								li.footer-menu__item
-	//- 									a(href="#").footer-menu__link= item.text
+							ul.footer-menu
+								-
+									var list=[
+										{text:'Бренды'},
+										{text:'Салон красоты'},
+										{text:'Доставка и оплата'},
+									]
+								each item in list
+									li.footer-menu__item
+										a(href="#").footer-menu__link= item.text
 
-	//- 					.footer-nav__item
-	//- 						.footer-nav__title каталог
+						.footer-nav__item
+							.footer-nav__title каталог
 							
-	//- 						ul.footer-menu
-	//- 							-
-	//- 								var list=[
-	//- 									{text:'Все товары'},
-	//- 									{text:'Новинки'},
-	//- 									{text:'Наборы'},
-	//- 								]
-	//- 							each item in list
-	//- 								li.footer-menu__item
-	//- 									a(href="#").footer-menu__link= item.text
+							ul.footer-menu
+								-
+									var list=[
+										{text:'Все товары'},
+										{text:'Новинки'},
+										{text:'Наборы'},
+									]
+								each item in list
+									li.footer-menu__item
+										a(href="#").footer-menu__link= item.text
 
-	//- 					.footer-nav__item
-	//- 						.footer-nav__title для бизнеса
+						.footer-nav__item
+							.footer-nav__title для бизнеса
 							
-	//- 						ul.footer-menu
-	//- 							-
-	//- 								var list=[
-	//- 									{text:'Салонам'},
-	//- 									{text:'Дистрибьюторам'},
-	//- 									{text:'Обучение'},
-	//- 								]
-	//- 							each item in list
-	//- 								li.footer-menu__item
-	//- 									a(href="#").footer-menu__link= item.text
+							ul.footer-menu
+								-
+									var list=[
+										{text:'Салонам'},
+										{text:'Дистрибьюторам'},
+										{text:'Обучение'},
+									]
+								each item in list
+									li.footer-menu__item
+										a(href="#").footer-menu__link= item.text
 
 
-	//- 			.col-4
-	//- 				.subscribe
-	//- 					.subscribe__title Узнавайте первыми о наших новинках
+				.col-lg-4
+					.subscribe
+						.subscribe__title Узнавайте первыми о наших новинках
 
-	//- 					.subscribe__content
-	//- 						input(type="email", placeholder="Ваш email*", required="required")
-	//- 						input(type="submit", value="Подписаться").btn
+						.subscribe__content
+							input(type="email", placeholder="Ваш email*", required="required")
+							input(type="submit", value="Подписаться").btn
 
-	//- 					.subscribe__polit
-	//- 						.subscribe__polit-item
-	//- 							label.input-check
-	//- 								input(type='checkbox')
-	//- 								span.input-check__mark
-	//- 									+svg('ic-tick','ic-tick', '9', '6')
-	//- 								span.input-check__text Даю согласие на 
-	//- 									a(href="#") обработку персональных данных 
+						.subscribe__polit
+							.subscribe__polit-item
+								label.input-check
+									input(type='checkbox')
+									span.input-check__mark
+										+svg('ic-tick','ic-tick', '9', '6')
+									span.input-check__text Даю согласие на 
+										a(href="#") обработку персональных данных 
 							
-	//- 						.subscribe__polit-item
-	//- 							label.input-check
-	//- 								input(type='checkbox')
-	//- 								span.input-check__mark
-	//- 									+svg('ic-tick','ic-tick', '9', '6')
-	//- 								span.input-check__text Согласен на получение рассылки рекламно-информационного характера
+							.subscribe__polit-item
+								label.input-check
+									input(type='checkbox')
+									span.input-check__mark
+										+svg('ic-tick','ic-tick', '9', '6')
+									span.input-check__text Согласен на получение рассылки рекламно-информационного характера
 
-	//- 				.social
-	//- 					a(href="#").social__item
-	//- 						+svg('ic-whatsapp','ic-whatsapp', '16', '16')
+					.social
+						a(href="#").social__item
+							+svg('ic-whatsapp','ic-whatsapp', '16', '16')
 
-	//- 					a(href="#").social__item
-	//- 						+svg('ic-telegram','ic-telegram', '16', '16')
+						a(href="#").social__item
+							+svg('ic-telegram','ic-telegram', '16', '16')
 
-	//- 					a(href="#").social__item
-	//- 						+svg('ic-vk','ic-vk', '16', '16')
+						a(href="#").social__item
+							+svg('ic-vk','ic-vk', '16', '16')
 
 
-	//- .footer__bottom
-	//- 	.container-fluid
-	//- 		.row
-	//- 			.col-8
-	//- 				.footer__copyright © 2023, GKeratin Beauty Group официальный дистрибьютор ПРОФЕССИОНАЛЬНОЙ косметики на территории России с 2011 года
+	.footer__bottom
+		.container-fluid
+			.row
+				.col-lg-8
+					.footer__copyright © 2023, GKeratin Beauty Group официальный дистрибьютор ПРОФЕССИОНАЛЬНОЙ косметики на территории России с 2011 года
 
-	//- 				ul.bottom-menu
-	//- 					-
-	//- 						var list=[
-	//- 							{text:'Политика конфиденциальности'},
-	//- 							{text:'Правила продажи товаров'},
-	//- 							{text:'Авторские права'},
-	//- 							{text:'Платежная информация'},
-	//- 							{text:'Условия акции'},
-	//- 							{text:'FAQ'},
-	//- 							{text:'Информация о продавце'},
-	//- 						]
-	//- 					each item in list
-	//- 						li.bottom-menu__item
-	//- 							a(href="#").bottom-menu__link= item.text
+					ul.bottom-menu
+						-
+							var list=[
+								{text:'Политика конфиденциальности'},
+								{text:'Правила продажи товаров'},
+								{text:'Авторские права'},
+								{text:'Платежная информация'},
+								{text:'Условия акции'},
+								{text:'FAQ'},
+								{text:'Информация о продавце'},
+							]
+						each item in list
+							li.bottom-menu__item
+								a(href="#").bottom-menu__link= item.text
 
-	//- 			.col-4
-	//- 				.footer__pay
-	//- 					.pay-system
-	//- 						.pay-system__label Способы оплаты:
+				.col-lg-4
+					.footer__pay
+						.pay-system
+							.pay-system__label Способы оплаты:
 
-	//- 						.pay-system__list
-	//- 							.pay-system__item
-	//- 								img(src="assets/img/visa.svg", alt="Visa")
+							.pay-system__list
+								.pay-system__item
+									img(src="assets/img/visa.svg", alt="Visa")
 
-	//- 							.pay-system__item
-	//- 								img(src="assets/img/mastercard.svg", alt="Mastercard")
+								.pay-system__item
+									img(src="assets/img/mastercard.svg", alt="Mastercard")
 
-	//- 							.pay-system__item
-	//- 								img(src="assets/img/maestro.svg", alt="Maestro")
+								.pay-system__item
+									img(src="assets/img/maestro.svg", alt="Maestro")
 
-	//- 					.app
-	//- 						a(href="#").app__item
-	//- 							img(src="assets/img/appstore.svg", alt="AppStore")
+						.app
+							a(href="#").app__item
+								img(src="assets/img/appstore.svg", alt="AppStore")
 
-	//- 						a(href="#").app__item
-	//- 							img(src="assets/img/google-play.svg", alt="Google play")
+							a(href="#").app__item
+								img(src="assets/img/google-play.svg", alt="Google play")
 
 #callback(style='display: none;')
 	.popup-form

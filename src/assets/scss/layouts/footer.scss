@@ -85,3 +85,10 @@
 
 	&__link:hover{color: var(--color-primary);}
 }
+
+@media (max-width: 991px) {
+	.footer{
+		.subscribe{margin-top: 40px;}
+		&__pay{margin-top: 30px;}
+	}
+}
