@@ -1,6 +1,7 @@
 /*-------------- catalog-sect-info -----------------*/
 .catalog-sect-info-wrap{
-	background: url(../img/bg-woman.jpg) no-repeat center;
+	background: url(../img/bg-woman.jpg) no-repeat center right;
+	background-size: cover;
 	// background-attachment: fixed;
 }
 
@@ -41,5 +42,22 @@
 		}
 
 		&__arr{max-width: 40px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.catalog-sect-info-wrap{background-position: calc(100% + 170px) center;}
+
+	.catalog-sect-info{
+		padding: 16px;
+		border: none;
+		background: #fff;
+
+		&__item{
+			font-size: 1.6rem;
+			padding: 14px 3px;
+		}
+
+		&__arr{max-width: 34px;}
 	}
 }

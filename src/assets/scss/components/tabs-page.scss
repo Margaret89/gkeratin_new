@@ -41,12 +41,20 @@
 
 	&__content-item{
 		display: none;
-		padding: 50px 0;
+		padding: 50px 0 0;
 	}
 }
 
 @media (max-width: 991px) {
 	.tabs-page{
 		&__item{font-size: 1.8rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.tabs-page{
+		&__list{gap: 35px;}
+		&__item{font-size: 1.3rem;}
+		&__item::after{height: 1px;}
 	}
 }

@@ -38,3 +38,16 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.logo-square{
+		margin: 0 18px 18px 0;
+
+		img{max-width: 40%;}
+
+		&::after{
+			top: 17px;
+			left: 17px;
+		}
+	}
+}

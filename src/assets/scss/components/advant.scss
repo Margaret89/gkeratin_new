@@ -59,3 +59,17 @@
 		&__label{text-align: center;}
 	}
 }
+
+@media (max-width: 767px) {
+	.advant{
+		&__item{gap: 15px;}
+		
+		&__val{
+			width: 66px;
+			height: 66px;
+			font-size: 2.2rem;
+		}
+
+		&__label{font-size: 1.1rem;}
+	}
+}

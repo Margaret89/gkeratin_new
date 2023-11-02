@@ -38,16 +38,21 @@
 }
 
 @media (max-width: 767px) {
+	.top-slider-wrap{
+		.swiper-pagination-bullets.swiper-pagination-horizontal{bottom: -20px;}
+	}
+
 	.top-slider{
 		&__item{
 			display: block;
+			min-height: 0;
 
 			h1, .h1{
 				margin-bottom: 0;
 				grid-column: span 2;
 			}
 
-			.btn-circle{margin: 0;}
+			.btn-circle{margin: -23px 0 0;}
 		}
 
 		&__content{

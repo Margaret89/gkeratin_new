@@ -4,3 +4,9 @@
 	flex-wrap: wrap;
 	gap: 10px;
 }
+
+@media (max-width: 767px) {
+	.app{
+		img{max-width: 70px;}
+	}
+}

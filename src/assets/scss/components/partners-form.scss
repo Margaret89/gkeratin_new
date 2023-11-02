@@ -22,3 +22,22 @@
 		.page-form{width: 75%;}
 	}
 }
+
+@media (max-width: 767px) {
+	.partners-form{
+		&__content{
+			flex-direction: column-reverse;
+		}
+
+		&__img{
+			width: auto;
+			margin: 0;
+		}
+
+		.page-form{
+			width: auto;
+			padding: 0;
+			border: none;
+		}
+	}
+}

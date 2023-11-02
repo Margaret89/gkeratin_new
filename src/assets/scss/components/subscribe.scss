@@ -67,3 +67,28 @@
 		&__content{gap: 10px;}
 	}
 }
+
+@media (max-width: 767px) {
+	.subscribe{
+		&__title{font-size: 1rem;}
+		&__content{gap: 5px;}
+		&__polit-item:not(:last-child){margin-bottom: 5px;}
+
+		input[type="text"],
+		input[type="email"]{
+			height: 3.6rem;
+			font-size: 0.8rem;
+			// padding: 0 20px;
+			border-radius: 1.9rem;
+		}
+
+		.btn,
+		input[type="submit"].btn,
+		button.btn{
+			height: 3.6rem;
+			border-radius: 1.9rem;
+			padding: 0 20px;
+			font-size: 0.8rem;
+		}
+	}
+}

@@ -118,6 +118,8 @@ main{
 	width: 100%;
 }
 
+.last-elem{margin-bottom: -100px;}
+
 .container-fluid{
 	max-width: 1320px;
 	margin-left: auto;
@@ -146,7 +148,10 @@ button.btn{
 	cursor: pointer;
 	transition: all 0.2s ease 0s;
 
-	.icon{fill: #fff;}
+	.icon{
+		flex-shrink: 0;
+		fill: #fff;
+	}
 
 	.icon.ic-stroke{
 		fill: transparent;
@@ -275,16 +280,64 @@ button.btn{
 		font-size: 2.6rem;
 		margin-bottom: 2rem;
 	}
+
+	main{padding-bottom: 80px;}
+	.last-elem{margin-bottom: -80px;}
 }
 
 @media (max-width: 767px) {
+	:root{
+		--margin-indent: 60px;
+	}
+
+	body{font-size: 1rem;}
+
 	h1, .h1{
 		font-size: 2.7rem;
 	}
+
+	h2,.h2{
+		font-size: 2.4rem;
+		margin-bottom: 2.5rem;
+	}
+	
+	h3,.h3{
+		font-size: 2.1rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	h4,.h4{
+		font-size: 1.8rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	h5,.h5{
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.font-big{font-size: 1.2rem;}
+	p.font-big{margin-bottom: 1.5rem;}
 
 	.btn-circle{
 		width: 85px;
 		height: 85px;
 		font-size: 1.1rem;
 	}
+
+	.container-fluid{box-sizing: border-box;}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: 4.4rem;
+		min-width: 180px;
+		font-size: 1rem;
+		letter-spacing: 0.8px;
+		border-radius: 2.2rem;
+		padding: 0 20px;
+	}
+
+	main{padding-bottom: 60px;}
+	.last-elem{margin-bottom: -60px;}
 }

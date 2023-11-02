@@ -14,3 +14,12 @@
 
 	&__item{flex-shrink: 0;}
 }
+
+@media (max-width: 991px) {
+	.pay-system{
+		&__item{
+			img{max-width: 30px;}
+		}
+
+	}
+}

@@ -9,3 +9,18 @@
 		&__content{padding-left: 40px;}
 	}
 }
+
+@media (max-width: 767px) {
+	.about{
+		&__content{
+			padding-left: 0;
+			margin-top: 30px;
+
+			h2, .h2{
+				br{display: none;}
+			}
+
+			.btn{margin-top: 5px;}
+		}
+	}
+}

@@ -114,19 +114,30 @@ const catalogSlider = new Swiper('.js-catalog-slider',
 	grabCursor: true,
 	centeredSlides: true,
 	slidesPerView: "auto",
+	spaceBetween: 12,
 	coverflowEffect: {
 		rotate: 0,
-		stretch: 0,
-		depth: 200,
-		modifier: 1,
+		depth: 0,
+		modifier: 0,
 		slideShadows: false,
-		scale: 0.8,
-		stretch: -30,
+		scale: 0,
+		// stretch: 0,
 	},
 	navigation: {
 		nextEl: '.js-catalog-slider-next',
 		prevEl: '.js-catalog-slider-prev',
 	},
+	breakpoints: {
+		768: {
+			spaceBetween: 30,
+			coverflowEffect: {
+				depth: 200,
+				// stretch: -30,
+				scale: 0.8,
+				modifier: 1,
+			},
+		}
+	}
 });
 
 
