@@ -1,0 +1,469 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Каталог детальная';
+	//- - var h1 = 'Интернет магазин';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'интернет магазин'},
+			{href:'#',name:'все товары'},
+			{href:'#',name:'домашний уход'},
+			{href:'#',name:'кондиционеры'},
+			{href:'#',name:'кондиционер из веганской линии Conditioner CBD Vegan line 240 мл'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.catalog-detail
+		.catalog-detail-top
+			.container.mb-indent
+				.row
+					.col-12
+						.product-slider-wrap
+							.product-thumb-slider.js-product-thumb-slider
+								-
+									var list=[
+										{img:'product-slide-thumb1.jpg'},
+										{img:'product-slide-thumb2.jpg'},
+										{img:'product-slide-thumb3.jpg'},
+										{img:'product-slide-thumb1.jpg'},
+										{img:'product-slide-thumb2.jpg'},
+										{img:'product-slide-thumb3.jpg'},
+										{img:'product-slide-thumb1.jpg'},
+										{img:'product-slide-thumb2.jpg'},
+										{img:'product-slide-thumb3.jpg'},
+									]
+								each item in list
+									.product-thumb-slider__item
+										.product-thumb-slider__img
+											img(src="assets/img/"+item.img, alt="")
+
+								.product-thumb-slider__item
+									.product-thumb-slider__video
+										+svg('ic-youtube','ic-youtube', '52', '36')
+
+							.product-slider.js-product-slider
+								-
+									var list=[
+										{img:'product-slide1.png'},
+										{img:'product-slide2.png'},
+										{img:'product-slide3.png'},
+										{img:'product-slide4.png'},
+										{img:'product-slide5.png'},
+										{img:'product-slide6.png'},
+										{img:'product-slide7.png'},
+										{img:'product-slide8.png'},
+										{img:'product-slide9.png'},
+									]
+								each item in list
+									.product-slider__item
+										a.product-slider__link(href="assets/img/"+item.img, data-fancybox='images')
+											img(src="assets/img/"+item.img, alt="")
+					
+					.catalog-advant
+						-
+							var list=[
+								{
+									icon:'ic-free',
+									icon_width:'30',
+									icon_height:'9',
+									text:'Бесплатная доставка от 3990 руб.',
+								},
+								{
+									icon:'ic-gift',
+									icon_width:'28',
+									icon_height:'28',
+									text:'Две миниатюры в подарок с любой покупкой',
+								},
+								{
+									icon:'ic-percent',
+									icon_width:'23',
+									icon_height:'24',
+									text:'Скидка 5% при оплате картой на сайте',
+								},
+							]
+						each item in list
+							.catalog-advant__item
+								.catalog-advant__icon
+									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+								.catalog-advant__text= item.text
+
+					.catalog-detail-top__info
+						.catalog-detail-top__label Кондиционер из веганской линии
+						h1.catalog-detail-top__title Conditioner CBD Vegan line
+						.catalog-detail-top__brand Innovatis
+
+						.rating
+							.rating__content(style="width: 60%")
+
+						.catalog-detail-top__text Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.
+
+						.catalog-detail-tp
+							.catalog-detail-tp__sect
+								.catalog-detail-tp__label Объем / Мл:
+
+								.catalog-detail-tp__list
+									.catalog-detail-tp__item 100 мл
+									.catalog-detail-tp__item.active 240 мл
+									.catalog-detail-tp__item 650 мл
+
+						.catalog-detail-prices
+							.catalog-detail-prices__item
+								.catalog-detail-prices__val 2142 
+									| 
+									| &#8381;
+								.catalog-detail-prices__label Цена с промокодом 
+									span.text-color GKERATIN
+								
+
+							.catalog-detail-prices__item
+								.catalog-detail-prices__val.catalog-detail-prices__val_grey 2600 
+									| 
+									| &#8381;
+								.catalog-detail-prices__label Цена без промокода
+
+						.catalog-detail-top__btn
+							a(href="#").btn Добавить в корзину
+
+							a(href="#").link-site купить в 1 клик
+
+			.container.mb-indent
+				.row
+					.col-10.offset-1
+						.tabs-page.js-tabs-page
+							.tabs-page__top
+								ul.tabs-page__list.js-tabs-page-list
+									li.tabs-page__item.js-tabs-page-item(data-item='tab-desc') Описание
+									li.tabs-page__item.js-tabs-page-item(data-item='tab-use') Применение
+									li.tabs-page__item.js-tabs-page-item(data-item='tab-ingred') Ингредиенты
+
+							.tabs-page__content.js-tabs-page-content
+								#tab-desc.tabs-page__content-item.js-tabs-page-content-item
+									p Кондиционер из веганской линии CBD интенсивно питает и увлажняет волосы, придает послушность, а также поддерживает яркость цвета окрашенных волос.
+
+									ul
+										li Делает волосы шелковистыми и мягкими.
+										li Восстанавливает структуру, укрепляет и реконструирует волосы.
+										li Уменьшает ломкость и повышает эластичность.
+										li Стимулирует рост, питает и придает волосам глянцевый блеск.
+
+									p В состав входит комплекс на основе растительных протеинов - JUVEXIN V2, состоящий из гидролизованного киноа и экстракта гороха, который насыщен питательными веществами и протеинами делая волосы шелковистыми, мягкими, послушными и восстанавливая структуру на молекулярном уровне. Juvexin V2 укрепляет и реконструирует волосы, насыщая их необходимыми для здоровья и прочности волос аминокислотами, заметно укрепляя структуру изнутри, что значительно уменьшает ломкость волос и повышает их эластичность.
+									p Вмсте с маслом каннабиса (конопляное масло), которое содержит витамины комплекса B, витамины A, C и E и высокий уровень Омега 3 и 6, этот коктейль восстанавливает гидролипидный слой и уменьшает ломкость. Масло ши в составе предотвращает сечение, делает волосы мягкими и шелковистыми; а сок алоэ вера стимулирует рост, питает, сохраняет естественное здоровье и придает глянцевый блеск.
+
+									p
+										b Кондиционер подойдет для тех, кто мечтает о блестящих, ухоженных волосах с ярким, насыщенным цветом.
+
+								#tab-use.tabs-page__content-item.js-tabs-page-content-item
+									| Текст
+
+								#tab-ingred.tabs-page__content-item.js-tabs-page-content-item
+									| Текст
+			
+			.container.mb-indent
+				.row
+					.col-10.offset-1
+						.tabs-page.js-tabs-page
+							.tabs-page__top
+								ul.tabs-page__list.js-tabs-page-list
+									li.tabs-page__item.js-tabs-page-item(data-item='tab-reviews') Отзывы
+									li.tabs-page__item.js-tabs-page-item(data-item='tab-qustions') Вопросы и ответы
+									li.tabs-page__item.js-tabs-page-item(data-item='tab-write') Написать отзыв
+
+							.tabs-page__content.js-tabs-page-content
+								#tab-reviews.tabs-page__content-item.js-tabs-page-content-item
+									.reviews-list
+										-
+											var list=[
+												{
+													name:'Имя Фамилия',
+													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+												},
+												{
+													name:'Имя Фамилия',
+													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+												},
+												{
+													name:'Имя Фамилия',
+													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+												},
+												{
+													name:'Имя Фамилия',
+													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+												},
+											]
+										each item in list
+											.review-item
+												.review-item__icon
+													img(src="assets/img/gk-ava.svg", alt="")
+
+												.review-item__content
+													.review-item__top
+														.review-item__name= item.name
+
+														.rating.rating_small
+															.rating__content(style="width: 60%")
+
+													.review-item__text= item.text
+
+								#tab-qustions.tabs-page__content-item.js-tabs-page-content-item
+									| Текст
+
+								#tab-write.tabs-page__content-item.js-tabs-page-content-item
+									| Текст
+
+								
+
+
+
+	section.special-products.mt-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center С этим товаром покупают
+
+					.swiper.catalog-slider.js-catalog-slider
+						.swiper-wrapper
+							-
+								var list=[
+									{
+										img:'catalog-slide1.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										old_price:'3500',
+									},
+									{
+										img:'catalog-slide2.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide3.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide5.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide1.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										old_price:'3500',
+									},
+									{
+										img:'catalog-slide2.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide3.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide5.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+								]
+							each item in list
+								.swiper-slide
+									.catalog-slider-item
+										a(href="#").catalog-slider-item__img-wrap
+											span.catalog-slider-item__img
+												img(src="assets/img/"+item.img, alt="")
+
+											span.catalog-slider-item__sticker New
+											span.catalog-slider-item__wish
+												+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+										.catalog-slider-item__content
+											.catalog-slider-item__label= item.label
+											.catalog-slider-item__title
+												a(href="#")= item.title
+
+											.catalog-slider-item__prices
+												span.catalog-slider-item__cur-prices= item.price
+													| 
+													| &#8381;
+
+												if(item.old_price)
+													span.catalog-slider-item__old-prices= item.old_price
+														| 
+														| &#8381;
+
+											.catalog-slider-item__btn
+												a(href="#").btn добавить в корзину
+													+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+						.swiper-button-prev.js-catalog-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+						.swiper-button-next.js-catalog-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+	section.other-products.mt-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Вы смотрели
+
+					.swiper.catalog-slider.js-catalog-viewed.d-lg-none
+						.swiper-wrapper
+							-
+								var list=[
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+								]
+							each item in list
+								.swiper-slide
+									.catalog-slider-item
+										a(href="#").catalog-slider-item__img-wrap
+											span.catalog-slider-item__img
+												img(src="assets/img/"+item.img, alt="")
+
+											span.catalog-slider-item__sticker New
+											span.catalog-slider-item__wish
+												+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+										.catalog-slider-item__content
+											.catalog-slider-item__label= item.label
+											.catalog-slider-item__title
+												a(href="#")= item.title
+
+											.catalog-slider-item__prices
+												span.catalog-slider-item__cur-prices= item.price
+													| 
+													| &#8381;
+
+												if(item.old_price)
+													span.catalog-slider-item__old-prices= item.old_price
+														| 
+														| &#8381;
+
+											.catalog-slider-item__btn
+												a(href="#").btn добавить в корзину
+													+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+						.swiper-button-prev.js-catalog-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+						.swiper-button-next.js-catalog-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+					.catalog-list.d-none.d-lg-grid
+						-
+							var list=[
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+							]
+						each item in list
+							.catalog-item
+								.catalog-item__img-wrap
+									a(href="#").catalog-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+									if(item.sticker)
+										.catalog-stickers
+											each sticker in item.sticker
+												.catalog-stickers__item(class=item.sticker=='%'?'catalog-stickers__item_black':'')
+
+									.catalog-item__wish
+										+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+									.catalog-item__cart
+										+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+								.catalog-item__content
+									.catalog-item__label= item.label
+
+									.catalog-item__title
+										a(href="#")= item.title
+
+									.catalog-item__price
+										span.catalog-item__cur-price= item.price
+											| 
+											| &#8381;
+
+										if(item.price_old)
+											span.catalog-item__old-price= item.price_old
+												| 
+												| &#8381;
