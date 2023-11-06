@@ -87,6 +87,24 @@ block content
 					span.input-radio__mark
 					span.input-radio__text Текст
 
+				br
+				br
+				br
+				.h2 Нестандартный select
+				select.js-select
+					option(value="по популярности") по популярности ↑
+					option(value="по популярности") по популярности ↓
+					option(value="По цене") По цене ↑
+					option(value="По цене") По цене ↓
+					option(value="По алфавиту") По алфавиту ↑
+					option(value="По алфавиту") По алфавиту ↓
+
+				.h2 Switch
+				label.switch
+					input(type="checkbox")
+					.switch__content
+						.switch__marker
+
 
 				br
 				br
@@ -189,3 +207,23 @@ block content
 						.type-icon__img
 							+svg('ic-heart','ic-heart ic-stroke', '26', '23')
 						.type-icon__name ic-heart
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-filter','ic-filter', '20', '18')
+						.type-icon__name ic-filter
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-view-tile','ic-view-tile', '20', '20')
+						.type-icon__name ic-view-tile
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-view-grid','ic-view-grid', '20', '20')
+						.type-icon__name ic-view-grid
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-circle-plus','ic-circle-plus', '29', '29')
+						.type-icon__name ic-circle-plus

@@ -61,5 +61,13 @@
 	
 	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
 	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
+
+	&:hover span,
+	&:hover span::before,
+	&:hover span::after{
+		background: var(--color-primary);
+	}
+
+	&.active:hover span{background: transparent;}
 }
 

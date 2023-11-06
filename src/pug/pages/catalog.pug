@@ -1,0 +1,685 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Каталог';
+	- var h1 = 'Интернет магазин';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Интернет магазин'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.catalog
+		.container-fluid
+			.row
+				.col-12
+					.catalog-actions
+						.row.d-flex.align-items-center
+							.col-md-6
+								.catalog-actions__item
+									.btn-filter.js-btn-filter
+										.btn-filter__icon
+											+svg('ic-filter','ic-filter', '20', '18')
+
+										.btn-filter__text фильтры
+
+									.filter-wrap.js-filter-wrap
+										.filter-wrap__top
+											.filter-wrap__title фильтры
+											.filter-wrap__close.js-filter-wrap-close
+												span.ic-hamburger.active
+													span
+
+										form.filter
+											.filter__item.js-filter-item.active
+												.filter__content.js-filter-content(style="display: block; padding: 0;")
+													.switch-wrap
+														.switch-wrap__label со скидкой
+
+														label.switch
+															input(type="checkbox")
+															.switch__content
+																.switch__marker
+
+											.filter__item.js-filter-item.active
+												.filter__content.js-filter-content(style="display: block; padding: 0;")
+													.switch-wrap
+														.switch-wrap__label в наличии
+
+														label.switch
+															input(type="checkbox")
+															.switch__content
+																.switch__marker
+
+											.filter__item.js-filter-item.active
+												//- .filter__head.js-filter-head
+												//- 	.filter__title Цена, руб
+												//- 	.filter__arr
+												//- 		+svg('ic-arrow-down','ic-arrow-down', '16', '8')
+												
+												.filter__content.js-filter-content(style="display: block; padding: 0;")
+													.range.js-range
+														.range__fields
+															.range__val
+																|от 
+																//- input(type="text", autocomplete="off", disabled="disabled")
+																span#slider-range-min.js-slider-range-min
+																| 
+																| &#8381;
+
+															.range__val
+																|до 
+																//- input(type="text", autocomplete="off", disabled="disabled")
+																span#slider-range-max.js-slider-range-max
+																| 
+																| &#8381;
+
+														.range__slider
+															#slider-range.js-slider-range(data-min="952", data-max="1404",data-cur-min="982",data-cur-max="1104", autocomplete="off")
+
+											.filter__item.js-filter-item
+												.filter__head.js-filter-head
+													.filter__arr
+													.filter__title тип продукта
+												
+												.filter__content.js-filter-content
+													-
+														var list=[
+															{text:'шампуни'},
+															{text:'крема'},
+															{text:'лосьоны'},
+														]
+
+													each item, index in list
+														.filter__param.js-filter-param
+															label.input-check
+																input(type='checkbox')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '9', '6')
+																span.input-check__text= item.text
+											
+											.filter__item.js-filter-item
+												.filter__head.js-filter-head
+													.filter__arr
+													.filter__title назначение
+												
+												.filter__content.js-filter-content
+													-
+														var list=[
+															{text:'для волос'},
+															{text:'для тела'},
+															{text:'для лица'},
+														]
+
+													each item, index in list
+														.filter__param.js-filter-param
+															label.input-check
+																input(type='checkbox')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '9', '6')
+																span.input-check__text= item.text
+
+											.filter__item.js-filter-item
+												.filter__head.js-filter-head
+													.filter__arr
+													.filter__title тип волос
+												
+												.filter__content.js-filter-content
+													-
+														var list=[
+															{text:'Текст 1'},
+															{text:'Текст 2'},
+															{text:'Текст 3'},
+															{text:'Текст 4'},
+															{text:'Текст 5'},
+														]
+
+													each item, index in list
+														.filter__param.js-filter-param
+															label.input-check
+																input(type='checkbox')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '9', '6')
+																span.input-check__text= item.text
+											
+											.filter__item.js-filter-item
+												.filter__head.js-filter-head
+													.filter__arr
+													.filter__title бренд
+												
+												.filter__content.js-filter-content
+													-
+														var list=[
+															{text:'Текст 1'},
+															{text:'Текст 2'},
+															{text:'Текст 3'},
+															{text:'Текст 4'},
+															{text:'Текст 5'},
+														]
+
+													each item, index in list
+														.filter__param.js-filter-param
+															label.input-check
+																input(type='checkbox')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '9', '6')
+																span.input-check__text= item.text
+											
+											.filter__item.js-filter-item
+												.filter__head.js-filter-head
+													.filter__arr
+													.filter__title для кого
+												
+												.filter__content.js-filter-content
+													-
+														var list=[
+															{text:'Текст 1'},
+															{text:'Текст 2'},
+															{text:'Текст 3'},
+															{text:'Текст 4'},
+															{text:'Текст 5'},
+														]
+
+													each item, index in list
+														.filter__param.js-filter-param
+															label.input-check
+																input(type='checkbox')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '9', '6')
+																span.input-check__text= item.text
+											
+											.filter__item.js-filter-item
+												.filter__head.js-filter-head
+													.filter__arr
+													.filter__title объем, мл
+												
+												.filter__content.js-filter-content
+													-
+														var list=[
+															{text:'Текст 1'},
+															{text:'Текст 2'},
+															{text:'Текст 3'},
+															{text:'Текст 4'},
+															{text:'Текст 5'},
+														]
+
+													each item, index in list
+														.filter__param.js-filter-param
+															label.input-check
+																input(type='checkbox')
+																span.input-check__mark
+																	+svg('ic-tick','ic-tick', '9', '6')
+																span.input-check__text= item.text
+											
+											.filter__btn
+												button(type="submit").btn Показать
+												button(type="submit").btn.btn_border Сбросить
+
+									.sort.d-none.d-md-block
+										select.js-select
+											option(value="по популярности") по популярности ↑
+											option(value="по популярности") по популярности ↓
+											option(value="По цене") По цене ↑
+											option(value="По цене") По цене ↓
+											option(value="По алфавиту") По алфавиту ↑
+											option(value="По алфавиту") По алфавиту ↓
+
+							.col-md-6
+								.catalog-actions__item.catalog-actions__item_sb
+									.catalog-actions__count 578 товаров
+
+									.view
+										.view__label вид каталога
+
+										.view__list
+											.view__item.active.js-view-item(data-type="tile")
+												+svg('ic-view-tile','ic-view-tile', '20', '20')
+
+											.view__item.js-view-item(data-type="grid")
+												+svg('ic-view-grid','ic-view-grid', '20', '20')
+
+
+					.catalog-list.js-catalog-list
+						-
+							var list=[
+								{
+									sticker:['new'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['new','%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item2.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item3.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['new'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['new','%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item2.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item3.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+							]
+						each item in list
+							.catalog-item
+								.catalog-item__img-wrap
+									a(href="#").catalog-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+									if(item.sticker)
+										.catalog-stickers
+											each sticker in item.sticker
+												.catalog-stickers__item(class=sticker=='%'?'catalog-stickers__item_black':'')= sticker
+
+									.catalog-item__wish
+										+svg('ic-heart','ic-heart ic-stroke', '22', '20')
+
+									.catalog-item__cart
+										+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+								.catalog-item__content
+									.catalog-item__label= item.label
+
+									.catalog-item__title
+										a(href="#")= item.title
+
+									.catalog-item__price
+										span.catalog-item__cur-price= item.price
+											| 
+											| &#8381;
+
+										if(item.price_old)
+											span.catalog-item__old-price= item.price_old
+												| 
+												| &#8381;
+
+		a(href="#").btn-more
+			+svg('ic-circle-plus','ic-circle-plus', '29', '29')
+			|показать еще
+
+		.container-fluid
+			.row
+				.col-12
+					.catalog__text-bottom GKhair - все о красоте волос! Инновационные технологии + Кератин Juvexin GKhair, представляет линию средств, специально разработанную для осуществления профессионального ухода. Все продукты обогащены кератином Juvexin – инновационная комбинация органических соединений которого способствует активному взаимодействию формулы продукта с волосами, глубокому восстановлению, увлажнению, усилению блеска. Волосы идеально гладкие и послушные. Продукция предназначена для использования, как в салонах, так и в домашних условиях. Все продукты содержат кератин Juvexin и не содержат SLS, SLES, хлорида натрия. Продукция не тестируется на животных.
+
+
+	section.special-products.mt-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Персональные предложения
+
+					.swiper.catalog-slider.js-catalog-slider
+						.swiper-wrapper
+							-
+								var list=[
+									{
+										img:'catalog-slide1.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										old_price:'3500',
+									},
+									{
+										img:'catalog-slide2.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide3.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide5.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide1.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										old_price:'3500',
+									},
+									{
+										img:'catalog-slide2.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide3.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide5.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+								]
+							each item in list
+								.swiper-slide
+									.catalog-slider-item
+										a(href="#").catalog-slider-item__img-wrap
+											span.catalog-slider-item__img
+												img(src="assets/img/"+item.img, alt="")
+
+											span.catalog-slider-item__sticker New
+											span.catalog-slider-item__wish
+												+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+										.catalog-slider-item__content
+											.catalog-slider-item__label= item.label
+											.catalog-slider-item__title
+												a(href="#")= item.title
+
+											.catalog-slider-item__prices
+												span.catalog-slider-item__cur-prices= item.price
+													| 
+													| &#8381;
+
+												if(item.old_price)
+													span.catalog-slider-item__old-prices= item.old_price
+														| 
+														| &#8381;
+
+											.catalog-slider-item__btn
+												a(href="#").btn добавить в корзину
+													+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+						.swiper-button-prev.js-catalog-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+						.swiper-button-next.js-catalog-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+	section.other-products.mt-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Вы смотрели
+
+					.swiper.catalog-slider.js-catalog-viewed.d-lg-none
+						.swiper-wrapper
+							-
+								var list=[
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+								]
+							each item in list
+								.swiper-slide
+									.catalog-slider-item
+										a(href="#").catalog-slider-item__img-wrap
+											span.catalog-slider-item__img
+												img(src="assets/img/"+item.img, alt="")
+
+											span.catalog-slider-item__sticker New
+											span.catalog-slider-item__wish
+												+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+										.catalog-slider-item__content
+											.catalog-slider-item__label= item.label
+											.catalog-slider-item__title
+												a(href="#")= item.title
+
+											.catalog-slider-item__prices
+												span.catalog-slider-item__cur-prices= item.price
+													| 
+													| &#8381;
+
+												if(item.old_price)
+													span.catalog-slider-item__old-prices= item.old_price
+														| 
+														| &#8381;
+
+											.catalog-slider-item__btn
+												a(href="#").btn добавить в корзину
+													+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+						.swiper-button-prev.js-catalog-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+						.swiper-button-next.js-catalog-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+					.catalog-list.d-none.d-lg-grid
+						-
+							var list=[
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+							]
+						each item in list
+							.catalog-item
+								.catalog-item__img-wrap
+									a(href="#").catalog-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+									if(item.sticker)
+										.catalog-stickers
+											each sticker in item.sticker
+												.catalog-stickers__item(class=item.sticker=='%'?'catalog-stickers__item_black':'')
+
+									.catalog-item__wish
+										+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+									.catalog-item__cart
+										+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+								.catalog-item__content
+									.catalog-item__label= item.label
+
+									.catalog-item__title
+										a(href="#")= item.title
+
+									.catalog-item__price
+										span.catalog-item__cur-price= item.price
+											| 
+											| &#8381;
+
+										if(item.price_old)
+											span.catalog-item__old-price= item.price_old
+												| 
+												| &#8381;

@@ -71,6 +71,8 @@
 		stroke: var(--color-primary);
 	}
 
+	&__wish.active .icon{fill: var(--color-primary);}
+
 	&__content{text-align: center;}
 
 	&__label{

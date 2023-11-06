@@ -9,9 +9,11 @@
 // swiper
 @import '~swiper/swiper-bundle.css';
 
-// // slick
-// @import '~slick-slider/slick/slick.css';
+// select2
+@import '~select2/dist/css/select2.min.css';
 
+// nouislider
+@import 'nouislider/dist/nouislider';
 
 // Наш сайт
 @import "utils/mixins";
@@ -46,3 +48,11 @@
 @import "components/swiper";
 @import "components/catalog-sect-info";
 @import "components/hamburger";
+@import "components/catalog";
+@import "components/breadcrumb";
+@import "components/filter";
+@import "components/select";
+@import "components/sort";
+@import "components/view";
+@import "components/btn-more";
+@import "components/switch";

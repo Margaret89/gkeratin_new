@@ -1,0 +1,46 @@
+/*-------------- view -----------------*/
+.view{
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+
+	&__label{
+		font-family: var(--font-evolventa);
+		font-size: 2rem;
+	}
+
+	&__list{
+		display: inline-flex;
+		gap: 6px;
+	}
+
+	&__item{
+		flex-shrink: 0;
+		cursor: pointer;
+
+		.icon{
+			display: block;
+			fill: #8C8C8C;
+			transition: fill 0.2s ease 0s;
+		}
+
+		&:hover .icon,
+		&.active .icon{
+			fill: var(--color-text);
+		}
+
+		&.active{cursor: auto;}
+	}
+}
+
+@media (max-width: 991px) {
+	.view{
+		&__label{font-size: 1.6rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.view{
+		&__label{display: none;}
+	}
+}

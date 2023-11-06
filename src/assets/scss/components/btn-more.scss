@@ -1,0 +1,42 @@
+/*-------------- btn-more -----------------*/
+.btn-more{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 42px 20px;
+	background: var(--bg-grey);
+	font-family: var(--font-evolventa);
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--color-text);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.2s ease 0s;
+
+	.icon{
+		flex-shrink: 0;
+		fill: var(--color-primary);
+		transition: fill 0.2s ease 0s;
+	}
+
+	&:hover{
+		background: var(--color-text);
+		color: #fff;
+
+		.icon{fill: #fff;}
+	}
+}
+
+@media (max-width: 767px) {
+	.btn-more{
+		font-size: 0.8rem;
+		padding: 17px 20px;
+		gap: 5px;
+
+		.icon{
+			width: 16px;
+			height: 16px;
+		}
+	}
+}

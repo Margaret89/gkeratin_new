@@ -1,0 +1,17 @@
+/*-------------- sort -----------------*/
+.sort{
+	.select2-container .select2-selection--single{
+		height: auto;
+		border: none;
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 991px) {
+	// .sort{
+	// 	.select2-container .select2-selection--single,
+	// 	.select2-container--default .select2-selection--single .select2-selection__rendered{
+	// 		width: 200px;
+	// 	}
+	// }
+}
