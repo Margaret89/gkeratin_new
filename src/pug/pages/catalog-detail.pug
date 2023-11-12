@@ -20,205 +20,240 @@ block breadcrumb
 block content
 	section.catalog-detail
 		.catalog-detail-top
-			.container.mb-indent
+			.container-fluid.mb-indent
 				.row
-					.col-12
-						.product-slider-wrap
-							.product-thumb-slider.js-product-thumb-slider
-								-
-									var list=[
-										{img:'product-slide-thumb1.jpg'},
-										{img:'product-slide-thumb2.jpg'},
-										{img:'product-slide-thumb3.jpg'},
-										{img:'product-slide-thumb1.jpg'},
-										{img:'product-slide-thumb2.jpg'},
-										{img:'product-slide-thumb3.jpg'},
-										{img:'product-slide-thumb1.jpg'},
-										{img:'product-slide-thumb2.jpg'},
-										{img:'product-slide-thumb3.jpg'},
-									]
-								each item in list
-									.product-thumb-slider__item
-										.product-thumb-slider__img
-											img(src="assets/img/"+item.img, alt="")
-
-								.product-thumb-slider__item
-									.product-thumb-slider__video
-										+svg('ic-youtube','ic-youtube', '52', '36')
-
-							.product-slider.js-product-slider
-								-
-									var list=[
-										{img:'product-slide1.png'},
-										{img:'product-slide2.png'},
-										{img:'product-slide3.png'},
-										{img:'product-slide4.png'},
-										{img:'product-slide5.png'},
-										{img:'product-slide6.png'},
-										{img:'product-slide7.png'},
-										{img:'product-slide8.png'},
-										{img:'product-slide9.png'},
-									]
-								each item in list
-									.product-slider__item
-										a.product-slider__link(href="assets/img/"+item.img, data-fancybox='images')
-											img(src="assets/img/"+item.img, alt="")
-					
-					.catalog-advant
-						-
-							var list=[
-								{
-									icon:'ic-free',
-									icon_width:'30',
-									icon_height:'9',
-									text:'Бесплатная доставка от 3990 руб.',
-								},
-								{
-									icon:'ic-gift',
-									icon_width:'28',
-									icon_height:'28',
-									text:'Две миниатюры в подарок с любой покупкой',
-								},
-								{
-									icon:'ic-percent',
-									icon_width:'23',
-									icon_height:'24',
-									text:'Скидка 5% при оплате картой на сайте',
-								},
-							]
-						each item in list
-							.catalog-advant__item
-								.catalog-advant__icon
-									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
-
-								.catalog-advant__text= item.text
-
-					.catalog-detail-top__info
-						.catalog-detail-top__label Кондиционер из веганской линии
-						h1.catalog-detail-top__title Conditioner CBD Vegan line
-						.catalog-detail-top__brand Innovatis
-
-						.rating
-							.rating__content(style="width: 60%")
-
-						.catalog-detail-top__text Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.
-
-						.catalog-detail-tp
-							.catalog-detail-tp__sect
-								.catalog-detail-tp__label Объем / Мл:
-
-								.catalog-detail-tp__list
-									.catalog-detail-tp__item 100 мл
-									.catalog-detail-tp__item.active 240 мл
-									.catalog-detail-tp__item 650 мл
-
-						.catalog-detail-prices
-							.catalog-detail-prices__item
-								.catalog-detail-prices__val 2142 
-									| 
-									| &#8381;
-								.catalog-detail-prices__label Цена с промокодом 
-									span.text-color GKERATIN
-								
-
-							.catalog-detail-prices__item
-								.catalog-detail-prices__val.catalog-detail-prices__val_grey 2600 
-									| 
-									| &#8381;
-								.catalog-detail-prices__label Цена без промокода
-
-						.catalog-detail-top__btn
-							a(href="#").btn Добавить в корзину
-
-							a(href="#").link-site купить в 1 клик
-
-			.container.mb-indent
-				.row
-					.col-10.offset-1
-						.tabs-page.js-tabs-page
-							.tabs-page__top
-								ul.tabs-page__list.js-tabs-page-list
-									li.tabs-page__item.js-tabs-page-item(data-item='tab-desc') Описание
-									li.tabs-page__item.js-tabs-page-item(data-item='tab-use') Применение
-									li.tabs-page__item.js-tabs-page-item(data-item='tab-ingred') Ингредиенты
-
-							.tabs-page__content.js-tabs-page-content
-								#tab-desc.tabs-page__content-item.js-tabs-page-content-item
-									p Кондиционер из веганской линии CBD интенсивно питает и увлажняет волосы, придает послушность, а также поддерживает яркость цвета окрашенных волос.
-
-									ul
-										li Делает волосы шелковистыми и мягкими.
-										li Восстанавливает структуру, укрепляет и реконструирует волосы.
-										li Уменьшает ломкость и повышает эластичность.
-										li Стимулирует рост, питает и придает волосам глянцевый блеск.
-
-									p В состав входит комплекс на основе растительных протеинов - JUVEXIN V2, состоящий из гидролизованного киноа и экстракта гороха, который насыщен питательными веществами и протеинами делая волосы шелковистыми, мягкими, послушными и восстанавливая структуру на молекулярном уровне. Juvexin V2 укрепляет и реконструирует волосы, насыщая их необходимыми для здоровья и прочности волос аминокислотами, заметно укрепляя структуру изнутри, что значительно уменьшает ломкость волос и повышает их эластичность.
-									p Вмсте с маслом каннабиса (конопляное масло), которое содержит витамины комплекса B, витамины A, C и E и высокий уровень Омега 3 и 6, этот коктейль восстанавливает гидролипидный слой и уменьшает ломкость. Масло ши в составе предотвращает сечение, делает волосы мягкими и шелковистыми; а сок алоэ вера стимулирует рост, питает, сохраняет естественное здоровье и придает глянцевый блеск.
-
-									p
-										b Кондиционер подойдет для тех, кто мечтает о блестящих, ухоженных волосах с ярким, насыщенным цветом.
-
-								#tab-use.tabs-page__content-item.js-tabs-page-content-item
-									| Текст
-
-								#tab-ingred.tabs-page__content-item.js-tabs-page-content-item
-									| Текст
-			
-			.container.mb-indent
-				.row
-					.col-10.offset-1
-						.tabs-page.js-tabs-page
-							.tabs-page__top
-								ul.tabs-page__list.js-tabs-page-list
-									li.tabs-page__item.js-tabs-page-item(data-item='tab-reviews') Отзывы
-									li.tabs-page__item.js-tabs-page-item(data-item='tab-qustions') Вопросы и ответы
-									li.tabs-page__item.js-tabs-page-item(data-item='tab-write') Написать отзыв
-
-							.tabs-page__content.js-tabs-page-content
-								#tab-reviews.tabs-page__content-item.js-tabs-page-content-item
-									.reviews-list
+					.col-lg-7.col-xl-8
+						.prod-detail-slider-wrap
+							.prod-detail-thumb-slider-wrap
+								.swiper.prod-detail-thumb-slider.js-prod-detail-thumb-slider
+									.swiper-wrapper
 										-
 											var list=[
-												{
-													name:'Имя Фамилия',
-													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
-												},
-												{
-													name:'Имя Фамилия',
-													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
-												},
-												{
-													name:'Имя Фамилия',
-													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
-												},
-												{
-													name:'Имя Фамилия',
-													text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
-												},
+												{img:'catalog-item1.png'},
+												{img:'product-slide-thumb2.png'},
+												{img:'product-slide-thumb3.png'},
+												{img:'product-slide-thumb4.png'},
+												{img:'product-slide-thumb5.png'},
+												{img:'product-slide-thumb6.png'},
+												{img:'product-slide-thumb7.png'},
+												{img:'product-slide-thumb8.png'},
+												{img:'product-slide-thumb9.png'},
 											]
 										each item in list
-											.review-item
-												.review-item__icon
-													img(src="assets/img/gk-ava.svg", alt="")
-
-												.review-item__content
-													.review-item__top
-														.review-item__name= item.name
-
-														.rating.rating_small
-															.rating__content(style="width: 60%")
-
-													.review-item__text= item.text
-
-								#tab-qustions.tabs-page__content-item.js-tabs-page-content-item
-									| Текст
-
-								#tab-write.tabs-page__content-item.js-tabs-page-content-item
-									| Текст
-
-								
+											.swiper-slide.prod-detail-thumb-slider__item
+												.prod-detail-thumb-slider__img
+													img(src="assets/img/"+item.img, alt="")
 
 
+							.swiper.prod-detail-slider.js-prod-detail-slider
+								.swiper-wrapper
+									-
+										var list=[
+											{img:'product-slide1.png'},
+											{img:'product-slide2.png'},
+											{img:'product-slide3.png'},
+											{img:'product-slide4.png'},
+											{img:'product-slide5.png'},
+											{img:'product-slide6.png'},
+											{img:'product-slide7.png'},
+											{img:'product-slide8.png'},
+											{img:'product-slide9.png'},
+										]
+									each item in list
+										.swiper-slide.prod-detail-slider__item
+											a.prod-detail-slider__link(href="assets/img/"+item.img, data-fancybox='images')
+												img(src="assets/img/"+item.img, alt="")
+
+								.swiper-button-next.js-prod-detail-slider-next
+									+svg('ic-arr-right','ic-arr-right ic-stroke', '19', '37')
+
+								.swiper-button-prev.js-prod-detail-slider-prev
+									+svg('ic-arr-left','ic-arr-left ic-stroke', '19', '37')
+					
+						.catalog-advant-wrap.d-none.d-lg-block
+							.catalog-advant
+								-
+									var list=[
+										{
+											icon:'ic-free',
+											icon_width:'30',
+											icon_height:'9',
+											text:'Бесплатная доставка от 3990 руб.',
+										},
+										{
+											icon:'ic-gift',
+											icon_width:'28',
+											icon_height:'28',
+											text:'Две миниатюры в подарок с любой покупкой',
+										},
+										{
+											icon:'ic-percent',
+											icon_width:'23',
+											icon_height:'24',
+											text:'Скидка 5% при оплате картой на сайте',
+										},
+									]
+								each item in list
+									.catalog-advant__item
+										.catalog-advant__icon
+											+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+										.catalog-advant__text= item.text
+
+					.col-lg-5.col-xl-4
+						.catalog-detail-top__info
+							.catalog-detail-top__label Кондиционер из веганской линии
+							h1.catalog-detail-top__title Conditioner CBD Vegan line
+							.catalog-detail-top__brand
+									a(href="#") Innovatis
+
+							.rating
+								.rating__content(style="width: 60%")
+
+							.catalog-detail-top__text Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.
+
+							.catalog-detail-tp
+								.catalog-detail-tp__sect
+									.catalog-detail-tp__label Объем / Мл:
+
+									.catalog-detail-tp__list
+										.catalog-detail-tp__item 100 мл
+										.catalog-detail-tp__item.active 240 мл
+										.catalog-detail-tp__item 650 мл
+
+							.catalog-detail-prices
+								.catalog-detail-prices__item
+									.catalog-detail-prices__val 2142
+										|
+										| &#8381;
+									.catalog-detail-prices__label Цена с промокодом 
+										span.text-color GKERATIN
+
+
+								.catalog-detail-prices__item
+									.catalog-detail-prices__val.catalog-detail-prices__val_grey 2600
+										|
+										| &#8381;
+									.catalog-detail-prices__label Цена без промокода
+
+							.catalog-detail-top__btn
+								a(href="#").btn Добавить в корзину
+
+								a(href="#").link-site купить в 1 клик
+
+						.catalog-advant-wrap.d-lg-none
+							.catalog-advant
+								-
+									var list=[
+										{
+											icon:'ic-free',
+											icon_width:'30',
+											icon_height:'9',
+											text:'Бесплатная доставка от 3990 руб.',
+										},
+										{
+											icon:'ic-gift',
+											icon_width:'28',
+											icon_height:'28',
+											text:'Две миниатюры в подарок с любой покупкой',
+										},
+										{
+											icon:'ic-percent',
+											icon_width:'23',
+											icon_height:'24',
+											text:'Скидка 5% при оплате картой на сайте',
+										},
+									]
+								each item in list
+									.catalog-advant__item
+										.catalog-advant__icon
+											+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+										.catalog-advant__text= item.text
+
+		.container-fluid.mb-indent
+			.row
+				.col-lg--10.offset-lg-1
+					.tabs-page.tabs-page_line.js-tabs-page
+						.tabs-page__top
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-desc') Описание
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-use') Применение
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-ingred') Ингредиенты
+
+						.tabs-page__content.js-tabs-page-content
+							#tab-desc.tabs-page__content-item.js-tabs-page-content-item
+								p Кондиционер из веганской линии CBD интенсивно питает и увлажняет волосы, придает послушность, а также поддерживает яркость цвета окрашенных волос.
+
+								ul
+									li Делает волосы шелковистыми и мягкими.
+									li Восстанавливает структуру, укрепляет и реконструирует волосы.
+									li Уменьшает ломкость и повышает эластичность.
+									li Стимулирует рост, питает и придает волосам глянцевый блеск.
+
+								p В состав входит комплекс на основе растительных протеинов - JUVEXIN V2, состоящий из гидролизованного киноа и экстракта гороха, который насыщен питательными веществами и протеинами делая волосы шелковистыми, мягкими, послушными и восстанавливая структуру на молекулярном уровне. Juvexin V2 укрепляет и реконструирует волосы, насыщая их необходимыми для здоровья и прочности волос аминокислотами, заметно укрепляя структуру изнутри, что значительно уменьшает ломкость волос и повышает их эластичность.
+								p Вмсте с маслом каннабиса (конопляное масло), которое содержит витамины комплекса B, витамины A, C и E и высокий уровень Омега 3 и 6, этот коктейль восстанавливает гидролипидный слой и уменьшает ломкость. Масло ши в составе предотвращает сечение, делает волосы мягкими и шелковистыми; а сок алоэ вера стимулирует рост, питает, сохраняет естественное здоровье и придает глянцевый блеск.
+
+								p
+									b Кондиционер подойдет для тех, кто мечтает о блестящих, ухоженных волосах с ярким, насыщенным цветом.
+
+							#tab-use.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
+
+							#tab-ingred.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
+		
+		.container-fluid.mb-indent
+			.row
+				.col-lg--10.offset-lg-1
+					.tabs-page.tabs-page_line.js-tabs-page
+						.tabs-page__top
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-reviews') Отзывы
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-qustions') Вопросы и ответы
+								li.tabs-page__item.js-tabs-page-item(data-item='tab-write') Написать отзыв
+
+						.tabs-page__content.js-tabs-page-content
+							#tab-reviews.tabs-page__content-item.js-tabs-page-content-item
+								.reviews-list
+									-
+										var list=[
+											{
+												name:'Имя Фамилия',
+												text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+											},
+											{
+												name:'Имя Фамилия',
+												text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+											},
+											{
+												name:'Имя Фамилия',
+												text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+											},
+											{
+												name:'Имя Фамилия',
+												text:'Кондиционер из веганской линии CBD интенсивно питает и увлажняет, придает послушность, поддерживает яркость цвета окрашенных волос.',
+											},
+										]
+									each item in list
+										.review-item
+											.review-item__icon
+												img(src="assets/img/gk-ava.svg", alt="")
+
+											.review-item__content
+												.review-item__top
+													.review-item__name= item.name
+
+													.rating.rating_small
+														.rating__content(style="width: 60%")
+
+												.review-item__text= item.text
+
+							#tab-qustions.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
+
+							#tab-write.tabs-page__content-item.js-tabs-page-content-item
+								| Текст
 
 	section.special-products.mt-indent
 		.container-fluid

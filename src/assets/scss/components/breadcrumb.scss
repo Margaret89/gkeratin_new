@@ -7,14 +7,10 @@
 		list-style: none;
 	}
 
-	&{
-		display: flex;
-		flex-wrap: wrap;
-		gap: 5px;
-		margin: 42px 0 22px;
-	}
+	&{margin: 42px 0 22px;}
 
 	&__item{
+		display: inline;
 		font-family: var(--font-evolventa);
 		@include font(none, none, 1.4rem, 1.5, var(--color-text));
 		opacity: 0.6;
@@ -26,6 +22,7 @@
 		}
 
 		a:hover{color: var(--color-primary);}
+		&::before{display: none;}
 	}
 
 	// &__item:not(:last-child){margin-right: 10px;}
@@ -43,7 +40,7 @@
 
 @media (max-width: 767px) {
 	.breadcrumb{
-		margin: 20px 0 4px;
+		margin: 20px 0 12px;
 		&__item{font-size: 0.8rem;}
 	}
 }

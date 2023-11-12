@@ -382,3 +382,24 @@ if($('.js-btn-filter').length){
 		$('.js-filter-wrap').removeClass('open');
 	});
 }
+
+//Слайдер детального изображения каталога
+var prodDetailSliderThumb = new Swiper('.js-prod-detail-thumb-slider', {
+	slidesPerView: 5,
+	spaceBetween: 10,
+	freeMode: true,
+	watchSlidesProgress: true,
+	direction: "vertical",
+	// loop: true,
+});
+var prodDetailSlider = new Swiper('.js-prod-detail-slider', {
+	spaceBetween: 20,
+	// loop: true,
+	navigation: {
+		nextEl: ".js-prod-detail-slider-next",
+		prevEl: ".js-prod-detail-slider-prev",
+	},
+	thumbs: {
+		swiper: prodDetailSliderThumb,
+	},
+});

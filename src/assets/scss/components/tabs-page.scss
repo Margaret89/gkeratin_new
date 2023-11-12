@@ -5,6 +5,8 @@
 		@include reset-list;
 	}
 
+	&__item::before{display: none;}
+
 	&__list{
 		display: flex;
 		flex-wrap: wrap;
@@ -43,6 +45,41 @@
 		display: none;
 		padding: 50px 0 0;
 	}
+
+	&_line &__list{
+		justify-content: flex-start;
+		border-bottom: 1px solid var(--color-text);
+	}
+
+	&_line &__item{
+		text-transform: none;
+		padding-bottom: 8px;
+		padding-left: 85px;
+		padding-right: 85px;
+	}
+
+	&_line &__item:first-child{padding-left: 0;}
+	&_line &__item::after{background: var(--color-text);}
+
+	&_line &__content-item{
+		padding-top: 30px;
+		font-size: 1.4rem;
+		line-height: 1.5;
+
+		ol, ul, p{margin-bottom: 2.1rem;}
+		ol:last-child, ul:last-child, p:last-child{margin-bottom: 0;}
+	}
+
+	.reviews-list{margin-top: 36px;}
+}
+
+@media (max-width: 1279px) {
+	.tabs-page{
+		&_line &__item{
+			padding-right: 25px;
+			padding-left: 25px;
+		}
+	}
 }
 
 @media (max-width: 991px) {
@@ -56,5 +93,22 @@
 		&__list{gap: 35px;}
 		&__item{font-size: 1.3rem;}
 		&__item::after{height: 1px;}
+
+		&_line &__list{gap: 5px;}
+
+		&_line &__item{
+			font-size: 1.2rem;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		&_line &__content-item{
+			font-size: 1rem;
+			padding-top: 15px;
+
+			ol, ul, p{margin-bottom: 1.5rem;}
+		}
+
+		.reviews-list{margin-top: 3px;}
 	}
 }

@@ -13,6 +13,11 @@
 		list-style: none;
 	}
 
+	&__item::before,
+	&__sub-item::before{
+		display: none;
+	}
+
 	&__link{
 		display: block;
 		@include font(none, none, 1.6rem, 1.3, var(--color-text));
@@ -98,6 +103,11 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+	}
+
+	&__item::before,
+	&__sub-item::before{
+		display: none;
 	}
 
 	&__link{
