@@ -1,0 +1,166 @@
+/*-------------- courses -----------------*/
+.course{
+	display: flex;
+	align-items: center;
+	gap: 110px;
+	margin-bottom: 100px;
+
+	&__img{
+		flex-shrink: 0;
+		width: calc(50% - 20px);
+		position: relative;
+	}
+
+	&__img &__tag{display: none;}
+
+	&__tag{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 22px;
+		height: 6rem;
+		border: 2px solid var(--color-primary);
+		border-radius: 3rem;
+		@include font(normal, 500, 1.4rem, 1.2, var(--color-text));
+		text-transform: uppercase;
+		// letter-spacing: 2px;
+		text-decoration: none;
+		text-align: center;
+		padding: 0 24px;
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+		margin-bottom: 20px;
+	}
+
+	&__title{
+		font-family: var(--font-header);
+		font-size: 3.2rem;
+		line-height: 1.2;
+		margin-bottom: 25px;
+
+		a{
+			color: var(--color-text);
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: var(--color-primary);}
+	}
+
+	&__info{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 82px;
+		margin-bottom: 40px;
+	}
+
+	&__label{
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+		letter-spacing: 1.5px;
+	}
+
+	&__val{
+		max-width: 256px;
+		font-size: 2rem;
+	}
+
+	&__btn{
+		display: flex;
+		gap: 6px;
+
+		.btn{
+			width: calc(50% - 3px);
+			min-width: 0;
+		}
+	}
+
+	&__note{
+		font-size: 1.2rem;
+		margin-top: 35px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.course{gap: 40px;}
+}
+
+@media (max-width: 991px) {
+	.course{
+		&__img{width: calc(40% - 20px);}
+	}
+}
+
+@media (min-width: 768px) {
+	.course{
+		&:nth-child(even){
+			flex-direction: row-reverse;
+			text-align: right;
+		}
+	
+		&:nth-child(even) &__info{justify-content: flex-end;}
+	}
+}
+
+@media (max-width: 767px) {
+	.course{
+		flex-direction: column;
+		gap: 24px;
+		margin-bottom: 40px;
+
+		&__img{width: 100%;}
+
+		&__content &__tag{display: none;}
+		&__img &__tag{display: inline-flex;}
+
+		&__info{
+			gap: 36px;
+			margin-bottom: 8px;
+		}
+
+		&__content{
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__tag{
+			height: 2.8rem;
+			border-radius: 1.4rem;
+			font-size: 0.7rem;
+			background: #fff;
+			padding: 0 12px;
+			position: absolute;
+			top: 10px;
+			left: 8px;
+		}
+
+		&__title{
+			font-size: 1.6rem;
+			margin-bottom: 12px;
+		}
+
+		&__label{
+			font-size: 0.7rem;
+			margin-bottom: 4px;
+		}
+
+		&__val{font-size: 1.2rem;}
+
+		&__note{
+			font-size: 0.8rem;
+			order: 4;
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+
+		&__btn{
+			order: 5;
+
+			.btn{
+				height: 2.8rem;
+				border-radius: 1.4rem;
+				font-size: 0.7rem;
+			}
+		}
+	}
+}

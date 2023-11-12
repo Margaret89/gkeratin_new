@@ -41,6 +41,32 @@
 	input[type=radio]:checked ~ &__mark::after{display: inline-block;}
 }
 
+.input-radio-btn{
+	display: inline-flex;
+
+	&__text{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 3.6rem;
+		border: 1px solid var(--color-primary);
+		border-radius: 1.8rem;
+		@include font(normal, 500, 1.2rem, 1.2, var(--color-text));
+		text-decoration: none;
+		text-align: center;
+		padding: 0 42px;
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+	}
+	
+	input[type=radio]{display: none;}
+
+	input[type=radio]:checked ~ &__text{
+		background: var(--color-primary);
+		color: #fff;
+	}
+}
+
 @media (max-width: 767px) {
 	.input-radio{font-size: 1rem;}
 }

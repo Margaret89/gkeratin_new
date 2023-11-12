@@ -1,0 +1,34 @@
+/*-------------- sale-block -----------------*/
+.sale-block{
+	background: var(--color-primary);
+	padding: 32px 0;
+
+	&__content{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 37px;
+		font-family: var(--font-evolventa);
+		color: #fff;
+		line-height: 1.2;
+	}
+
+	&__num{
+		font-size: 6.4rem;
+		line-height: 0.8;
+	}
+
+	&__text{
+		max-width: 430px;
+		font-size: 2.4rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.sale-block{
+		padding: 18px 0;
+		&__content{gap: 12px;}
+		&__num{font-size: 3rem;}
+		&__text{font-size: 1.1rem;}
+	}
+}

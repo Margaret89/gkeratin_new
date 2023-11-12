@@ -1,0 +1,165 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Обучение';
+	- var h1 = 'Обучение';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'о нас'},
+			{href:'#',name:'Обучение'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.sale-block.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.sale-block__content
+						.sale-block__num 10%
+						.sale-block__text Скидка на покупку продукции в день семинара и прямого эфира 
+
+	section.courses
+		.container-fluid
+			.row
+				.col-12
+					-
+						var list=[
+							{
+								img:'course1.jpg',
+								tags:'по ЗАПИСи, онлайн ',
+								title:'Выпрямление и дисциплина. Составы на основе глиоксиловой кислоты.',
+								price:'1000',
+								time:'с 10:00 до 17:00',
+								note:'*бесплатно для действующих клиентов',
+							},
+							{
+								img:'course2.jpg',
+								tags:'по ЗАПИСи',
+								title:'Мастера кератинового выпрямления с нуля',
+								price:'8000',
+								time:'с 10:00 до 17:00',
+							},
+							{
+								img:'course3.jpg',
+								tags:'по ЗАПИСи, онлайн',
+								title:'Курс повышения квалификации мастера кератинового выпрямления',
+								price:'12000',
+								time:'Продолжительность курса 2 дня с 11:00-17:00',
+							},
+							{
+								img:'course4.jpg',
+								tags:'по ЗАПИСи',
+								title:'Практикум',
+								price:'1500',
+								time:'с 10:00 до 17:00',
+							},
+							{
+								img:'course5.jpg',
+								tags:'по ЗАПИСи, онлайн',
+								title:'Реконструкция и восстановление',
+								price:'1000',
+								time:'с 10:00 до 17:00',
+								note:'*бесплатно для действующих клиентов',
+							},
+							{
+								img:'course6.jpg',
+								tags:'по ЗАПИСи, онлайн',
+								title:'Тотальная реконструкция',
+								price:'8000',
+								time:'Продолжительность курса 2 дня с 11:00-17:00',
+							},
+							{
+								img:'course7.jpg',
+								tags:'по ЗАПИСи, онлайн',
+								title:'Кератиновое выпрямление и разглаживание волос. Классические составы.',
+								price:'1000',
+								time:'с 10:00 до 17:00',
+								note:'*бесплатно для действующих клиентов',
+							},
+						]
+					each item in list
+						.course
+							.course__img
+								img(src="assets/img/"+item.img, alt="")
+
+								.course__tag= item.tags
+
+							.course__content
+								.course__tag= item.tags
+
+								.course__title
+									a(href="#")= item.title
+
+								.course__info
+									.course__info-item
+										.course__label Цена:
+										.course__val= item.price
+											| 
+											| &#8381;
+											if(item.note)
+											|*
+
+									.course__info-item
+										.course__label ВРЕМЯ:
+										.course__val= item.time
+
+								.course__btn
+									a(href="#").btn узнать подробнее
+									span(data-move="form-write").btn.btn_border.js-link-move записаться
+
+								if(item.note)
+									.course__note= item.note
+
+	section.form-img-page.p-indent.last-elem.js-to-move(data-move="form-write")
+		.container-fluid
+			.row
+				.col-lg-6
+					.page-form
+						.js-valid-form
+							form.form-site
+								.form-site__title Записаться на обучение
+								
+								.form-site__content
+									.form-site__item.js-form-site-item
+										.form-site__field
+											.form-site__radio-list
+												label.input-radio-btn
+													input(type='radio', name="learning")
+													span.input-radio-btn__text В студии
+
+												label.input-radio-btn
+													input(type='radio', name="learning")
+													span.input-radio-btn__text Онлайн
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", required="required", placeholder="Имя*")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="email", placeholder="Email")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", placeholder="Город")
+
+								
+								.form-site__polit.js-form-site-polit
+									label.input-check
+										input(type='checkbox', required="required")
+										span.input-check__mark
+											+svg('ic-tick','ic-tick', '9', '6')
+										span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+								.form-site__btn
+									button(type="submit").btn.js-btn-submit
+										span Записаться
