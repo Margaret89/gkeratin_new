@@ -6,19 +6,20 @@ mixin h1(v)
 					h1= v
 
 
-mixin breadcrumbs(links)
+mixin breadcrumbs(links, color)
 	- var len=links.length
-	.container-fluid
-		.row
-			.col-12
-				ul.breadcrumb
-					- var i=0
-					while i < len-1
+	.breadcrumb-wrap(class=color=='grey'?'bg-grey':'')
+		.container-fluid
+			.row
+				.col-12
+					ul.breadcrumb
+						- var i=0
+						while i < len-1
+							li.breadcrumb__item
+								a(href=links[i].href).breadcrumb__link=links[i].name
+							- i++
 						li.breadcrumb__item
-							a(href=links[i].href).breadcrumb__link=links[i].name
-						- i++
-					li.breadcrumb__item
-						span=links[i].name
+							span=links[i].name
 
 mixin svg(icon, name_class, width,height)
 	svg.icon(class=name_class?name_class:'', width=width?width:'', height=height?height:'')

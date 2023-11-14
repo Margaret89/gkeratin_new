@@ -1,0 +1,174 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Обучение детальная';
+	//- - var h1 = 'Обучение';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'о нас'},
+			{href:'#',name:'Обучение'},
+			{href:'#',name:'выпрямление и дисциплина. составы на основе глиоксиловой кислоты'},
+		];
+
+	+breadcrumbs(breadcrumbs, 'grey')
+
+block content
+	section.about-block.mb-indent.bg-grey
+		.container-fluid
+			.row
+				.col-7.d-flex.align-items-center
+					.about-block__content
+						h1.about-block__title Выпрямление и дисциплина. Составы на основе глиоксиловой кислоты
+						p Уникальная возможность познакомится с техниками работы составов на основе глиоксиловой кислоты и золотых нитей (Система Gold Thread - Золотые нити). На обучении Вы узнаете что такое НАНОПЛАСТИКА и в чем ее отличие от кератинового выпрямления, а так же все ньансы и особенности работы с составами.
+				
+				.col-5
+					.about-block__img
+						img(src="assets/img/woman.jpg", alt="")
+
+	section.advant-company.mb-indent
+		.container-fluid
+			.row
+				.col-md-4.col-lg-6
+					.logo-square
+						.logo-square__content
+							img(src="assets/img/logo-page.svg", alt="")
+				
+				.col-md-8.col-lg-5.offset-lg-1
+					.advant.advant_column
+						.advant__item
+							.advant__val
+								img(src="assets/img/clock.png", alt="")
+
+							.advant__label
+								|Продолжительность
+								br
+								|1 день.
+
+						.advant__item
+							.advant__val
+								+svg('ic-user','ic-user ic-stroke', '54', '61')
+
+							.advant__label
+								|Людей в группе:
+								br
+								|1-4 человека
+
+						.advant__item
+							.advant__val
+								+svg('ic-ruble','ic-ruble', '47', '67')
+
+							.advant__label
+								|Стоимость:
+								br
+								|1 000 рублей
+
+
+	section.line-block.mb-indent
+		.container-fluid
+			.row
+				.col-lg-10.offset-lg-1 Обучение подойдет: для тех, кто хочет попробовать себя в новой профессии и никогда не работал с кератиновым выпрямлением.
+
+	section.info-block-wrap.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.info-block
+						.info-block__content
+							.info-block__title Темы: любые два состава из перечисленных брендов для выпрямления:
+
+							.info-block__text
+								ul
+									li Правила диагностики волос
+									li Эволюция выпрямлений
+									li Уникальность действия и составов продуктов
+									li Секреты идеальной процедуры
+									li Подбор инструментов
+									li Уникальность действия и составов продуктов
+									li Домашний уход
+									li Практическая часть: работа с моделями
+
+						.info-block__img
+							img(src="assets/img/learning1.jpg", alt="")
+
+					.info-block
+						.info-block__content
+							.info-block__title По окончанию вы получите Два именных сертификата
+
+							.info-block-contacts
+								.info-block-contacts__item
+									.info-block-contacts__label Место проведения:
+									.info-block-contacts__val Санкт-Петербург, ул Ефимова д 4-а лит. А, Бизнес Центр 1 этаж, обучающая студия LookLuxe.
+
+								.info-block-contacts__item
+									.info-block-contacts__label Запишитесь на семинар:
+
+									.info-block-contacts-phones
+										.info-block-contacts-phones__item
+											.info-block-contacts-phones__val
+												a(href="tel:+78005050984") 8 (800) 505-09-84
+											.info-block-contacts-phones__label звонок по России бесплатный!
+
+										.info-block-contacts-phones__item
+											.info-block-contacts-phones__val
+												+svg('ic-whatsapp','ic-whatsapp', '23', '23')
+												a(href="https://api.whatsapp.com/send?phone=79523741444") 8 (952) 374-14-44
+
+								
+
+						.info-block__img
+							img(src="assets/img/learning2.jpg", alt="")
+
+
+
+
+	section.form-img-page.p-indent.last-elem.js-to-move(data-move="form-write")
+		.container-fluid
+			.row
+				.col-lg-6
+					.page-form
+						.js-valid-form
+							form.form-site
+								.form-site__title Записаться на обучение
+								
+								.form-site__content
+									.form-site__item.js-form-site-item
+										.form-site__field
+											.form-site__radio-list
+												label.input-radio-btn
+													input(type='radio', name="learning")
+													span.input-radio-btn__text В студии
+
+												label.input-radio-btn
+													input(type='radio', name="learning")
+													span.input-radio-btn__text Онлайн
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", required="required", placeholder="Имя*")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="email", placeholder="Email")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", placeholder="Город")
+
+								
+								.form-site__polit.js-form-site-polit
+									label.input-check
+										input(type='checkbox', required="required")
+										span.input-check__mark
+											+svg('ic-tick','ic-tick', '9', '6')
+										span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+								.form-site__btn
+									button(type="submit").btn.js-btn-submit
+										span Записаться

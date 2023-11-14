@@ -1,0 +1,19 @@
+/*-------------- about-block -----------------*/
+.about-block{
+	&__title{
+		font-size: 4.8rem;
+		line-height: 1;
+		margin-bottom: 6.7rem;
+	}
+
+	&__content{
+		font-size: 2.4rem;
+		padding: 50px 0;
+		position: relative;
+	}
+
+	&__img{
+		margin-left: -80px;
+		margin-top: -70px;
+	}
+}
