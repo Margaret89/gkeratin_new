@@ -68,6 +68,15 @@
 	.advant{
 		&__item{flex-direction: column;}
 		&__label{text-align: center;}
+
+		&_column{flex-direction: row;}
+	}
+
+	.advant-company{
+		.advant{
+			margin-left: 0;
+			&__item{width: calc(33.33% - 33.33px);}
+		}
 	}
 }
 
@@ -82,5 +91,31 @@
 		}
 
 		&__label{font-size: 1.1rem;}
+	}
+
+	.advant-company{
+		.advant{
+			justify-content: flex-start;
+			gap: 12px 6px;
+			margin-top: -37px;
+
+			&__item{
+				flex-direction: row;
+				gap: 5px;
+				text-align: left;
+			}
+
+			&__val{
+				width: 38px;
+				height: 38px;
+			}
+
+			&__label{
+				font-size: 0.9rem;
+				text-align: left;
+			}
+
+			&__item{width: calc(50% - 3px);}
+		}
 	}
 }

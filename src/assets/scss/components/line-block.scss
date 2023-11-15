@@ -8,3 +8,10 @@
 	text-align: center;
 	line-height: 1.2;
 }
+
+@media (max-width: 767px) {
+	.line-block{
+		font-size: 1.4rem;
+		padding: 17px 0;
+	}
+}

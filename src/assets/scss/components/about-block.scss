@@ -1,5 +1,7 @@
 /*-------------- about-block -----------------*/
 .about-block{
+	background: var(--bg-grey);
+
 	&__title{
 		font-size: 4.8rem;
 		line-height: 1;
@@ -10,10 +12,47 @@
 		font-size: 2.4rem;
 		padding: 50px 0;
 		position: relative;
+
+		p:last-child{margin-bottom: 0;}
 	}
 
 	&__img{
+		display: flex;
+		align-items: flex-end;
+		height: 100%;
 		margin-left: -80px;
-		margin-top: -70px;
+
+		img{margin-top: -70px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.about-block{
+		background: transparent;
+
+		&__img{
+			background: var(--bg-grey);
+			margin: 0 -20px;
+			overflow: hidden;
+
+			img{
+				display: block;
+				max-height: 270px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		&__title{
+			font-size: 1.8rem;
+			line-height: 1.1;
+			margin-bottom: 2rem;
+		}
+
+		&__content{
+			font-size: 1rem;
+			line-height: 1.5;
+			padding: 24px 0 0;
+		}
 	}
 }
