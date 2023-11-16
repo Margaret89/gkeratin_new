@@ -1,0 +1,79 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Реквизиты';
+	- var h1 = 'Реквизиты';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Реквизиты'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.about.mb-indent
+		.container-fluid
+			.row
+				.col-md-4.col-lg-5
+					.logo-square
+						.logo-square__content
+							img(src="assets/img/logo-page.svg", alt="")
+				
+				.col-md-8.col-lg-6.offset-lg-1.d-flex.align-items-center
+					.about__content.about__content_indent
+						h4 GKERATIN BEAUTY GROUP
+
+						p ОФИЦИАЛЬНЫЙ ДИСТРИБЬЮТОР ЭКСКЛЮЗИВНОЙ ПРОФЕССИОНАЛЬНОЙ КОСМЕТИКИ ПО УХОДУ ЗА ВОЛОСАМИ ПРЕМИУМ КЛАССА НА ТЕРРИТОРИИ РОССИИ С 2011 ГОДА
+
+
+	section.requisites-list
+		.container-fluid
+			.row
+				.col-lg-6
+					.requisite-item
+						.requisite-item__label Полное наименование:
+						.requisite-item__val Общество с ограниченной ответственностью «ГКератин»
+						
+					.requisite-item
+						.requisite-item__label Сокращенное наименование:
+						.requisite-item__val ООО «ГКератин»
+
+					.requisite-item
+						.requisite-item__label ИНН/КПП:
+						.requisite-item__val 7838458803/783801001
+
+					.requisite-item
+						.requisite-item__label ОРГН:
+						.requisite-item__val 1117847157340
+
+					.requisite-item
+						.requisite-item__label Телефон, факс:
+						.requisite-item__val
+							a(href="tel:+78124383138") +7 (812) 438-31-38
+
+					.requisite-item
+						.requisite-item__label e-mail:
+						.requisite-item__val
+							a(href="mailto:info@gkeratin.ru") info@gkeratin.ru
+
+					.requisite-item
+						.requisite-item__label Сайт:
+						.requisite-item__val
+							a(href="https://gkeratin.ru/") gkeratin.ru
+
+				.col-lg-6
+					.requisite-item
+						.requisite-item__label Юридический адрес:
+						.requisite-item__val 190031, Г.Санкт-Петербург, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ СЕННОЙ ОКРУГ, УЛ ЕФИМОВА, Д. 4А, ЛИТЕРА А, ПОМЕЩ. 30-Н, ОФИС 209
+
+					.requisite-item
+						.requisite-item__label Фактический адрес:
+						.requisite-item__val 190031, Г.Санкт-Петербург, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ СЕННОЙ ОКРУГ, УЛ ЕФИМОВА, Д. 4А, ЛИТЕРА А, ПОМЕЩ. 30-Н, ОФИС 209
+
+					.requisite-item
+						.requisite-item__label Банковские реквизиты:
+						.requisite-item__val БИК 044030795Р/с №40702810601008201522 Филиал Петровский ПАО Банка «ФК ОТКРЫТИЕ» г. Санкт-Петербург,Кор/счет 30101810540300000795
+					

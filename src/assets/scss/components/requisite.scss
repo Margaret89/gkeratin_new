@@ -1,0 +1,26 @@
+/*-------------- requisite -----------------*/
+.requisite-item{
+	margin-bottom: 40px;
+
+	&__label{
+		font-size: 1.2rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__val{font-size: 2rem;}
+}
+
+@media (max-width: 767px) {
+	.requisite-item{
+		margin-bottom: 18px;
+		
+		&__label{
+			font-size: 0.7rem;
+			margin-bottom: 5px;
+		}
+
+		&__val{font-size: 1.2rem;}
+	}
+}
