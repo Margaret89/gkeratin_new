@@ -1,6 +1,10 @@
 /*-------------- about -----------------*/
 .about{
-	&__content{padding-left: 70px;}
+	&__content{
+		padding-left: 70px;
+		p:last-child{margin-bottom: 0;}
+	}
+
 	.btn{margin-top: 23px;}
 }
 
@@ -17,6 +21,7 @@
 			margin-top: 30px;
 
 			h2, .h2{
+				font-size: 2rem;
 				br{display: none;}
 			}
 

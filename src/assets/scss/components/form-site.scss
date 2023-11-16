@@ -45,7 +45,7 @@
 	}
 
 	textarea{
-		height: 10rem;
+		height: 16rem;
 		line-height: 1.6;
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
@@ -173,7 +173,7 @@
 
 .main-user-consent-request-popup{z-index: 100010;}
 
-.form-img-page{
+.form-img-bg-page{
 	background: url(../img/bg-water-bottle.jpg) no-repeat center;
 	background-size: cover;
 
@@ -181,7 +181,7 @@
 }
 
 @media (max-width: 991px) {
-	.form-img-page{
+	.form-img-bg-page{
 		.page-form{margin-right: 0;}
 	}
 }
@@ -204,7 +204,7 @@
 		}
 	}
 
-	.form-img-page{
+	.form-img-bg-page{
 		background: transparent;
 		padding-top: 0;
 

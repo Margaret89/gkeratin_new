@@ -1,0 +1,19 @@
+/*-------------- map -----------------*/
+.map-wrap{margin-right: -40px;}
+
+@media (max-width: 991px) {
+	.map-wrap{margin-right: 0;}
+}
+
+@media (max-width: 767px) {
+	.map-wrap{margin: 0 -20px 25px;}
+
+	.map{
+		iframe{
+			height: 290px;
+			-ms-touch-action: auto !important;
+			touch-action: auto !important;
+			pointer-events: none;
+		}
+	}
+}

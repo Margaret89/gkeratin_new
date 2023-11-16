@@ -1,5 +1,8 @@
 /*-------------- breadcrumb -----------------*/
 .breadcrumb{
+	position: relative;
+	z-index: 2;
+
 	&,
 	&__item{
 		margin: 0;

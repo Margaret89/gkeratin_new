@@ -1,0 +1,110 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Контакты';
+	- var h1 = 'Контакты';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Контакты'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.contacts-page
+		section.mb-indent
+			.container-fluid
+				.row
+					.col-md-6.col-lg-7
+						.map-wrap
+							.map
+								iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ac5fc8a00a483be4af9dbcdb35fd493ea1708773b7070106fd63cdb2ae6d3d620&source=constructor' width='100%' height='650' frameborder='0')
+
+					.col-md-6.col-lg-4.offset-lg-1
+						.contacts-wrap
+							.contacts
+								.contacts__item
+									.contacts__label Телефон:
+									.contacts-phones
+										.contacts-phones__item
+											.contacts-phones__val
+												a(href="tel:+78005050984") 8 (800) 505-09-84
+											.contacts-phones__label звонок по России бесплатный!
+
+										.contacts-phones__item
+											.contacts-phones__val
+												a(href="tel:+78124383138") 8 (812) 438-31-38
+
+										.contacts-phones__item
+											.contacts-phones__val
+												+svg('ic-whatsapp','ic-whatsapp', '23', '23')
+												a(href="https://api.whatsapp.com/send?phone=79523741444") 8 (952) 374-14-44
+
+								.contacts__item
+									.contacts__label e-mail:
+									.contacts__val
+										a(href="mailto:info@gkeratin.ru") info@gkeratin.ru
+
+								.contacts__item
+									.contacts__label Адрес:
+									.contacts__val Санкт-Петербург, м.&nbsp;Сенная, ул.&nbsp;Ефимова, 4а, Бизнес Центр, офис&nbsp;209
+
+								.contacts__item
+									.contacts__label Режим работы:
+									.contacts__val Пн. – Пт.: с 10:00 до 19:00
+
+							.social.social_big
+								a(href="#").social__item
+									+svg('ic-whatsapp','ic-whatsapp', '23', '23')
+								a(href="#").social__item
+									+svg('ic-telegram','ic-telegram', '23', '23')
+								a(href="#").social__item
+									+svg('ic-vk','ic-vk', '23', '23')
+		
+		section.form-img-page
+			.container-fluid
+				.row
+					.col-12
+						.form-img-page__content
+							.page-form
+								.js-valid-form
+									form.form-site
+										.form-site__title Задать вопрос
+										
+										.form-site__content
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", required="required", placeholder="Имя*")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="email", placeholder="Email")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", placeholder="Город")
+
+											.form-site__item.js-form-site-item
+												.form-site__field
+													textarea(placeholder="Ваше обращение ...")
+										
+										.form-site__polit.js-form-site-polit
+											label.input-check
+												input(type='checkbox', required="required")
+												span.input-check__mark
+													+svg('ic-tick','ic-tick', '9', '6')
+												span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+										.form-site__btn
+											button(type="submit").btn.js-btn-submit
+												span отправить
+
+							.form-img-page__img
+								img(src="assets/img/products.jpg", alt="")

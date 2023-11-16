@@ -1,5 +1,5 @@
-/*-------------- partners-form -----------------*/
-.partners-form{
+/*-------------- form-img-page -----------------*/
+.form-img-page{
 	&__content{
 		display: flex;
 		align-items: center;
@@ -11,27 +11,40 @@
 	}
 
 	.page-form{
+		flex-shrink: 0;
 		width: 51.5%;
 		position: relative;
 		z-index: 2;
 	}
 }
 
+@media (min-width: 992px) {
+	.form-img-page{
+		&_reverse &__content{flex-direction: row-reverse;}
+
+		&_reverse &__img{
+			margin-left: 0;
+			margin-right: -100px;
+		}
+	}
+}
+
 @media (max-width: 991px) {
-	.partners-form{
+	.form-img-page{
 		.page-form{width: 75%;}
 	}
 }
 
 @media (max-width: 767px) {
-	.partners-form{
+	.form-img-page{
 		&__content{
 			flex-direction: column-reverse;
 		}
 
-		&__img{
+		&__img,
+		&_reverse &__img{
 			width: auto;
-			margin: 0;
+			margin: 0 -20px;
 		}
 
 		.page-form{

@@ -276,7 +276,10 @@ button.btn{
 .text-color {color: var(--color-primary) !important;}
 
 .page-header{
-	margin-bottom: 3.2rem;
+	padding-bottom: 3.2rem;
+	position: relative;
+	z-index: 2;
+
 	h1, .h1{margin-bottom: 0;}
 }
 
@@ -400,5 +403,5 @@ button.btn{
 	main{padding-bottom: 60px;}
 	.last-elem{margin-bottom: -60px;}
 
-	.page-header{margin-bottom: 2.4rem;}
+	.page-header{padding-bottom: 2.4rem;}
 }

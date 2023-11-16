@@ -1,0 +1,160 @@
+extends ../layout/main
+
+block variables
+	- var title = 'О нас';
+	- var h1 = 'О нас';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О нас'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.about-info.mb-indent
+		.about-info__img
+		.container-fluid
+			.row
+				.col-lg-6
+					.about-info__content
+						.about-info__title Работаем для вас с 2011 года
+						.about-info__text Компания «ГКератин» - надежный партнер в области бьюти-индустрии. Широкая сеть дистрибуции охватывает всю территорию России и количество наших партнеров профессиональной косметики постоянно расширяется.
+
+
+	section.brands-wrap.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Наши бренды
+
+					.brands
+						-
+							var list=[
+								{
+									img:'partner1.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+								{
+									img:'partner2.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+								{
+									img:'partner3.png',
+									text:'Американский бренд, лидер на рынке продукции, предназначенной для восстановления, выпрямления и окрашивания волос.'
+								},
+							]
+						each item in list
+							.brand-item
+								.brand-item__logo-wrap
+									.brand-item__logo
+										img(src="assets/img/"+item.img, alt="")
+
+								.brand-item__text= item.text 
+
+								a(href="#").btn.btn_border Узнать больше
+
+	section.about.mb-indent
+		.container-fluid
+			.row
+				.col-md-4.col-lg-6
+					.logo-square
+						.logo-square__content
+							img(src="assets/img/logo-page.svg", alt="")
+				
+				.col-md-8.col-lg-6.d-flex.align-items-center
+					.about__content
+						h2 История компании
+
+						p Мы видим свою миссию в том, чтобы наши знания и многолетний опыт помогли найти и представить на Российском рынке лучшее, что есть на мировом рынке индустрии красоты. Выбирая нашу компанию, Вы получаете возможность иметь в своем арсенале продукцию с новейшими технологиями для работы с любым типом и состоянием волос!
+
+						p Мы видим свою миссию в том, чтобы наши знания и многолетний опыт помогли найти и представить на Российском рынке лучшее, что есть на мировом рынке индустрии красоты. Выбирая нашу компанию, Вы получаете возможность иметь в своем арсенале продукцию с новейшими технологиями для работы с любым типом и состоянием волос!
+
+
+	section.advant-company.bg-grey.mb-indent
+		.container
+			.row
+				.col-md-8.col-lg-6.order-2.order-md-1
+					-
+						var list=[
+							{
+								icon:'diamond.png',
+								title:'Эксклюзивный дистрибьютор',
+								text:'Профессиональной косметики для волос премиум-класса GKhair (Америка), Innovatis (Испания). ООО «ГКератин» представляет на российском рынке профессиональную косметику ведущих европейских брендов.',
+							},
+							{
+								icon:'60.png',
+								title:'Широкая сеть дистрибуции',
+								text:'Более 60 представителей по всей территории России.',
+							},
+							{
+								icon:'delivery-truck.png',
+								title:'Бесперебойные поставки',
+								text:'Компания гарантирует ответственное, добропорядочное отношение к партнерам и максимальную заинтересованность в их развитии.',
+							},
+							{
+								icon:'shield.png',
+								title:'Надежный представитель в России',
+								text:'Официальное представительство — гарант подлинности и качества продукции на территории Российской Федерации. Мы выступаем за высокий уровень сотрудничества и продвижения и предлагаем встать на путь успеха вместе с нашей компанией.',
+							},
+						]
+					each item in list
+						.advant-company-item
+							.advant-company-item__icon
+								img(src="assets/img/"+item.icon, alt="")
+							.advant-company-item__content
+								.advant-company-item__title= item.title
+								.advant-company-item__text= item.text
+
+				.col-md-4.col-lg-6.order-1.order-md-2
+					.advant-company__img
+						img(src="assets/img/product.jpg", alt="")
+		
+	section.form-img-page.form-img-page_reverse
+		.container-fluid
+			.row
+				.col-12
+					.form-img-page__content
+						.page-form
+							.js-valid-form
+								form.form-site
+									.form-site__title Обратная связь
+									
+									.form-site__content
+										.form-site__item.js-form-site-item
+											.form-site__field
+												textarea(placeholder="Ваше обращение ...")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", required="required", placeholder="Имя*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="email", placeholder="Email")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", placeholder="Город")
+
+										
+									
+									.form-site__polit.js-form-site-polit
+										label.input-check
+											input(type='checkbox', required="required")
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '9', '6')
+											span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+									.form-site__btn
+										button(type="submit").btn.js-btn-submit
+											span отправить
+
+						.form-img-page__img
+							img(src="assets/img/products2.jpg", alt="")

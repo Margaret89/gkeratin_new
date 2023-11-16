@@ -1,0 +1,101 @@
+/*-------------- contacts -----------------*/
+.contacts-wrap{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+	gap: 30px;
+}
+
+.contacts{
+	&__item:not(:last-child){margin-bottom: 45px;}
+
+	&__label{
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		margin-bottom: 12px;
+	}
+
+	&__val{font-size: 2rem;}
+}
+
+.contacts-phones{
+	margin-top: 16px;
+
+	&__item:not(:last-child){margin-bottom: 18px;}
+
+	&__val{
+		display: flex;
+		gap: 6px;
+		align-items: center;
+		font-size: 2.4rem;
+		line-height: 1.2;
+
+		a{
+			color: var(--color-text);
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: var(--color-primary);}
+		.icon{flex-shrink: 0;}
+		.ic-whatsapp{fill: #46A440;}
+	}
+
+	&__label{
+		font-size: 1.4rem;
+		color: var(--color-primary);
+		margin-top: 5px;
+	}
+}
+
+.contacts-page{
+	.form-img-page .page-form{width: calc(58.33% + 25px);}
+}
+
+@media (max-width: 991px) {
+	.contacts-page{
+		.form-img-page .page-form{width: 75%;}
+	}
+}
+
+@media (max-width: 767px) {
+	.contacts-wrap{gap: 25px;}
+
+	.contacts{
+		&__label{
+			font-size: 0.7rem;
+			margin-bottom: 0.8rem;
+		}
+
+		&__val{font-size: 1.4rem;}
+		&__item:not(:last-child){margin-bottom: 34px;}
+	}
+
+	.contacts-phones{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px 25px;
+		margin-top: 10px;
+
+		&__val{
+			font-size: 1.4rem;
+
+			.ic-whatsapp{
+				width: 12px;
+				height: 12px;
+			}
+		}
+
+		&__label{
+			font-size: 0.8rem;
+			margin-top: 3px;
+		}
+
+		&__item:not(:last-child){margin-bottom: 0;}
+	}
+
+	.contacts-page{
+		.form-img-page .page-form{width: auto;}
+	}
+}

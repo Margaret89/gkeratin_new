@@ -49,6 +49,11 @@
 }
 
 @media (max-width: 767px) {
+	.brands-wrap:not(.bg-grey){
+		background: var(--bg-grey);
+		padding: 40px 0;
+	}
+
 	.brand-item{
 		width: 100%;
 
