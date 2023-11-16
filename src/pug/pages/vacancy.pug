@@ -1,0 +1,79 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вакансии';
+	- var h1 = 'Вакансии';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'о нас'},
+			{href:'#',name:'вакансии'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.vacancy-main.mb-indent
+		.container-fluid
+			.row
+				.col-md-4.col-lg-6
+					.logo-square
+						.logo-square__content
+							img(src="assets/img/logo-page.svg", alt="")
+				
+				.col-md-8.col-lg-6.d-flex.align-items-cente
+					.vacancy-main__content
+						.vacancy-main__title GKeratin Beauty Group
+
+						.vacancy-main__text
+							p.font-big Это только эффективные и проверенные временем профессиональные косметические бренды, которые дополняют друг друга.
+							p Мы видим свою миссию в том, чтобы наши знания и многолетний опыт помогли найти и представить на Российском рынке лучшее, что есть на мировом рынке индустрии красоты. Выбирая нашу компанию, Вы получаете возможность иметь в своем арсенале продукцию с новейшими технологиями для работы с любым типом и состоянием волос!
+
+						.vacancy-main-contacts
+							.vacancy-main-contacts__item
+								.vacancy-main-contacts__label Телефон:
+								.vacancy-main-contacts__val
+									a(href="tel:+78124383138") +7 (812) 438-31-38
+
+							.vacancy-main-contacts__item
+								.vacancy-main-contacts__label e-mail:
+								.vacancy-main-contacts__val
+									a(href="mailto:info@gkeratin.ru") info@gkeratin.ru
+
+						.vacancy-main__btn
+							a(href="#").btn Отправить резюме
+						
+
+
+	section.vacancy-list
+		.container-fluid
+			.row
+				.col-md-8.col-lg-6.order-2.order-md-1
+					.vacancy-list__title Актуальные вакансии
+
+					-
+						var list=[
+							{
+								label:'по результатам собеседования',
+								title:'Менеджер в отдел продаж',
+								text:'Ведение переговоров, оформление и сопровождение договоров, формирование клиентской базы, отчетность по работе с клиентами.',
+							},
+							{
+								label:'по результатам собеседования',
+								title:'Ассистент технолога',
+								text:'Управляет документацией, досье на полупродукты',
+							},
+						]
+					each item in list
+						.vacancy-item
+							.vacancy-item__label= item.label
+							.vacancy-item__title= item.title
+							.vacancy-item__text= item.text
+							.vacancy-item__btn
+								a(href="#").btn Отправить резюме
+
+				.col-md-4.col-lg-6.order-1.order-md-2
+					img(src="assets/img/innovations.png", alt="")
+					

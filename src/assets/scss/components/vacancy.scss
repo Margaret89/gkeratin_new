@@ -1,0 +1,153 @@
+/*-------------- vacancy -----------------*/
+.vacancy-main{
+	&__content{padding-left: 70px;}
+
+	&__title{
+		font-family: var(--font-header);
+		font-size: 4rem;
+		line-height: 1.2;
+		margin-bottom: 4.3rem;
+	}
+
+	&__text{
+		p.font-big{margin-bottom: 4rem;}
+	}
+
+	&__btn{
+		margin-top: 40px;
+
+		.btn{min-width: 290px;}
+	}
+}
+
+.vacancy-main-contacts{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 30px;
+	margin-top: 38px;
+
+	&__label{
+		font-size: 1.2rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+	}
+
+	&__val{
+		font-size: 2rem;
+
+		a{
+			color: var(--color-text);
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: var(--color-primary);}
+	}
+}
+
+.vacancy-item{
+	max-width: 470px;
+
+	&__label{
+		font-size: 1.2rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__title{
+		font-family: var(--font-header);
+		font-size: 2.4rem;
+		margin-bottom: 20px;
+	}
+
+	&__text{font-size: 1.6rem;}
+
+	&__btn{
+		margin-top: 30px;
+
+		.btn{min-width: 290px;}
+	}
+
+	&:not(:last-child){margin-bottom: 65px;}
+}
+
+.vacancy-list{
+	&__title{
+		font-family: var(--font-header);
+		font-size: 4rem;
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 991px) {
+	.vacancy-main{
+		&__content{padding-left: 30px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.vacancy-main{
+		&__content{
+			padding-left: 0;
+			margin-top: 25px;
+		}
+
+		&__title{
+			font-size: 2.4rem;
+			margin-bottom: 2rem;
+		}
+
+		&__text{
+			p.font-big{margin-bottom: 2.4rem;}
+		}
+
+		&__btn{
+			margin-top: 20px;
+			.btn{min-width: 280px;}
+		}
+	}
+
+	.vacancy-main-contacts{
+		margin-top: 22px;
+
+		&__item{width: calc(50% - 15px);}
+
+		&__label{
+			font-size: 0.7rem;
+			margin-bottom: 8px;
+		}
+
+		&__val{font-size: 1.2rem;}
+	}
+
+	.vacancy-item{
+		&__label{
+			font-size: 0.8rem;
+			margin-bottom: 5px;
+		}
+
+		&__title{
+			font-size: 1.8rem;
+			margin-bottom: 12px;
+		}
+
+		&__text{font-size: 1.2rem;}
+
+		&__btn{
+			margin-top: 25px;
+			.btn{min-width: 280px;}
+		}
+
+		&:not(:last-child){margin-bottom: 38px;}
+	}
+
+	.vacancy-list{
+		&__title{
+			font-size: 2.4rem;
+			margin-top: 25px;
+			margin-bottom: 18px;
+		}
+	}
+}
