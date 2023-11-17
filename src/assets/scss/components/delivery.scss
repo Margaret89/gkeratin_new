@@ -1,0 +1,61 @@
+/*-------------- delivery -----------------*/
+.delivery-item{
+	font-size: 2rem;
+	margin-bottom: 110px;
+
+	p{margin-bottom: 2.8rem;}
+	p:last-child{margin-bottom: 0;}
+
+	&__title{
+		font-family: var(--font-header);
+		font-size: 4rem;
+		line-height: 1.2;
+		margin-bottom: 2.8rem;
+	}
+
+
+	.list-color{
+		font-size: 1.6rem;
+
+		li{margin-bottom: 30px;}
+		li:last-child{margin-bottom: 0;}
+	}
+
+	&__label{
+		font-size: 1.2rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 991px) {
+	.delivery-item{
+		font-size: 1.6rem;
+		.list-color{font-size: 1.4rem;}
+		&__title{font-size: 3rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.delivery-item{
+		font-size: 1.1rem;
+		margin-bottom: 43px;
+
+		&__title{
+			font-size: 1.9rem;
+			margin-bottom: 1.7rem;
+		}
+
+		.list-color{font-size: 0.9rem;}
+
+		&__label{
+			font-size: 0.7rem;
+			letter-spacing: 0.7px;
+			margin-bottom: 2px;
+		}
+
+		p{margin-bottom: 17px;}
+		.list-color li{margin-bottom: 16px;}
+	}
+}

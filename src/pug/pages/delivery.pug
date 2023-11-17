@@ -1,0 +1,155 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Доставка и оплата';
+	- var h1 = 'Доставка и оплата';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'контакты'},
+			{href:'#',name:'доставка и оплата'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.sale-block.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.sale-block__content
+						.sale-block__num 5%
+						.sale-block__text Скидка при оплате на сайте
+							br
+							|через систему ROBOKASSA
+
+	section.delivery-block
+		.container-fluid
+			.row
+				.col-md-6
+					.delivery-item
+						.delivery-item__title Доставка
+
+						p Заказать продукцию в нашем Интернет-магазине очень просто: выберите интересующие Вас товары, положите их в корзину и оформите свой заказ.
+
+						ul.list-color
+							li После оформления заказа на указанный Вами e-mail придет письмо с уведомлением о принятом заказе, после чего с Вами свяжется наш менеджер для подтверждения заказа и уточнения деталей.
+							li Интернет магазин принимает Ваши заказы 24 часа в сутки OnLine.
+							li Менеджеры свяжутся с Вами с 10:00 до 19:00 часов в будние дни.
+							li Доставка товара, заказанного в выходные, праздничные и предпраздничные дни – осуществляется в ближайший рабочий день.
+
+				.col-md-6
+					.delivery-item
+						.delivery-item__title Самовывоз
+						.delivery-item__label В санкт-петербурге
+
+						p м. Сенная/Спасская/Садовая ул. Ефимова д. 4а, лит. А, Бизнес Центр 1 этаж офис 209.
+						p Ежедневно с 10-19 кроме выходных и праздничных дней.
+						p Оплата возможна наличными и банковскими картами.
+						p Там же можно получить бесплатно консультацию технологов по подбору и применению продукции.
+
+
+				.col-md-6
+					.delivery-item
+						.delivery-item__title Доставка по Москве и Санкт-Петербургу ТК Сдэк, Почтой России
+
+						p.font-accent Бесплатно
+						p До Пункта выдачи заказов и 100% предоплате онлайн на сайте (Robokassa)
+						p Курьерская доставка при сумме заказа от 3990 р.
+
+						p.font-accent 1—3 дня
+						p Зависит от региона доставки.
+						
+				.col-md-6
+					.delivery-item
+						.delivery-item__title Доставка по России ив другие страны ТК Сдэк, Почтой России
+
+						p.font-accent Бесплатно
+						p До Пункта выдачи заказов и 100% предоплате онлайн на сайте (Robokassa).
+
+						p.font-accent 1—15 дней
+						p Зависит от региона доставки.
+
+						p.font-accent Доставка до адреса и ПВЗ
+						p Доставка до пункта выдачи заказов и курьерская доставка до адреса рассчитываются при оформлении заказа и подтверждается менеджером.
+
+
+	section.bg-grey.p-indent.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					h4 Вопросы о доставке
+
+					.unwrap-block-list
+						-
+							var list=[
+								{
+									title:'Как осуществляается доставка в регионы',
+									text:'Товары нашего магазина доставляются покупателям транспортной компанией СДЭК и Почтой России.',
+								},
+								{
+									title:'Как расчитать стоимость доставки в Магадан?',
+									text:'Для точного расчета стоимости доставки заказа в ваш регион обращайтесь к операторам call-центра или задайте вопрос через онлайн-консультанта.',
+								},
+								{
+									title:'Возможен ли самовывоз заказанного товара?',
+									text:'Да, Вы можете самостоятельно забрать заказ из нашего магазина.',
+								},
+								{
+									title:'Какой режим работы менеджера интернет-магазина?',
+									text:'Наши операторы работают с понедельника по пятницу с 10 до 19 часов.',
+								},
+							]
+						each item in list
+							.unwrap-block.js-unwrap-block
+								.unwrap-block__head.js-unwrap-head= item.title
+									.unwrap-block__sign
+								.unwrap-block__content.js-unwrap-content= item.text
+
+
+	section.form-img-page.form-img-page_reverse
+			.container-fluid
+				.row
+					.col-12
+						.form-img-page__content
+							.page-form
+								.js-valid-form
+									form.form-site
+										.form-site__title Задать вопрос
+										
+										.form-site__content
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", required="required", placeholder="Имя*")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="email", placeholder="Email")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", placeholder="Город")
+
+											.form-site__item.js-form-site-item
+												.form-site__field
+													textarea(placeholder="Ваше обращение ...")
+										
+										.form-site__polit.js-form-site-polit
+											label.input-check
+												input(type='checkbox', required="required")
+												span.input-check__mark
+													+svg('ic-tick','ic-tick', '9', '6')
+												span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+										.form-site__btn
+											button(type="submit").btn.js-btn-submit
+												span отправить
+
+							.form-img-page__img
+								img(src="assets/img/products3.jpg", alt="")

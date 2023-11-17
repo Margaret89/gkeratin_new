@@ -417,3 +417,15 @@ if($('.js-link-move').length){
 		$('html, body').animate({ scrollTop: posBlock }, 600);
 	});
 }
+
+// Раскрывающийся блок
+$(".js-unwrap-block").on('click','.js-unwrap-head',function(event){
+    event.preventDefault();
+    $(this).parent().toggleClass("opened");
+    if($(this).parent().hasClass("opened")){
+        $(this).parent().children(".js-unwrap-content").slideDown(400);
+    }
+    else{
+        $(this).parent().children(".js-unwrap-content").slideUp(400);
+    }
+});
