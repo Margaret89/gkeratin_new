@@ -1,0 +1,168 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Записаться в салон';
+	- var h1 = 'Записаться в салон';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'салон красоты'},
+			{href:'#',name:'записаться в салон'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.about-info.mb-indent
+		.about-info__img(style="background-image: url(assets/img/salon.jpg)")
+		
+		.container-fluid
+			.row
+				.col-lg-6
+					.about-info__content
+						.about-info__title <span class="text-color">LOOKLUXE</span> — эксклюзивная студия закрытого типа
+						.about-info__text И обучающий центр официального представителя GKhair (США) и Innovatis (Испания) в России
+						a(href="#").btn записаться в салон
+
+	section.about-salon.mb-indent
+		.container-fluid
+			.row.d-flex.align-items-center
+				.col-md-6.col-lg-7
+					.swiper.salon-slider.js-salon-slider
+						.swiper-wrapper
+							-
+								var list=[
+									{img:'salon1.jpg'},
+									{img:'salon2.jpg'},
+									{img:'salon3.jpg'},
+								]
+							each item in list
+								.swiper-slide
+									.salon-slider-item
+										a(href="#", data-fancybox="salon-slider", data-src="assets/img/"+item.img)
+											img(src="assets/img/"+item.img, alt="")
+
+						.swiper-button-prev.js-salon-slider-prev
+							+svg('ic-arr-left','ic-arr-left ic-stroke', '19', '37')
+						.swiper-button-next.js-salon-slider-next
+							+svg('ic-arr-right','ic-arr-right ic-stroke', '19', '37')
+				
+				.col-md-6.col-lg-5
+					.about-salon__content
+						h4 Если вы живете в Санкт-Петербурге, то вам крупно повезло!
+
+						p Именно здесь, в историческом центре Северной столицы, работают ведущие технологи брендов. LOOKLUXE — эксклюзивная студия закрытого типа и обучающий центр официального представителя GKhair (США) и Innovatis (Испания) в России.
+
+	section.experts-wrap.bg-grey.p-indent.mb-indent
+		.container-fluid
+			.row
+				.offset-xl-2.col-xl-8
+					h3.text-center Наши эксперты - топ-стилисты и технологи брендов
+
+					.experts-list
+						-
+							var list=[
+								{name:'Ольга Новикевич'},
+								{name:'Сергей Петросян'},
+							]
+						each item in list
+							.experts-item
+								.experts-item__img.experts-item__img_empty(style="background-image: url(assets/img/gk-ava.svg)")
+								.experts-item__name= item.name
+
+					.experts-wrap__text У каждого более 10 лет опыта, высочайший профессионализм и насмотренность, которые в купе с люксовой косметикой помогают волосам приблизиться к совершенству.
+
+
+	section.order-salon.mb-indent
+		.container-fluid
+			.row
+				.col-md-6.order-2.order-md-1
+					.order-salon__content
+						h3 Записаться в салон
+						p.font-big В LOOKLUXE вы можете попробовать и влюбиться раз и навсегда в  кератиновое окрашивание, тотальную реконструкцию, кератиновое восстановление, нанопластику, плазму и другие программы преображения волос.
+						p Все процедуры — это индивидуальный подход к клиенту. С вас — история волос и пожелания по результату, с нас — диагностика волос, проверка на эластичность и уже потом резюме, что подойдет именно вам.
+
+						a(href="#").btn.btn_black Онлайн запись
+
+				.col-md-6.order-1.order-md-2
+					.img-border
+						img(src="assets/img/woman-salon.jpg", alt="")
+
+	section.about-salon.mb-indent.bg-grey.p-indent
+		.container-fluid
+			.row.d-flex.align-items-center
+				.col-md-6.col-lg-7
+					.swiper.salon-slider.js-salon-slider-hair
+						.swiper-wrapper
+							-
+								var list=[
+									{img:'hair.jpg'},
+									{img:'hair2.jpg'},
+									{img:'hair3.jpg'},
+									{img:'hair4.jpg'},
+								]
+							each item in list
+								.swiper-slide
+									.salon-slider-item
+										a(href="#", data-fancybox="hair-slider", data-src="assets/img/"+item.img)
+											img(src="assets/img/"+item.img, alt="")
+
+						.swiper-button-prev.js-salon-slider-prev-hair
+							+svg('ic-arr-left','ic-arr-left ic-stroke', '19', '37')
+						.swiper-button-next.js-salon-slider-next-hair
+							+svg('ic-arr-right','ic-arr-right ic-stroke', '19', '37')
+				
+				.col-md-6.col-lg-5
+					.about-salon__content
+						h4 LOOKLUXE — приватная территория успешных людей, которая помогает выглядеть роскошно!
+
+						p Кроме того, наши специалисты всегда дают рекомендации по домашнему уходу за волосами, который позволит продлить эффект процедур на максимальный срок. Приобрести косметику можно на месте — в наличии всегда широчайший ассортимент продукции обоих брендов.
+
+	section.prices.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					h3.text-center Стоимость услуг
+
+					.prices-list
+						-
+							var list=[
+								{img:'price1.jpg'},
+								{img:'price2.jpg'},
+								{img:'price3.jpg'},
+							]
+						each item in list
+							.prices-list__item
+								a(href="#", data-fancybox="price", data-src="assets/img/"+item.img)
+									img(src="assets/img/"+item.img, alt="")
+
+
+	section.contacts-block.bg-grey.p-indent.last-elem
+		.container-fluid
+			.row.d-flex.align-items-center
+				.col-md-6.order-2.order-md-1
+					.contacts-block__content
+						h3.d-none.d-md-block Как нас найти
+						p Мы находимся в историческом центре и в самом центре деловой жизни Петербурга — в 3-х минутах от Сенной площади. Рядом парковка.
+
+						.contacts-list
+							.contacts-list__item
+								.contacts-list__label телефон:
+								.contacts-list__val
+									a(href="tel:+79523741444") +7 952 374 14 44
+
+							.contacts-list__item
+								.contacts-list__label Адрес:
+								.contacts-list__val Санкт-Петербург, м. Сенная, ул. Ефимова, 4а, Бизнес Центр, офис 209
+
+							.contacts-list__item
+								.contacts-list__label Режим работы:
+								.contacts-list__val Пн. – Пт.: с 10:00 до 19:00
+
+				.col-md-6.order-1.order-md-2
+					.h3.d-md-none Как нас найти
+					.map-wrap
+						.map
+							iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ac5fc8a00a483be4af9dbcdb35fd493ea1708773b7070106fd63cdb2ae6d3d620&source=constructor' width='100%' height='556' frameborder='0')

@@ -1,0 +1,47 @@
+/*-------------- order-salon -----------------*/
+.order-salon{
+	&__content{
+		max-width: 550px;
+		font-size: 2rem;
+		line-height: 1.5;
+
+		.font-big{
+			font-size: 2.4rem;
+			line-height: 1.3;
+			margin-bottom: 4rem;
+		}
+
+		.btn{margin-top: 25px;}
+	}
+
+	.img-border{margin-left: -40px;}
+}
+
+@media (max-width: 991px) {
+	.order-salon{
+		.img-border{margin-left: 0;}
+	}
+}
+
+@media (max-width: 767px) {
+	.order-salon{
+		.img-border{margin-left: -10px;}
+		h3, .h3{font-size: 2.4rem;}
+
+		&__content{
+			font-size: 1rem;
+			text-align: center;
+			margin-top: 15px;
+
+			.font-big{
+				font-size: 1.2rem;
+				margin-bottom: 1.7rem;
+			}
+
+			.btn{
+				width: 100%;
+				margin-top: 10px;
+			}
+		}
+	}
+}

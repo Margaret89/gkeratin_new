@@ -1,0 +1,21 @@
+/*-------------- prices -----------------*/
+.prices-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+
+	&__item{width: calc(33.33% - 26.66px);}
+}
+
+@media (max-width: 767px) {
+	.prices-list{
+		gap: 17px;
+	
+		&__item{
+			width: 100%;
+			text-align: center;
+
+			img{box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.04), 0px 23px 14px 0px rgba(0, 0, 0, 0.03), 0px 40px 16px 0px rgba(0, 0, 0, 0.01), 0px 63px 18px 0px rgba(0, 0, 0, 0.00); }
+		}
+	}
+}

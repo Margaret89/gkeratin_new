@@ -14,7 +14,7 @@
 	// --color-link-active: var(--color-semi-gold);
 
 	--color-dander: #E01E1E;
-	--margin-indent: 160px;
+	--margin-indent: 140px;
 	--bg-grey: #F2F2F2;
 }
 
@@ -93,12 +93,12 @@ h2,.h2{
 
 h3,.h3{
 	font-size: 4.8rem;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 }
 
 h4,.h4{
 	font-size: 4rem;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 }
 
 h5,.h5{
@@ -226,6 +226,16 @@ button.btn{
 			fill: transparent;
 			stroke: #fff;
 		}
+	}
+
+	&_black{
+		border-color: var(--color-text);
+		background: var(--color-text);
+	}
+
+	&_black:hover{
+		border-color: var(--color-primary);
+		background: var(--color-primary);
 	}
 }
 
@@ -366,6 +376,15 @@ button.btn{
 
 	body{font-size: 1rem;}
 
+	h1,.h1,
+	h2,.h2,
+	h3,.h3,
+	h4,.h4,
+	h5,.h5
+	{
+		line-height: 1.3;
+	}
+
 	h1, .h1{
 		font-size: 2.7rem;
 	}
@@ -376,7 +395,7 @@ button.btn{
 	}
 	
 	h3,.h3{
-		font-size: 2.1rem;
+		font-size: 1.6rem;
 		margin-bottom: 1.5rem;
 	}
 	

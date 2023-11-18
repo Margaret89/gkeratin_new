@@ -169,6 +169,52 @@ const productSlider = new Swiper('.js-products-slider',
 	},
 });
 
+// Слайдер салона
+const salonSlider = new Swiper('.js-salon-slider',
+{
+	loop:true,
+	effect: "creative",
+	creativeEffect: {
+		prev: {
+			shadow: true,
+			translate: [0, 0, -800],
+			rotate: [180, 0, 0],
+		},
+		next: {
+			shadow: true,
+			translate: [0, 0, -800],
+			rotate: [-180, 0, 0],
+		},
+	},
+	navigation: {
+		nextEl: '.js-salon-slider-next',
+		prevEl: '.js-salon-slider-prev',
+	},
+});
+
+// Слайдер волос
+const hairSlider = new Swiper('.js-salon-slider-hair',
+{
+	loop:true,
+	effect: "creative",
+	creativeEffect: {
+		prev: {
+			shadow: true,
+			translate: [0, 0, -800],
+			rotate: [180, 0, 0],
+		},
+		next: {
+			shadow: true,
+			translate: [0, 0, -800],
+			rotate: [-180, 0, 0],
+		},
+	},
+	navigation: {
+		nextEl: '.js-salon-slider-next-hair',
+		prevEl: '.js-salon-slider-prev-hair',
+	},
+});
+
 // Слайдер продуктов ранее просмотренных
 const viewedSlider = new Swiper('.js-catalog-viewed',
 {

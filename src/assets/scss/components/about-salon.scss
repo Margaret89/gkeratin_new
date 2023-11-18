@@ -1,0 +1,13 @@
+/*-------------- about-salon -----------------*/
+.about-salon{
+	&__content{font-size: 2rem;}
+}
+
+@media (max-width: 767px) {
+	.about-salon{
+		&__content{
+			font-size: 1.2rem;
+			margin-top: 30px;
+		}
+	}
+}

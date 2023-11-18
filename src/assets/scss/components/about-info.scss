@@ -5,7 +5,7 @@
 	
 	&__title{
 		font-family: var(--font-header);
-		max-width: 435px;
+		max-width: 510px;
 		font-size: 4.8rem;
 		line-height: 1.05;
 		margin-bottom: 43px;
@@ -17,8 +17,10 @@
 	}
 
 	&__content{
-		padding: 168px 0;
+		padding: 140px 0;
 		position: relative;
+
+		.btn{margin-top: 60px;}
 	}
 
 	&__img{
@@ -73,6 +75,8 @@
 			margin: 0;
 			padding: 0;
 			background: transparent;
+
+			.btn{margin-top: 20px;}
 		}
 	}
 }
