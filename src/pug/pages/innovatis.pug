@@ -1,0 +1,334 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Инновации';
+	//- - var h1 = 'Интернет магазин';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'бренды'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.about-info.mb-indent
+		.about-info__img(style="background-image: url(assets/img/bg-water-bottle.jpg)")
+		
+		.container-fluid
+			.row
+				.col-lg-6
+					.about-info__content
+						.about-info__logo
+							img(src="assets/img/innovatis.png", alt="")
+						.about-info__title Инновации - это умение опережать время
+						.about-info__text Бренд INNOVATIS–это молодой, но уже известный испанский бренд профессиональной косметики по уходу за волосами класса люкс, который использует эксклюзивные ингредиенты, инновационные формулы и технологии в уходе за волосами.
+
+	section.lines-brand-wrap.mb-indent
+		.container-fluid
+			.row
+				.col-md-8.col-lg-6.order-2.order-md-1
+					.lines-brand-wrap__content
+						.lines-brand
+							.lines-brand__title Линейки бренда:
+
+							.lines-brand__list
+								-
+									var list=[
+										{text:'Luxury Anti Age', status:'active'},
+										{text:'Luxury Vol up'},
+										{text:'Luxury ice shine'},
+										{text:'Luxury SMOOTHER SPA'},
+										{text:'Luxury STEM CELLS'},
+										{text:'Luxury Up Style'},
+										{text:'для профессионалов'},
+										{text:'КРАСИТЕЛЬ'},
+									]
+								each item in list
+									.lines-brand__item(class=item.status?'active':'')= item.text
+
+						.lines-brand-wrap__desc.d-none.d-md-block
+							h3 Luxury Anti Age
+
+							h6 Омолаживающая линия
+							p Линия Anti-Age это комплексный подход к здоровью волос. Применение средств обеспечит глубокое увлажнение, питание, восстановление структуры и омолаживающий эффект.
+
+				.col-md-4.col-lg-6.order-1.order-md-2
+					img(src="assets/img/lines-production.jpg", alt="")
+	
+	
+	section.catalog
+		.container-fluid
+			.row
+				.col-12
+					.catalog-actions
+						.row.d-flex.align-items-center
+							.col-md-6
+								form.form-search.js-form-search.d-none.d-lg-block
+									input(type="text", placeholder="поиск по товарам", class="js-search-input")
+									button(type="submit", class="js-search-submit")
+										+svg('ic-search','ic-search', '24', '24')
+
+							.col-md-6
+								.catalog-actions__item.catalog-actions__item_sb
+									.catalog-actions__count 78 товаров
+
+									.view
+										.view__label вид каталога
+
+										.view__list
+											.view__item.active.js-view-item(data-type="tile")
+												+svg('ic-view-tile','ic-view-tile', '20', '20')
+
+											.view__item.js-view-item(data-type="grid")
+												+svg('ic-view-grid','ic-view-grid', '20', '20')
+
+
+					.catalog-list.js-catalog-list
+						-
+							var list=[
+								{
+									sticker:['new'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['new','%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item2.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item3.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['new'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['new','%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item2.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item3.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+							]
+						each item in list
+							.catalog-item
+								.catalog-item__img-wrap
+									a(href="#").catalog-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+									if(item.sticker)
+										.catalog-stickers
+											each sticker in item.sticker
+												.catalog-stickers__item(class=sticker=='%'?'catalog-stickers__item_black':'')= sticker
+
+									.catalog-item__wish
+										+svg('ic-heart','ic-heart ic-stroke', '22', '20')
+
+									.catalog-item__cart
+										+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+								.catalog-item__content
+									.catalog-item__label= item.label
+
+									.catalog-item__title
+										a(href="#")= item.title
+
+									.catalog-item__price
+										span.catalog-item__cur-price= item.price
+											| 
+											| &#8381;
+
+										if(item.price_old)
+											span.catalog-item__old-price= item.price_old
+												| 
+												| &#8381;
+
+		a(href="#").btn-more
+			+svg('ic-circle-plus','ic-circle-plus', '29', '29')
+			|показать еще
+
+	section.about-brand.m-indent
+		.container-fluid
+			.row
+				.col-md-6
+					img(src="assets/img/innovations.png", alt="")
+
+				.col-md-6
+					h2 Философия бренда
+					p.font-big Цель INNOVATIS–обеспечить салонный профессиональный сектор уникальными продуктами и инновационными сервисами, а также открыть перед профессиональными стилистами новые возможности для развития бизнеса.
+
+					p Основной акцент бренда сделан на уникальные разработки собственной лаборатории, эксклюзивные формулы средств, содержащих редкие и ценные компоненты, такие как: экстракт черной икры, золото, бриллиантовая пудра, кватернизованный кератин и силанетриол создают идеальный микс, позволяющий получить оптимальную защиту, омоложение и уход за волосами. В составах отсутствуют: парабены, сульфаты, формальдегид.
+
+					p Зная структуру, состав и особенности волос, компания INNOVATIS создала продукты, которые полностью отвечают всем требованиям в процедурах по восстановлению и омоложению волос.
+
+					p Все продукты разработаны с учетом потребностей как мастеров так и их клиентов. И дают возможность стилистам иметь в арсенале новейшие технологии для работы с любым типом и состоянием волос.
+
+	section.form-img-page.form-img-page_reverse
+			.container-fluid
+				.row
+					.col-12
+						.form-img-page__content
+							.page-form
+								.js-valid-form
+									form.form-site
+										.form-site__title Задать вопрос
+										
+										.form-site__content
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", required="required", placeholder="Имя*")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="email", placeholder="Email")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+											.form-site__item.form-site__item_half.js-form-site-item
+												.form-site__field
+													input(type="text", placeholder="Город")
+
+											.form-site__item.js-form-site-item
+												.form-site__field
+													textarea(placeholder="Ваше обращение ...")
+										
+										.form-site__polit.js-form-site-polit
+											label.input-check
+												input(type='checkbox', required="required")
+												span.input-check__mark
+													+svg('ic-tick','ic-tick', '9', '6')
+												span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+										.form-site__btn
+											button(type="submit").btn.js-btn-submit
+												span отправить
+
+							.form-img-page__img
+								img(src="assets/img/products4.jpg", alt="")

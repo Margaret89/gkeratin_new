@@ -35,6 +35,12 @@
 		bottom: 0;
 		right: 0;
 	}
+
+	&__logo{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
 
 @media (max-width: 1279px) {
@@ -43,6 +49,11 @@
 			margin: 100px 0;
 			padding: 30px;
 			background: rgba(242, 242, 242, 0.3);
+		}
+
+		&__logo{
+			position: static;
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -77,6 +88,13 @@
 			background: transparent;
 
 			.btn{margin-top: 20px;}
+		}
+
+		&__logo{
+			width: 100px;
+			position: absolute;
+			top: -145px;
+			left: 0;
 		}
 	}
 }
