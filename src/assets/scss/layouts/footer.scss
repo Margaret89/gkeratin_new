@@ -48,6 +48,7 @@
 
 	&{font-size: 1.3rem;}
 	&__item:not(:last-child){margin-bottom: 0.8rem;}
+	&__item::before{display: none;}
 
 	&__link{
 		color: var(--color-text);
@@ -68,6 +69,8 @@
 		padding: 0;
 		list-style: none;
 	}
+
+	&__item::before{display: none;}
 
 	&{
 		display: flex;

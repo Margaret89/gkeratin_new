@@ -1,0 +1,238 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Краситель';
+	- var h1 = 'Краситель';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'О нас'},
+			{href:'#',name:'краситель'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.about-info.mb-indent
+		.about-info__img
+		.container-fluid
+			.row
+				.col-lg-8.col-xl-6
+					.about-info__content
+						.about-info__title.about-info__title_big Новый взгляд на привычное
+						.about-info__text.about-info__text_big “Будущее принадлежит тем, кто верит в красоту своей мечты”
+
+
+	section.paint-list
+		-
+			var list=[
+				{
+					img:'paint-item1.png',
+					head:'IMAGINE!',
+					title:'Перманентный краситель (NH3 Tech)',
+					subtitle:'С экстрактами овса и пшеницы',
+					text1:'Прогрессивная формула перманентного красителя для волос создана с использованием самых инновационных технологий и с идеальным балансом между качеством и предсказуемостью результата.',
+					text2:'Краситель обогащен функциональными растительными ингредиентами такими как: экстракт ферментированного овса, богатого белком и обладающего антиоксидантными и успокаивающими свойствами, комплексом растительных аминокислот, полученных из пшеницы и сои, обеспечивающие питание, мягкость, блеск и здоровье волосам.',
+					tags:['палитра', '120 мл'],
+					ing:[
+						'Экстракт овса',
+						'Растительные аминокислоты (пшеницы и сои)',
+						'Масло авокадо',
+					],
+					advant:[
+						'0% амиака',
+						'0% меа',
+						'0% резорцина',
+						'100% веган',
+						'100% покрытия',
+						'Придает блеск',
+					],
+					bg:'',
+				},
+				{
+					img:'paint-item2.png',
+					head:'IMAGINE!',
+					title:'Полуперманентный краситель',
+					subtitle:'С маслом подсолнечника и маслом макадамии',
+					text1:'Формула демиперманентного красителя IMAGINE OIL DEMI COLOR позволяет добиться превосходных результатов в процессе окрашивания в салоне. Революционная система окрашивания разработана для стилистов и их клиентов, которые хотят окрасить волосы и готовы к изменениям.',
+					text2:'Благодаря ферментированному фитокомплексу масел, содержащему подсолнечник, хлопок, масло макадамии и миндаля, придает мягкость и блеск волосам. IMAGINE OIL DEMI COLOR гарантирует ровный цвет',
+					tags:['100 мл'],
+					ing:[
+						'Масло подсолнечника',
+						'Масло хлопка',
+						'Масло макадамии',
+						'Масло миндаля',
+					],
+					advant:[
+						'0% амиака',
+						'0% меа',
+						'0% резорцина',
+						'100% веган',
+						'Придает блеск',
+					],
+					bg:'grey',
+				},
+				{
+					img:'paint-item3.png',
+					head:'IMAGINE!',
+					title:'Крем активатор',
+					subtitle:'С экстрактами овса и пшеницы',
+					text1:'Формула крем-активатора разработана специально для смешивания и работы с IMAGINE COLOR.',
+					text2:'Благодаря активным ингридиентам таким как экстракты сои и черники, гарантируют смягчающее, успокаивающее и увлажняющее действие во время окрашивания.',
+					tags:['100мл'],
+					bg:'',
+				},
+				{
+					img:'paint-item4.png',
+					img_indent:'true',
+					head:'BELIEVE!',
+					title:'Серая осветляющая пудра',
+					subtitle:'С углем и черным киноа',
+					text1:'Нелетучий серый осветляющий порошок равномерно осветляет, гарантирует быстрое и интенсивное осветление до 9 уровней тона.',
+					text2:'Формула порошка обогащена древесным углем и черным киноа, которые обеспечивают процесс осветления, нейтрализуют желтые оттенки, а также успокаивают, защищают, питают и увлажняют кожу головы и волосы.',
+					tags:['2х500 гр'],
+					bg:'grey',
+				},
+				{
+					img:'paint-item5.png',
+					img_indent:'true',
+					head:'BELIEVE!',
+					title:'Зеленая осветляющая пудра',
+					subtitle:'С бамбуком и зеленым чаем',
+					text1:'Нелетучий осветляющий порошок изумрудно-зеленого цвета с низким содержанием аммиака равномерно осветляет, дает качественное, постепенное осветление до 7-8 уровней тона.',
+					text2:'Веганская формула, обогащенная экстрактами бамбука, зеленого чая и протеинов шелка, которые обеспечивают лечение, защиту и бережное воздействие на кожу головы и волосы.',
+					tags:['2х500 гр'],
+					bg:'',
+				},
+				{
+					img:'paint-item6.png',
+					head:'DO IT!',
+					title:'Технический шампунь завершающий окрашивание',
+					subtitle:'С растительным кератином и провитамином B5',
+					text1:'Завершающий шампунь (РН 5-6) разработан специально для закрытия кутикулы после каждой процедуры, повышает стойкость и эффективность выполняемых процедур.',
+					text2:'Обогащен растительным кератином и провитамином В5, чтобы сбалансировать РН, обеспечить увлажнение и блеск, защитить и сохранить яркость цвета.',
+					bg:'grey',
+				},
+				{
+					img:'paint-item7.png',
+					head:'DO IT!',
+					title:'Технический несмываемый уход завершающий окрашивание',
+					subtitle:'С керависом и провитамином В5',
+					text1:'Ритуал для закрепления цвета после окрашивания (РН 3.7 - 4.5) мягко воздействует на структуру, запечатывает, увлажняет и питает волосы, защищает цвет, усиливает блеск.',
+					text2:'100% веганский и без силикона, обогащенный керависом и провитамином В5 для восстановления, защиты, улучшения эластичности и блеска волос. Не смываемый',
+					bg:'',
+				},
+			]
+		each item in list
+			.paint-item(class=item.bg=='grey'?'bg-grey':'')
+				.container-fluid
+					.row.d-flex.align-items-center
+						.col-md-5.col-xl-6(class=item.bg?'order-1 order-md-2':'')
+							.paint-item__img(class=item.img_indent?'paint-item__img_indent':'')
+								img(src="assets/img/"+item.img, alt="")
+							
+						.col-md-7.col-xl-6(class=item.bg?'order-2 order-md-1':'')
+							.paint-item__content
+								.paint-item__top
+									.paint-item__head= item.head
+
+									.paint-info
+										.paint-info__item
+											img(src="assets/img/green.svg", alt="")
+
+										.paint-info__item
+											img(src="assets/img/vegan.svg", alt="")
+
+										.paint-info__item
+											img(src="assets/img/cruelty.svg", alt="")
+
+								.paint-item__title= item.title
+								.paint-item__subtitle= item.subtitle
+								.paint-item__text
+									p= item.text1
+									p= item.text2
+
+								.paint-item__btn
+									a(href="#").btn Перейти к товару
+
+									if(item.tags)
+										each tag in item.tags
+											.paint-item__tag= tag
+
+								if(item.ing)
+									.paint-structure
+										.paint-structure__item
+											.paint-structure__title Ингридиенты:
+
+											ul.paint-structure__list
+												each ing in item.ing
+													li= ing
+
+										.paint-structure__item
+											.paint-structure__title Преимущества:
+
+											ul.paint-structure__list
+												each advant in item.advant
+													li= advant
+
+	section.form-img-page.bg-grey.p-indent.last-elem
+		.container-fluid
+			.row
+				.col-12
+					.form-img-page__content
+						.page-form
+							.js-valid-form
+								form.form-site
+									.form-site__title Стать партнером
+									
+									.form-site__content
+										.form-site__item.js-form-site-item
+											.form-site__field
+												.form-site__radio-list
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Салон красоты
+
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Магазин
+
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Частный мастер
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", required="required", placeholder="Имя*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="email", placeholder="Email")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", placeholder="Город")
+
+									
+									.form-site__polit.js-form-site-polit
+										label.input-check
+											input(type='checkbox', required="required")
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '9', '6')
+											span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+									.form-site__btn
+										button(type="submit").btn.js-btn-submit
+											span отправить
+
+						.form-img-page__img
+							img(src="assets/img/products4.jpg", alt="")
