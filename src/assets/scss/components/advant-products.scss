@@ -1,0 +1,88 @@
+/*-------------- advant-products -----------------*/
+.advant-products{
+	&__desc{
+		font-size: 3.2rem;
+		font-weight: 500;
+		line-height: 1.25;
+		margin-bottom: 6rem;
+	}
+
+	&__label{
+		font-size: 2.4rem;
+		font-weight: 500;
+		line-height: 1.25;
+		margin-bottom: 3rem;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+
+	&__item{width: calc(50% - 20px);}
+
+	&__num{
+		font-family: var(--font-evolventa);
+		font-size: 6rem;
+		line-height: 1.1;
+		margin-bottom: 0.5rem;
+	}
+
+	&__note{
+		font-size: 2rem;
+		line-height: 1.25;
+	}
+
+	&__btn{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+		margin-top: 60px;
+
+		.btn{width: calc(50% - 20px);}
+	}
+}
+
+@media (max-width: 1359px) {
+	.advant-products{
+		&__item{width: 100%;}
+	}
+}
+
+@media (max-width: 991px) {
+	.advant-products{margin-top: 60px;}
+}
+
+@media (max-width: 767px) {
+	.advant-products{
+		&__desc{
+			font-size: 1.4rem;
+			margin-bottom: 2.5rem;
+		}
+
+		&__label{
+			font-size: 1.1rem;
+			margin-bottom: 1.4rem;
+		}
+
+		&__num{
+			font-size: 2.6rem;
+			margin-bottom: 0.2rem;
+		}
+
+		&__note{font-size: 0.9rem;}
+		&__list{gap: 20px;}
+		&__item{width: calc(50% - 10px);}
+
+		&__btn{
+			gap: 20px 10px;
+			margin-top: 20px;
+
+			.btn{
+				min-width: 0;
+				width: calc(50% - 5px);
+			}
+		}
+	}
+}

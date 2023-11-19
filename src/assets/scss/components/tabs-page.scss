@@ -71,6 +71,58 @@
 	}
 
 	.reviews-list{margin-top: 36px;}
+
+	&_btn &__list{gap: 40px;}
+
+	&_btn &__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 22px;
+		height: 5.6rem;
+		min-width: 290px;
+		background: transparent;
+		border: 2px solid var(--color-text);
+		border-radius: 2.8rem;
+		font-family: var(--font-site);
+		@include font(normal, 500, 1.4rem, 1.2, var(--color-text));
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		padding: 0 25px;
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+
+		&::after{display: none;}
+
+		&:hover,
+		&.active{
+			background: var(--color-text);
+			color: #fff;
+		}
+	}
+
+	&_btn{
+		.advant{
+			padding: 0;
+			gap: 20px;
+
+			&__item{gap: 36px;}
+
+			&__val{
+				width: 110px;
+				height: 110px;
+
+				.icon,
+				img{
+					max-width: 50%;
+					max-height: 50%;
+				}
+			}
+
+			&__label{font-size: 2rem;}
+		}
+	}
 }
 
 @media (max-width: 1279px) {
@@ -85,6 +137,15 @@
 @media (max-width: 991px) {
 	.tabs-page{
 		&__item{font-size: 1.8rem;}
+
+		&_btn{
+			.advant_column{
+				flex-direction: row;
+				gap: 40px;
+			}
+
+			.advant_column .advant__item{width: calc(50% - 20px);}
+		}
 	}
 }
 
@@ -110,5 +171,43 @@
 		}
 
 		.reviews-list{margin-top: 3px;}
+
+		&_btn &__list{gap: 4px;}
+
+		&_btn &__item{
+			height: 3rem;
+			min-width: 0;
+			border-radius: 1.5rem;
+			font-size: 0.7rem;
+			padding: 0 30px;
+		}
+
+		&_btn{
+			.advant_column{
+				gap: 16px;
+				.advant__label{font-size: 1.1rem;}
+		
+				.advant__item{
+					width: 100%;
+					flex-direction: row;
+					gap: 10px;
+				}
+		
+				.advant__label{text-align: left;}
+		
+				.advant__val{
+					width: 56px;
+					height: 56px;
+
+					.icon,
+					img{
+						max-width: 70%;
+						max-height: 70%;
+					}
+				}
+			}
+		}
+		
+
 	}
 }

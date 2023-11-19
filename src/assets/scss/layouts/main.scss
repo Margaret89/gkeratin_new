@@ -254,6 +254,7 @@ button.btn{
 	border-radius: 50%;
 	background: var(--color-text);
 	@include font(none, 700, 2rem, none, #fff);
+	text-align: center;
 	text-transform: uppercase;
 	transition: all 0.2s ease 0s;
 

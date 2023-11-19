@@ -11,9 +11,19 @@
 		margin-bottom: 43px;
 	}
 
+	&__title_big{
+		max-width: none;
+		font-size: 7.2rem;
+	}
+
 	&__text{
 		max-width: 560px;
 		font-size: 2rem;
+	}
+
+	&__text_big{
+		font-size: 2.8rem;
+		line-height: 1.25;
 	}
 
 	&__content{
@@ -41,6 +51,12 @@
 		top: 0;
 		left: 0;
 	}
+
+	.btn-circle{
+		position: absolute;
+		bottom: 110px;
+		left: calc(100% + 107px);
+	}
 }
 
 @media (max-width: 1279px) {
@@ -61,6 +77,12 @@
 @media (max-width: 991px) {
 	.about-info{
 		&__content{margin: 50px 0;}
+		&__title_big{font-size: 5.2rem;}
+
+		.btn-circle{
+			position: static;
+			margin-top: 20px;
+		}
 	}
 }
 
@@ -94,6 +116,12 @@
 			width: 100px;
 			position: absolute;
 			top: -145px;
+			left: 0;
+		}
+
+		.btn-circle{
+			position: absolute;
+			bottom: calc(100% + 40px);
 			left: 0;
 		}
 	}

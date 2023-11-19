@@ -1,4 +1,15 @@
 /*-------------- page-form -----------------*/
+.page-form-wrap{
+	&.bg-grey .page-form{
+		padding: 0;
+		background: transparent;
+		border: none;
+
+		h3, .h3{margin-bottom: 3.5rem;}
+		.font-big{line-height: 1.25;}
+	}
+}
+
 .page-form{
 	border: 3px solid var(--color-primary);
 	padding: 50px 38px;
@@ -10,7 +21,27 @@
 	}
 }
 
+.page-form-contacts{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	margin-bottom: 45px;
+
+	&__label{
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		margin-bottom: 5px;
+	}
+
+	&__val{font-size: 2rem;}
+}
+
 @media (max-width: 767px) {
+	.page-form-wrap{
+		img{margin-bottom: 20px;}
+	}
+
 	.page-form{
 		border-width: 1px;
 		padding: 30px 20px;
@@ -20,4 +51,22 @@
 			&__title{font-size: 2.4rem;}
 		}
 	}
+
+	.page-form-wrap{
+		img{
+			max-width: calc(100% + 40px);
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		&.bg-grey .page-form{
+			h3, .h3{
+				font-size: 2.4rem;
+				margin-bottom: 1rem;
+			}
+
+			.font-big{margin-bottom: 4rem;}
+		}
+	}
+	
 }

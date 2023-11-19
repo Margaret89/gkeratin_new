@@ -7,6 +7,11 @@
 	color: #fff;
 	text-align: center;
 	line-height: 1.2;
+
+	&_big{
+		font-size: 3.6rem;
+		padding: 65px 0;
+	}
 }
 
 @media (max-width: 767px) {
