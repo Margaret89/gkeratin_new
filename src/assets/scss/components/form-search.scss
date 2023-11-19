@@ -9,7 +9,7 @@
 		width: 100%;
 		font-family: var(--font-evolventa);
 		@include font(none, none, 2rem, 1, var(--color-text));
-		padding: 0 0 0 34px;
+		padding: 0 34px;
 		background: transparent;
 		border: 0;
 		border-bottom: 1.5px solid var(--color-primary);
@@ -48,6 +48,56 @@
 
 		&:hover{
 			.icon{fill: var(--color-primary);}
+		}
+	}
+
+	&__cancel{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.form-search{
+		input[type="text"],
+		input[type="search"]{
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-search{
+		input[type="text"],
+		input[type="search"]{
+			height: 3rem;
+			font-size: 1rem;
+			padding: 0 25px;
+		}
+
+		input[type="submit"],
+		button{
+			width: 16px;
+
+			.icon{
+				width: 16px;
+				height: 16px;
+			}
+		}
+
+		&__cancel{
+			width: 16px;
+	
+			.icon{
+				width: 10px;
+				height: 10px;
+			}
 		}
 	}
 }

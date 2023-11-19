@@ -1,0 +1,92 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Страница поиска';
+	//- - var h1 = 'Краситель';
+
+
+block content
+	section.page-search
+		.container-fluid
+			.row
+				.col-12
+					form.form-search
+						input(type="text", placeholder="Начните искать что-нибудь", class="js-search-input")
+						button(type="submit", class="js-search-submit")
+							+svg('ic-search','ic-search', '24', '24')
+
+						.form-search__cancel
+							+svg('ic-close','ic-close', '17', '17')
+
+					.page-search__top
+						.page-search__count 8 товаров
+
+						.page-search__link
+							a(href="#").link-site показать все
+
+					.catalog
+						.catalog-list.js-catalog-list
+							-
+								var list=[
+									{
+										img:'catalog-item1.png',
+										label:'Кондиционер из веганской линии',
+										title:'Conditioner CBD Vegan line 650 мл',
+										price:'2790',
+									},
+									{
+										img:'catalog-item1.png',
+										label:'Кондиционер из веганской линии',
+										title:'Conditioner CBD Vegan line 650 мл',
+										price:'2790',
+										price_old:'4500',
+									},
+									{
+										img:'catalog-item2.png',
+										label:'Кондиционер из веганской линии',
+										title:'Conditioner CBD Vegan line 650 мл',
+										price:'2790',
+										price_old:'4500',
+									},
+									{
+										sticker:['%'],
+										img:'catalog-item3.png',
+										label:'Кондиционер из веганской линии',
+										title:'Conditioner CBD Vegan line 650 мл',
+										price:'2790',
+										price_old:'4500',
+									},
+								]
+							each item in list
+								.catalog-item
+									.catalog-item__img-wrap
+										a(href="#").catalog-item__img
+											img(src="assets/img/"+item.img, alt="")
+
+										if(item.sticker)
+											.catalog-stickers
+												each sticker in item.sticker
+													.catalog-stickers__item(class=sticker=='%'?'catalog-stickers__item_black':'')= sticker
+
+										.catalog-item__wish
+											+svg('ic-heart','ic-heart ic-stroke', '22', '20')
+
+										.catalog-item__cart
+											+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+									.catalog-item__content
+										.catalog-item__label= item.label
+
+										.catalog-item__title
+											a(href="#")= item.title
+
+										.catalog-item__price
+											span.catalog-item__cur-price= item.price
+												| 
+												| &#8381;
+
+											if(item.price_old)
+												span.catalog-item__old-price= item.price_old
+													| 
+													| &#8381;

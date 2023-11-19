@@ -1,0 +1,33 @@
+/*-------------- page-search -----------------*/
+.page-search{
+	padding-top: 60px;
+
+	.form-search{
+		margin-bottom: 20px;
+
+		input[type="text"],
+		input[type="search"]{
+			border-color: var(--color-text);
+		}
+
+		input[type="text"]:focus,
+		input[type="search"]:focus{
+			border-color: var(--color-primary);
+		}
+	}
+
+	&__top{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+		margin-bottom: 20px;
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-search{
+		&__top{font-size: 1rem;}
+	}
+}
