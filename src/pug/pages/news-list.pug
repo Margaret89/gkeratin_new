@@ -1,0 +1,74 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Новости';
+	- var h1 = 'Новости';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'о нас'},
+			{href:'#',name:'новости'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content 
+	section.news-main.mb-indent
+		.news-main__img(style="backgroung-img: url(assets/img/news-main.jpg)")
+
+		.container-fluid
+			.row
+				.col-5
+					.news-main__content
+						.news-main__date 16 декабря 2023
+						.news-main__title
+							a(href="#")  Что подарить: подборка лучших подарков для дорогих сердцу женщин
+						.news-main__text 8 марта — праздник, конечно, женский, но сколько изнурительной подготовки к нему лежит на женских плечах?!
+						a(href="#").btn Читать далее
+
+	section
+		.container-fluid
+			.row
+				.col-12
+					.news-list
+						-
+							var list=[
+								{
+									img:'news1.jpg',
+									date:'16 декабря 2023',
+									title:'Что подарить: подборка лучших подарков для дорогих сердцу женщин',
+									text:'8 марта — праздник, конечно, женский, но сколько изнурительной подготовки к нему лежит на женских плечах?!'
+								},
+								{
+									img:'news2.jpg',
+									date:'16 декабря 2023',
+									title:'Что подарить: подборка лучших подарков для дорогих сердцу женщин',
+									text:'8 марта — праздник, конечно, женский, но сколько изнурительной подготовки к нему лежит на женских плечах?!'
+								},
+								{
+									img:'news1.jpg',
+									date:'16 декабря 2023',
+									title:'Что подарить: подборка лучших подарков для дорогих сердцу женщин',
+									text:'8 марта — праздник, конечно, женский, но сколько изнурительной подготовки к нему лежит на женских плечах?!'
+								},
+								{
+									img:'news2.jpg',
+									date:'16 декабря 2023',
+									title:'Что подарить: подборка лучших подарков для дорогих сердцу женщин',
+									text:'8 марта — праздник, конечно, женский, но сколько изнурительной подготовки к нему лежит на женских плечах?!'
+								},
+							]
+						each item in list
+							.news-item
+								a(href="#").news-item__img-wrap
+									span.news-item__img(style="background-image: url(assets/img/"+item.img+")")
+
+								.news-item__content
+									.article-item__date= item.date
+									.article-item__title
+										a(href="#")= item.title
+
+									.article-item__arr
+										+svg('ic-arrow-long','ic-arrow-long', '34', '12')
