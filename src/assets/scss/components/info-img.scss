@@ -1,0 +1,32 @@
+/*-------------- info-img -----------------*/
+.info-img{
+	position: relative;
+	z-index: 1;
+	padding: var(--margin-indent) 0;
+
+	&__pic{
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 767px) {
+	.info-img{
+		padding: 0;
+
+		&__pic{
+			height: 215px;
+			position: static;
+			margin-bottom: 20px;
+		}
+
+		h2, .h2{font-size: 2rem;}
+	}
+}

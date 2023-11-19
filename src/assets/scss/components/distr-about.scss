@@ -1,0 +1,26 @@
+/*-------------- distr-about -----------------*/
+.distr-about{
+	&__content{
+		font-size: 2rem;
+		margin-left: -40px;
+
+		li{margin-bottom: 23px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.distr-about{
+		&__content{margin-left: 0;}
+	}
+}
+
+@media (max-width: 767px) {
+	.distr-about{
+		&__img{margin: 0 -20px 20px;}
+
+		&__content{
+			font-size: 1.1rem;
+			li{margin-bottom: 12px;}
+		}
+	}
+}

@@ -1,0 +1,194 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Дистрибьютерам';
+	//- - var h1 = 'Интернет магазин';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'сотрудничество'},
+			{href:'#',name:'дистрибьютерам'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.about-info.mb-indent
+		.about-info__img(style="background-image: url(assets/img/bg-water-bottle.jpg)")
+		
+		.container-fluid
+			.row
+				.col-lg-7.col-xl-6
+					.about-info__content
+						.about-info__title.about-info__title_big Хотите отличаться от конкурентов?
+						.about-info__text.about-info__text_big Хотите работать со стабильно развивающимся брендом и получать максимальную прибыль? Станьте эксклюзивным представителем бренда INNOVATIS в вашем регионе!
+						a(href="#").btn-circle Оставить заявку
+
+	section.distr-about.mb-indent
+		.container-fluid
+			.row.d-flex.align-items-lg-center
+				.col-md-4.col-lg-6
+					.distr-about__img
+						img(src="assets/img/distr-bottle.jpg", alt="")
+
+				.col-md-8.offset-lg-1.col-lg-5
+					.distr-about__content
+						h4 Компания GKERATIN Beauty Group приглашает вас к сотрудничеству, если:
+
+						ul.list-color
+							li Вы работаете в сфере парикмахерского искусства
+							li Занимаетесь продажами косметики и аксессуаров для профессионалов в бьюти-индустрии
+							li Вы или в вашей команде работает технолог
+							li Планируете проводить обучающие семинары, консультации и бизнес-встречи с партнерами
+							li Хотите профессионального роста и расширения клиентской базы в вашем регионе
+	
+	section.info-img.mb-indent
+		.info-img__pic(style="background-image: url(assets/img/bg-innovatis.jpg)")
+
+		.container-fluid
+			.row
+				.col-md-10.col-lg-6
+					h2 Профессиональная косметика оптом – для вашего роста
+
+					.font-middle
+						p Компания GKERATIN Beauty Group – официальный дистрибьютор мировых брендов в РФ с 2011 года. Весь товар имеет необходимую разрешительную документацию и сертификаты.
+						p Мы проводим обучение для вас и всей вашей команды в удобном формате (онлайн или в студии).
+						p На протяжении всего сотрудничества с вами будет работать персональный менеджер, готовый помочь вам в любом вопросе.
+						p Заключение договора поставки на тестовый период и договора дистрибьюции.
+
+	section.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					h3 Почему выгодно купить косметику оптом у нас?
+			
+			.row
+				.col-lg-9
+					h5 Мы предоставляем выгодные закупочные цены для дистрибьюторов на косметику бренда INNOVATIS
+			
+			.row
+				.col-12
+					.list-circle-num
+						-
+							var list=[
+								{
+									num:'1',
+									text:'В листе товаров бренда предоставлены востребованные и актуальные товары по уходу за волосами и кожей головы для всех типов клиентов: от салонов красоты и частных мастеров до покупателей в онлайн и розничных магазинах',
+								},
+								{
+									num:'2',
+									text:'Бесперебойные официальные поставки товара на постоянной основе для того, чтобы любимые товары всегда были в наличии',
+								},
+								{
+									num:'3',
+									text:'Прозрачная система расширения клиентской базы: все входящие заявки потенциальных клиентов с вашего региона будут переданы вам для обработки запроса и заключения сделки',
+								},
+								{
+									num:'4',
+									text:'Акции и специальные предложения от бренда каждые 3-4 месяца для привлечения новых клиентов',
+								},
+								{
+									num:'5',
+									text:'Наличие интернет-каналов и мессенджеров с актуальной информацией для общения и получения обратной связи от всех клиентов',
+								},
+								{
+									num:'6',
+									text:'Первые 3 месяца действует «тестовый период», в течение которого вы работаете в комфортных для вас условиях, без привязки к обязательным суммам закупок. За этот период у вас есть возможность познакомиться с товарами бренда, всеми его особенностями и преимуществами',
+								},
+								{
+									num:'7',
+									text:'Обучение для вас и вашего персонала от ведущих технологов бренда',
+								},
+								{
+									num:'8',
+									text:'Мы приветствуем инициативу проведения различных мероприятий, связанных с узнаваемостью бренда на территориях представителей и готовы принимать в них участие',
+								},
+								{
+									num:'9',
+									text:'Вы первыми всегда будете в курсе акций, новинок бренда и предстоящих мероприятий компании',
+								},
+								{
+									num:'10',
+									text:'Каждый заказ сопровождается печатной продукцией, аксессуарами с символикой бренда, пробниками и фирменными пакетами',
+								},
+							]
+						each item in list
+							.list-circle-num__item
+								.list-circle-num__num= item.num
+								.list-circle-num__text= item.text
+
+	section.info-img.mb-indent
+		.info-img__pic(style="background-image: url(assets/img/salon.jpg)")
+
+		.container-fluid
+			.row
+				.col-lg-5
+					h4 Условия сотрудничества
+
+					.font-middle
+						ul.list-color
+							li Соблюдение ценовой политики бренда, условий договора поставки/дистрибьюции, поддержание «здоровой» конкуренции среди партнеров на всех территориях
+							li Профессиональная косметика для волос оптом реализуется лицам, имеющим юридический статус (форма – любая).
+							li Выполнение условий ежемесячных закупок в соответствии с заключенным договором
+							li Заинтересованность и желание расти и развиваться вместе с брендом INNOVATIS
+
+	section.line-block.line-block_big.mb-indent
+		.container-fluid
+			.row
+				.col-lg-10.offset-lg-1 Шикарные волосы – это роскошь, которую Вы заслужили!
+	
+	
+	section.page-form-wrap
+			.container-fluid
+				.row.d-flex.align-items-center
+					.col-md-5.col-lg-6.col-xl-5
+						img(src="assets/img/yellow-bottle.jpg", alt="")
+
+					.col-md-7.offset-xl-1.col-lg-6
+						.page-form
+							.h3 Начните сотрудничество с GKeratin Beauty Group прямо сейчас
+
+							.page-form-contacts
+								.page-form-contacts__item
+									.page-form-contacts__label телефон:
+									.page-form-contacts__val
+										a(href="tel:+79523741444") +7 952 374 14 44
+
+								.page-form-contacts__item
+									.page-form-contacts__label E-mail:
+									.page-form-contacts__val
+										a(href="mailto:info@gkeratin.ru") info@gkeratin.ru
+							
+							p.font-big Заполните форму и наши менеджеры свяжутся с вами:
+
+							.js-valid-form
+								form.form-site
+									.form-site__content
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", required="required", placeholder="Имя*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="email", placeholder="Email")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", placeholder="Город")
+
+									.form-site__polit.js-form-site-polit
+										label.input-check
+											input(type='checkbox', required="required")
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '9', '6')
+											span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+									.form-site__btn
+										button(type="submit").btn.js-btn-submit
+											span отправить

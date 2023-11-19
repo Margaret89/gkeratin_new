@@ -1,6 +1,6 @@
 /*-------------- page-form -----------------*/
 .page-form-wrap{
-	&.bg-grey .page-form{
+	.page-form{
 		padding: 0;
 		background: transparent;
 		border: none;
@@ -38,10 +38,6 @@
 }
 
 @media (max-width: 767px) {
-	.page-form-wrap{
-		img{margin-bottom: 20px;}
-	}
-
 	.page-form{
 		border-width: 1px;
 		padding: 30px 20px;
@@ -57,9 +53,10 @@
 			max-width: calc(100% + 40px);
 			margin-left: -20px;
 			margin-right: -20px;
+			margin-bottom: 20px;
 		}
 
-		&.bg-grey .page-form{
+		.page-form{
 			h3, .h3{
 				font-size: 2.4rem;
 				margin-bottom: 1rem;
