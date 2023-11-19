@@ -1,0 +1,221 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Салонный уход INNOVATIS';
+	//- - var h1 = 'Салонный уход INNOVATIS';
+	- var h1_bg = 'grey';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'салон красоты'},
+			{href:'#',name:'Салонный уход INNOVATIS'},
+		];
+
+	+breadcrumbs(breadcrumbs, 'grey')
+
+block content
+	section.about-block.mb-indent
+		.container-fluid
+			.row
+				.col-md-7.col-lg-6.col-xl-5.order-2.order-md-1
+					.about-block__content.about-block__content_sb
+						h1.about-block__head Салонный уход INNOVATIS
+						.about-block__subtitle Косметика, которую мы создаем - это удивительное сочетание современных и продуманных рецептур
+						p При разработке уходов нашего бренда используются только эксклюзивные ингридиенты, новейшие формулы и технологии
+				
+				.col-md-5.col-lg-6.offset-xl-2.col-xl-5.order-md-2.order-order-md-2
+					.about-block__img.order-1.order-md-2
+						img(src="assets/img/woman.jpg", alt="")
+
+	section.advant-company.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.sect-salon-wrap
+						.sect-salon
+							.sect-salon__content
+								.sect-salon__title Anti-Age
+								.sect-salon__subtitle Luxury Mask Therapy
+								.sect-salon__text Глубоко питает волосы, смягчает и придает блеск. Обеспечивает мгновенное увлажнение, устраняя эффект пушистых волос.
+				
+							.sect-salon__img-wrap
+								.sect-salon__img
+									.sect-salon__img-content
+										img(src="assets/img/sect-salon1.jpg", alt="")
+
+						.salon-list
+							-
+								var list=[
+									{
+										img:'salon-item1.jpg',
+										title:'Luxury Sublime Therapy',
+										text:'Обеспечивает мгновенное увлажнение, устраняет эффект пушистых волос. Глубоко питает волосы, возвращая им мягкость, эластичность, послушность и ультра-блеск.',
+									},
+									{
+										img:'salon-item2.jpg',
+										title:'Luxury Caviar Therapy',
+										text:'Процедура прекрасно разглаживает, уменьшает нежелательный объем, а также придает волосам эффектный блеск и шелковистость.',
+									},
+									{
+										img:'salon-item3.jpg',
+										title:'Luxury Plasm Therapy',
+										text:'Восстанавливает, реструктурирует и придает волосам прочность и плотность.',
+									},
+									{
+										img:'salon-item4.jpg',
+										title:'Luxury Total Therapy',
+										text:'Уникальная процедура, богатая высококачественными косметическими ингредиентами, которые придают волосам блеск, мягкость и жизненную силу.',
+									},
+								]
+							each item in list
+								.salon-item
+									.salon-item__img-wrap
+										.salon-item__img
+											.salon-item__img-content
+												img(src="assets/img/"+item.img, alt="")
+									.salon-item__content
+										.salon-item__title= item.title
+										.salon-item__text= item.text
+					
+					.sect-salon-wrap
+						.sect-salon
+							.sect-salon__content(style="background-color: #8D6F95")
+								.sect-salon__title Ice Shine
+								.sect-salon__subtitle Luxury Ice Shine Mask Therapy
+								.sect-salon__text Глубоко питает волосы, смягчает и придает блеск. Обеспечивает мгновенное увлажнение, устраняя эффект пушистых волос.
+				
+							.sect-salon__img-wrap
+								.sect-salon__img
+									.sect-salon__img-content
+										img(src="assets/img/sect-salon2.jpg", alt="")
+
+						.salon-list
+							-
+								var list=[
+									{
+										img:'salon-item5.jpg',
+										title:'Luxury Ice Shine Therapy',
+										text:'Уходовая процедура которая устраняет и нейтрализует нежелательные теплые оттенки в натуральных, обесцвеченных, потерявших цвет волосах.',
+									},
+									{
+										img:'salon-item6.jpg',
+										title:'Luxury Ice Shine Total Therapy',
+										text:'Уходовая процедура которая устраняет и нейтрализует нежелательные теплые оттенки в натуральных, обесцвеченных, потерявших цвет волосах.',
+									},
+								]
+							each item in list
+								.salon-item
+									.salon-item__img-wrap
+										.salon-item__img
+											.salon-item__img-content
+												img(src="assets/img/"+item.img, alt="")
+									.salon-item__content
+										.salon-item__title= item.title
+										.salon-item__text= item.text
+					
+					.sect-salon-wrap
+						.sect-salon
+							.sect-salon__content(style="background-color: #819CBC")
+								.sect-salon__title Smoother Spa
+								.sect-salon__subtitle Smoother Spa Treatment Therapy
+								.sect-salon__text Процедура прекрасно разглаживает, уменьшает нежелательный объем, а также придает волосам эффектный блеск и шелковистость.
+				
+							.sect-salon__img-wrap
+								.sect-salon__img
+									.sect-salon__img-content
+										img(src="assets/img/sect-salon3.jpg", alt="")
+
+						.salon-list
+							-
+								var list=[
+									{
+										img:'salon-item7.jpg',
+										title:'Luxury Smoother Spa Organic Therapy',
+										text:'Уходовая процедура которая устраняет и нейтрализует нежелательные теплые оттенки в натуральных, обесцвеченных, потерявших цвет волосах.',
+									},
+								]
+							each item in list
+								.salon-item
+									.salon-item__img-wrap
+										.salon-item__img
+											.salon-item__img-content
+												img(src="assets/img/"+item.img, alt="")
+									.salon-item__content
+										.salon-item__title= item.title
+										.salon-item__text= item.text
+					
+					.sect-salon-wrap
+						.sect-salon
+							.sect-salon__content.sect-salon__content_dark(style="background-color: #FCC696")
+								.sect-salon__title Stem Cells
+								.sect-salon__subtitle Luxury Stem Cells Therapy
+								.sect-salon__text Процедура, которая обеспечивает защиту от выпадения, стимулирует рост и повышает плотность волос.
+				
+							.sect-salon__img-wrap
+								.sect-salon__img
+									.sect-salon__img-content
+										img(src="assets/img/sect-salon4.jpg", alt="")
+
+		a(href="#").btn-more Скачать технический гид
+
+	section.form-img-page
+		.container-fluid
+			.row
+				.col-12
+					.form-img-page__content
+						.page-form
+							.js-valid-form
+								form.form-site
+									.form-site__title Стать партнером
+									
+									.form-site__content
+										.form-site__item.js-form-site-item
+											.form-site__field
+												.form-site__radio-list
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Салон красоты
+
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Магазин
+
+													label.input-radio
+														input(type='radio', name="service")
+														span.input-radio__mark
+														span.input-radio__text Частный мастер
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", required="required", placeholder="Имя*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="email", placeholder="Email")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+										.form-site__item.form-site__item_half.js-form-site-item
+											.form-site__field
+												input(type="text", placeholder="Город")
+
+									
+									.form-site__polit.js-form-site-polit
+										label.input-check
+											input(type='checkbox', required="required")
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '9', '6')
+											span.input-check__text Я принимаю <a href="#">соглашение сайта</a> об обработке персональных данных
+
+									.form-site__btn
+										button(type="submit").btn.js-btn-submit
+											span отправить
+
+						.form-img-page__img
+							img(src="assets/img/products4.jpg", alt="")

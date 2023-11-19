@@ -2,10 +2,25 @@
 .about-block{
 	background: var(--bg-grey);
 
+	&__head{
+		font-family: var(--font-evolventa);
+		font-size: 6rem;
+		line-height: 1.1;
+		margin-bottom: 160px;
+	}
+
 	&__title{
+		font-family: var(--font-evolventa);
 		font-size: 4.8rem;
 		line-height: 1;
 		margin-bottom: 6.7rem;
+	}
+
+	&__subtitle{
+		font-family: var(--font-evolventa);
+		font-size: 3.2rem;
+		line-height: 1.2;
+		margin-bottom: 5.5rem;
 	}
 
 	&__content{
@@ -14,6 +29,14 @@
 		position: relative;
 
 		p:last-child{margin-bottom: 0;}
+
+		&_sb{
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+			padding-bottom: 140px;
+			font-size: 1.6rem;
+		}
 	}
 
 	&__img{
@@ -49,10 +72,25 @@
 			margin-bottom: 2rem;
 		}
 
+		&__subtitle{
+			font-size: 1.6rem;
+			margin-bottom: 1.5rem;
+		}
+
 		&__content{
 			font-size: 1rem;
 			line-height: 1.5;
 			padding: 24px 0 0;
+		}
+
+		&__head{
+			width: 100%;
+			font-size: 2.4rem;
+			position: absolute;
+			margin: 0;
+			top: -190px;
+			left: 0;
+			z-index: 2;
 		}
 	}
 }

@@ -1,0 +1,177 @@
+/*-------------- sect-salon -----------------*/
+.sect-salon-wrap{
+	&:not(:last-child){margin-bottom: 135px;}
+	&:last-child{margin-bottom: 70px;}
+}
+
+.sect-salon{
+	display: flex;
+
+	&__content,
+	&__img-wrap{
+		width: 50%;
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		padding: 75px 80px;
+		background-color: #94865F;
+		color: #fff;
+
+		&_dark{color: var(--color-text);}
+	}
+
+	&__title{
+		font-family: var(--font-evolventa);
+		font-size: 4.8rem;
+		line-height: 1.1;
+		margin-bottom: auto;
+	}
+
+	&__subtitle{
+		font-family: var(--font-evolventa);
+		font-size: 3.2rem;
+		line-height: 1.1;
+		margin-bottom: 2.4rem;
+	}
+
+	&__text{
+		font-size: 1.6rem;
+	}
+
+	&__img{
+		position: relative;
+		padding-bottom: 86%;
+		min-height: 100%;
+	}
+
+	&__img-content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&:not(:last-child){margin-bottom: 60px;}
+}
+
+.salon-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 47px 40px;
+}
+
+.salon-item{
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	width: calc(50% - 20px);
+
+	&__img-wrap{
+		width: 35.5%;
+		flex-shrink: 0;
+
+	}
+
+	&__img{
+		position: relative;
+		padding-bottom: 100%;
+	}
+
+	&__img-content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title{
+		font-family: var(--font-evolventa);
+		font-size: 3.2rem;
+	}
+
+	&__text{
+		font-size: 1.6rem;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sect-salon{
+		&__content{padding: 40px;}
+	}
+
+	.salon-item{width: 100%;}
+}
+
+@media (min-width: 768px) {
+	.sect-salon-wrap{
+		&:nth-child(even) .sect-salon{flex-direction: row-reverse;}
+	}
+}
+
+@media (max-width: 767px) {
+	.sect-salon-wrap{
+		&:not(:last-child){margin-bottom: 45px;}
+		&:last-child{margin-bottom: 25px;}
+	}
+	
+	.sect-salon{
+		flex-direction: column-reverse;
+
+		&__content,
+		&__img-wrap{
+			width: 100%;
+		}
+
+		&__content{padding: 20px;}
+
+		&__title{
+			font-size: 2.4rem;
+			margin-bottom: 3.8rem;
+		}
+
+		&__subtitle{
+			font-size: 1.6rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&__text{font-size: 1.2rem;}
+		&:not(:last-child){margin-bottom: 25px;}
+	}
+
+	.salon-list{gap: 20px;}
+
+	.salon-item{
+		gap: 10px;
+
+		&__title{font-size: 1.4rem;}
+
+		&__text{
+			font-size: 0.9rem;
+			line-height: 1.3;
+			margin-top: 6px;
+		}
+	}
+}
