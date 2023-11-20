@@ -1,0 +1,229 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Оформление заказа';
+	- var h1 = 'Оформление заказа';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'личный кабинет'},
+			{href:'#',name:'корзина'},
+			{href:'#',name:'оформление заказа'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.sale-block.mb-indent
+		.container-fluid
+			.row
+				.col-12
+					.sale-block__content
+						.sale-block__num 5%
+						.sale-block__text Скидка при оплате на сайте
+							br
+							|через систему ROBOKASSA
+
+	section.order
+		form
+			.container-fluid
+				.row
+					.col-12
+						.order__content
+							.order__main
+								.order__sect
+									.order__title Регион доставки
+
+									.order__item
+										.order__label Тип плательщика:
+
+										.order__radio
+											label.input-radio
+												input(type='radio', name="person")
+												span.input-radio__mark
+												span.input-radio__text Физическое лицо
+
+											label.input-radio
+												input(type='radio', name="person")
+												span.input-radio__mark
+												span.input-radio__text Юридическое лицо
+
+									.order__item
+										.order__label Местоположение:
+
+										.choose-address
+											.choose-address__list
+												span.btn.btn_border Санкт-Петербург
+												span.btn.btn_border Москва
+
+											.choose-address__field
+												input(type="text", placeholder="Адрес")
+												.choose-address__loop
+													+svg('ic-search','ic-search', '22', '22')
+
+												.choose-address__close
+													+svg('ic-close','ic-close', '17', '17')
+
+									.order__item
+										.order__label Индекс:
+
+										.order-index
+											input(type="text", value="190000")
+											.order-index__close
+												+svg('ic-close','ic-close', '17', '17')
+
+								.order__sect
+									.order__title Доставка
+
+									.order-info-list
+										.order-info
+											.order-info__title Бесконтактная курьерская доставка
+
+											.order-info__info
+												.order-info__item
+													.order-info__label Цена:
+													.order-info__val 200 &#8381;
+
+												.order-info__item
+													.order-info__label сроки доставки:
+													.order-info__val от 1 до 2 дней
+
+											.order-info__btn
+												a(href="#").btn.btn_border Выбрать
+
+										.order-info
+											.order-info__title Доставка курьером
+
+											.order-info__info
+												.order-info__item
+													.order-info__label Цена:
+													.order-info__val 200 &#8381;
+
+												.order-info__item
+													.order-info__label сроки доставки:
+													.order-info__val от 1 до 2 дней
+
+											.order-info__btn
+												a(href="#").btn.btn_border Выбрать
+
+										.order-info
+											.order-info__title Самовывоз из магазина
+
+											.order-info__text Вы можете самостоятельно забрать заказ из нашего магазина с 10-00 до 19-00 ежедневно, кроме выходных, Санкт-Петербург, ул. Ефимова, 4а м. Сенная, БЦ, 1 этаж офис 209
+
+											.order-info__info
+												.order-info__item
+													.order-info__label Стоимость:
+													.order-info__val бесплатно
+
+											.order-info__btn
+												a(href="#").btn.btn_border Выбрать
+
+										.order-info
+											.order-info__title Почта России (Доставка в отделение)
+
+											.order-info__text Самовывоз из отделения Почты России
+
+											.order-info__btn
+												a(href="#").btn.btn_border Выбрать отделение на карте
+								
+								.order__sect
+									.order__title Оплата
+
+									.order-info-list
+										.order-info
+											.order-info__title RoboKassa
+
+											.order-info__text Дополнительная скидка 5% при оплате картой
+
+											.order-info__btn
+												a(href="#").btn.btn_border Выбрать
+
+										.order-info
+											.order-info__title Оплата в отделении Почты России
+
+											.order-info__btn
+												a(href="#").btn.btn_border Выбрать
+							
+								.order__sect
+									.order__title Покупатель
+
+									.order-form
+										.order-form__item
+											input(type="text", placeholder="Фамилия Имя Отчество")
+
+										.order-form__item
+											input(type="email", placeholder="Email")
+
+										.order-form__item
+											input(type="text", class="js-phone", placeholder="Телефон")
+
+										.order-form__item
+											input(type="text", placeholder="Адрес Доставки")
+										
+										.order-form__item
+											textarea(placeholder="Комментарии к заказу") 
+								
+								.order__sect
+									.order__title Товары в заказе
+
+									.order-prod-list
+										-
+											var list=[
+												{
+													title:'Мусс для укладки волос Styling Mousse 250 мл',
+													price:'2500',
+												},
+												{
+													title:'Оттеночный шампунь',
+													price:'0',
+												},
+											]
+										each item in list 
+											.order-prod-item
+												a(href="#").order-prod-item__img
+													img(src="assets/img/product-order.png", alt="")
+											
+												.order-prod-item__title
+													a(href="#")= item.title
+
+												.order-prod-item__count 1 шт
+												.order-prod-item__price= item.price
+													| 
+													|&#8381;
+
+									.order__polit
+										label.input-check
+											input(type='checkbox', required="required")
+											span.input-check__mark
+												+svg('ic-tick','ic-tick', '9', '6')
+											span.input-check__text Я согласен <a href="#">на обработку персональных данных</a>
+
+									.order__btn
+										input.btn(type="submit", value="Оформить заказ")
+
+							.order-result
+								.order-result__top
+									.order-result__title Ваш заказ
+
+									a(href="#").btn.btn_border Изменить
+
+								.order-result__item
+									.order-result__label Товаров на:
+
+									.order-result__val
+										.order-result__cur-price 7500 &#8381;
+										.order-result__old-price 800 &#8381;
+
+								.order-result__item
+									.order-result__label
+									.order-result__val
+										.order-result__cur-price
+											span.text-color бесплатно
+										.order-result__old-price 195 &#8381;
+
+								.order-result__bottom
+									.order-result__label-sum Итого:
+									.order-result__sum 7500 &#8381;
