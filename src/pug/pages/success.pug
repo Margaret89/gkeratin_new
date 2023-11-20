@@ -1,0 +1,17 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Спасибо за оформление заказа';
+
+block content
+	section.success-page.last-elem
+		.success-page__img
+		.container-fluid
+			.row
+				.offset-md-2.col-md-10.offset-lg-5.col-lg-7.offset-xl-6.col-xl-5
+					.success-page__content
+						.success-page__title Спасибо за оформление заказа
+						.success-page__text Оплата прошла успешно. Ваш заказ будет отправлен в течение двух дней
+
+						a(href="#").btn-circle Вернуться в магазин
+		
