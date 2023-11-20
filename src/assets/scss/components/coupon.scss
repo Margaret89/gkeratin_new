@@ -1,0 +1,84 @@
+/*-------------- coupon -----------------*/
+.coupon{
+	&__label{
+		font-size: 1.6rem;
+		margin-bottom: 5px;
+	}
+
+	&__field{
+		width: 290px;
+		position: relative;
+
+		input[type="text"]{
+			display: inline-flex;
+			align-items: center;
+			height: 6rem;
+			width: 100%;
+			font-family: var(--font-site);
+			@include font(normal, 500, 1.6rem, 1, var(--color-text));
+			padding: 0 50px 0 24px;
+			border-radius: 3rem;
+			border: 1px solid var(--color-primary);
+			outline: 0;
+			margin: 0;
+			outline: 0;
+			background: transparent;
+			box-shadow: none;
+			transition: border 0.2s ease 0s;
+		}
+
+		input[type="text"]:focus{border-color: var(--color-text);}
+	}
+
+	&__icon{
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+
+		.icon{fill: var(--color-primary);}
+	}
+
+	&__success{
+		font-size: 2rem;
+		color: var(--color-primary);
+		margin-top: 12px;
+	}
+
+	&.success &__icon{opacity: 1;}
+}
+
+@media (max-width: 767px) {
+	.coupon{
+		&__label{
+			font-size: 0.9rem;
+			margin-bottom: 3px;
+		}
+	
+		&__field{
+			width: 100%;
+	
+			input[type="text"]{
+				height: 3rem;
+				font-size: 0.8rem;
+				padding: 0 30px 0 14px;
+			}
+		}
+	
+		&__icon{
+			right: 10px;
+	
+			.icon{
+				width: 11px;
+				height: 11px;
+			}
+		}
+	
+		&__success{
+			font-size: 0.9rem;
+			margin-top: 7px;
+		}
+	}
+	
+}

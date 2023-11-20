@@ -1,0 +1,422 @@
+/*-------------- basket -----------------*/
+.basket-actions{
+	background: var(--bg-grey);
+	padding: 26px 0;
+	margin-bottom: 54px;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+
+		.form-search{width: 50%;}
+	}
+
+	&__btn{
+		display: flex;
+		gap: 15px;
+
+		.btn{min-width: 240px;}
+	}
+}
+
+.basket-list{margin-bottom: 25px;}
+
+.basket-item{
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 35px;
+
+	&__img-wrap{
+		width: 180px;
+		flex-shrink: 0;
+	}
+
+	&__img{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 100%;
+		height: 180px;
+		background-color: var(--bg-grey);
+
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+		width: 100%;
+	}
+
+	&__info{max-width: 300px;}
+
+	&__title{
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 1.2;
+
+		a{
+			color: var(--color-text);
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: var(--color-primary);}
+	}
+
+	&__param{
+		font-size: 2rem;
+		line-height: 1.2;
+		margin-top: 15px;
+	}
+
+	.counter-wrap{
+		position: relative;
+		text-align: center;
+	}
+
+	.counter,
+	&__close{
+		flex-shrink: 0;
+	}
+
+	&__prices-wrap{
+		display: flex;
+		justify-content: center;
+	}
+
+	&__prices-val{
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&__cur-price{
+		font-size: 3rem;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__old-price{
+		font-size: 2rem;
+		line-height: 1.2;
+		color: #9E9E9E;
+		position: relative;
+
+		&::after{
+			content: "";
+			border-bottom: 1px solid#9E9E9E;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			transform: rotate(-12deg);
+		}
+	}
+
+	&__prices-label{
+		font-size: 1.8rem;
+		color: var(--color-primary);
+		text-align: right;
+		margin-top: 0.6rem;
+	}
+
+	&__close{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		.icon{transition: fill 0.2s ease 0s;}
+		&:hover .icon{fill: var(--color-primary);}
+	}
+}
+
+.basket-bottom{
+	background: var(--bg-grey);
+	padding: 53px 0;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+	}
+
+	.coupon{flex-shrink: 0;}
+
+	&__link{
+		color: var(--color-text);
+		margin-top: 5px;
+	}
+
+	&__btn{
+		.btn{min-width: 290px;}
+	}
+
+	&__link{
+		font-size: 1.6rem;
+		text-align: center;
+		margin-top: 10px;
+		
+		a{
+			color: var(--color-text);
+			text-decoration: underline;
+		}
+
+		a:hover{
+			color: var(--color-primary);
+			text-decoration: none;
+		}
+	}
+}
+
+.basket-sum{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	width: 485px;
+	margin-left: auto;
+
+	&__title{font-size: 2.9rem;}
+
+	&__note{
+		font-size: 1.8rem;
+		margin-top: 8px;
+	}
+
+	&__val{
+		display: flex;
+		align-items: flex-end;
+		gap: 14px;
+	}
+
+	&__cur{
+		font-size: 4.4rem;
+		font-weight: 600;
+		line-height: 1;
+	}
+
+	&__old{
+		font-size: 2rem;
+		line-height: 1.2;
+		color: #9E9E9E;
+		position: relative;
+		padding-bottom: 3px;
+
+		&::after{
+			content: "";
+			border-bottom: 1px solid#9E9E9E;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			transform: rotate(-12deg);
+		}
+	}
+
+	&__label{
+		font-size: 1.8rem;
+		color: var(--color-primary);
+		text-align: right;
+		margin-top: 0.8rem;
+	}
+}
+
+@media (max-width: 1359px) {
+	.basket-item{
+		gap: 20px;
+
+		&__content{gap: 20px;}
+		&__img-wrap{width: 140px;}
+		&__img{height: 140px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.basket-actions{
+		background: transparent;
+	
+		&__content{
+			flex-direction: column-reverse;
+			align-items: flex-start;
+
+			.form-search{
+				width: calc(100% + 40px);
+				margin-left: -20px;
+				margin-right: -20px;
+				padding: 20px;
+				background: var(--bg-grey);
+
+				button,
+				input[type="submit"]{
+					left: 20px;
+				}
+			}
+		}
+	}
+
+	.basket-item{
+		align-items: flex-start;
+
+		&__content{flex-wrap: wrap;}
+
+		&__info{
+			flex-shrink: 0;
+			width: calc(100% - 60px);
+			max-width: none;
+			order: 1;
+		}
+
+		&__title{font-size: 2rem;}
+		&__param{font-size: 1.6rem;}
+		&__prices-wrap{order: 4;}
+		&__cur-price{font-size: 2rem;}
+		&__old-price{font-size: 1.6rem;}
+		&__prices-label{font-size: 1.4rem;}
+
+		.counter-wrap{order: 3;}
+
+		&__close{
+			align-self: flex-start;
+			order: 2;
+			margin-top: -8px;
+			margin-right: -11px;
+
+			.icon{
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+
+	.basket-bottom{
+		padding: 0;
+		background: transparent;
+
+		&__content{display: block;}
+		.coupon{margin-bottom: 20px;}
+
+		&__btn{
+			background: var(--bg-grey);
+			padding: 0 20px 30px;
+			margin-left: -20px;
+			margin-right: -20px;
+			text-align: left;
+		}
+
+		&__link{text-align: left;}
+	}
+
+	.basket-sum{
+		width: auto;
+		padding: 20px 0;
+		background: var(--bg-grey);
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.basket-actions{
+		margin-bottom: 20px;
+		padding: 0;
+
+		&__content{gap: 20px;}
+
+		&__btn{
+			width: 100%;
+			gap: 8px;
+
+			.btn{
+				width: calc(50% - 4px);
+				min-width: 0;
+				padding: 0 10px;
+				font-size: 0.9rem;
+			}
+		}
+
+		.form-search{padding: 13px 20px;}
+	}
+
+	.basket-list{margin-bottom: 0;}
+
+	.basket-item{
+		gap: 10px;
+		margin-bottom: 22px;
+
+		&__img-wrap{width: 83px;}
+		&__img{height: 83px;}
+		&__content{gap: 10px;}
+		&__info{width: calc(100% - 40px);}
+		&__title{font-size: 1rem;}
+
+		&__param{
+			font-size: 0.8rem;
+			margin-top: 7px;
+		}
+
+		&__cur-price{font-size: 1.4rem;}
+		&__old-price{font-size: 0.95rem;}
+		&__prices-label{font-size: 0.85rem;}
+		&__prices-val{gap: 5px;}
+
+		&__close{
+			width: 30px;
+			height: 30px;
+			margin-top: -6px;
+			margin-right: -10px;
+
+			.icon{
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+
+	.basket-bottom{
+		&__link{
+			font-size: 1rem;
+			text-align: center;
+		}
+
+		&__btn{padding-bottom: 12px;}
+	}
+
+	.basket-sum{
+		padding: 12px 20px;
+
+		&__title{font-size: 1.6rem;}
+
+		&__note{
+			font-size: 0.8rem;
+			margin-top: 0;
+		}
+
+		&__val{gap: 5px;}
+		&__cur{font-size: 1.6rem;}
+
+		&__old{
+			font-size: 1rem;
+			padding-bottom: 0;
+		}
+
+		&__label{
+			font-size: 0.85rem;
+			margin-top: 4px;
+		}
+	}
+}

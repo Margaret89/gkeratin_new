@@ -1,0 +1,117 @@
+/*-------------- counter -----------------*/
+.counter-wrap{
+	&__label{
+		font-size: 1.8rem;
+		line-height: 1;
+		text-align: center;
+		margin-top: 10px;
+	}
+}
+
+.counter{
+	display: inline-flex;
+	gap: 5px;
+
+	&__arr{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 1px solid var(--color-text);
+		@include font(none, 600, 2.8rem, 1, var(--color-text));
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+
+		&:hover{
+			border-color: var(--color-primary);
+			box-shadow: 0px 0px 0px 30px var(--color-primary) inset;
+			color: #fff;
+		}
+	}
+
+	input[type="text"],
+	input[type="number"]{
+		display: inline-block;
+		height: 40px;
+		width: 40px;
+		font-family: var(--font-site);
+		@include font(none, 600, 2.8rem, 1, var(--color-text));
+		text-align: center;
+		padding: 0;
+		background: transparent;
+		border: 0;
+		outline: 0;
+		margin: 0;
+		box-shadow: none;
+	}
+
+	input[type="number"]{-moz-appearance: textfield;}
+	// &__arr.product-item-amount-field-btn-disabled{cursor: auto;}
+
+	// &__arr.product-item-amount-field-btn-disabled .icon,
+	// &__arr.product-item-amount-field-btn-disabled:hover .icon,
+	// &__arr.disabled .icon,
+	// &__arr.disabled:hover .icon{
+	// 	fill: #ddd;
+	// }
+
+	// &__arr.product-item-amount-field-btn-disabled,
+	// &__arr.product-item-amount-field-btn-disabled:hover,
+	// &__arr.disabled,
+	// &__arr.disabled:hover{
+	// 	color: #ddd;
+	// }
+}
+
+@media (max-width: 991px) {
+	.counter{
+		&__arr{
+			width: 34px;
+			height: 34px;
+			font-size: 2.4rem;
+		}
+
+		&__field{
+			input[type="text"]{
+				height: 34px;
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	.counter-wrap{
+		&__label{
+			font-size: 1.4rem;
+			margin-top: 5px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.counter{
+		&__arr{
+			width: 20px;
+			height: 20px;
+			font-size: 1.4rem;
+		}
+
+		&__field{
+			gap: 3px;
+			
+			input[type="text"]{
+				height: 20px;
+				width: 30px;
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.counter-wrap{
+		&__label{
+			font-size: 0.85rem;
+			margin-top: 3px;
+		}
+	}
+}

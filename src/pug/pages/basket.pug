@@ -1,0 +1,362 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Корзина';
+	- var h1 = 'Корзина';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'личный кабинет'},
+			{href:'#',name:'корзина'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content 
+	section.basket.mb-indent
+		.basket-actions
+			.container-fluid
+				.row
+					.col-12
+						.basket-actions__content
+							form.form-search
+								input(type="text", placeholder="поиск по корзине", class="js-search-input")
+								button(type="submit", class="js-search-submit")
+									+svg('ic-search','ic-search', '24', '24')
+
+							.basket-actions__btn
+								span.btn.btn_border в корзине 3 товара
+								a(href="#").btn Очистить
+
+		.basket-list
+			.container-fluid
+				.row
+					.col-12
+						-
+							var list=[
+								{
+									title:'Мусс для укладки волос Styling Mousse 250 мл',
+								},
+								{
+									title:'Мусс для укладки волос Styling Mousse 250 мл',
+								},
+								{
+									title:'Мусс для укладки волос Styling Mousse 250 мл',
+								},
+							]
+						each item in list
+							.basket-item
+								.basket-item__img-wrap
+									a(href="#").basket-item__img
+										img(src="assets/img/basket-item.png", alt="")
+
+								.basket-item__content
+									.basket-item__info
+										.basket-item__title
+											a(href="#")= item.title
+										.basket-item__param Тип цены: Розничная
+
+									.counter-wrap
+										.counter
+											.counter__arr -
+											.counter__field
+												input(type="text", value="1")
+											.counter__arr +
+
+										.counter-wrap__label шт
+
+									.basket-item__prices-wrap
+										.basket-item__prices
+											.basket-item__prices-val
+												span.basket-item__old-price 2700 &#8381;
+												span.basket-item__cur-price 2500 &#8381;
+											.basket-item__prices-label экономия 200 &#8381;
+
+									.basket-item__close
+										+svg('ic-close','ic-close', '24', '24')
+
+		.basket-bottom
+			.container-fluid
+				.row
+					.col-12
+						.basket-bottom__content
+							.coupon.success
+								.coupon__label Введите промкод для скидки:
+
+								form(action="#")
+									.coupon__field
+										input(type="text", placeholder="Промокод")
+										.coupon__icon
+											+svg('ic-check','ic-check', '21', '21')
+
+								.coupon__success Скидка 30% применена!
+
+							.basket-sum
+								.basket-sum__info
+									.basket-sum__title Итого:
+									.basket-sum__note Сумма НДС 0 рублей
+
+								.basket-sum__val-wrap
+									.basket-sum__val
+										span.basket-sum__old 7500 &#8381;
+										span.basket-sum__cur 6500 &#8381;
+
+									.basket-sum__label экономия 1000 &#8381;
+
+							.basket-bottom__btn
+								a(href="#").btn Оплатить заказ
+
+								.basket-bottom__link
+									a(href="#")  Выбрать подарок
+
+
+	
+	section.special-products.mt-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Персональные предложения
+
+					.swiper.catalog-slider.js-catalog-slider
+						.swiper-wrapper
+							-
+								var list=[
+									{
+										img:'catalog-slide1.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										old_price:'3500',
+									},
+									{
+										img:'catalog-slide2.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide3.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide5.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide1.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										old_price:'3500',
+									},
+									{
+										img:'catalog-slide2.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide3.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+									{
+										img:'catalog-slide5.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+									},
+								]
+							each item in list
+								.swiper-slide
+									.catalog-slider-item
+										a(href="#").catalog-slider-item__img-wrap
+											span.catalog-slider-item__img
+												img(src="assets/img/"+item.img, alt="")
+
+											span.catalog-slider-item__sticker New
+											span.catalog-slider-item__wish
+												+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+										.catalog-slider-item__content
+											.catalog-slider-item__label= item.label
+											.catalog-slider-item__title
+												a(href="#")= item.title
+
+											.catalog-slider-item__prices
+												span.catalog-slider-item__cur-prices= item.price
+													| 
+													| &#8381;
+
+												if(item.old_price)
+													span.catalog-slider-item__old-prices= item.old_price
+														| 
+														| &#8381;
+
+											.catalog-slider-item__btn
+												a(href="#").btn добавить в корзину
+													+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+						.swiper-button-prev.js-catalog-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+						.swiper-button-next.js-catalog-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+	section.other-products.mt-indent
+		.container-fluid
+			.row
+				.col-12
+					h2.text-center Вы смотрели
+
+					.swiper.catalog-slider.js-catalog-viewed.d-lg-none
+						.swiper-wrapper
+							-
+								var list=[
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+									{
+										img:'catalog-item4.png',
+										label:'Шампунь для объема',
+										title:'Luxury Vol-Up Shampoo',
+										price:'2790',
+										price_old:'3500',
+									},
+								]
+							each item in list
+								.swiper-slide
+									.catalog-slider-item
+										a(href="#").catalog-slider-item__img-wrap
+											span.catalog-slider-item__img
+												img(src="assets/img/"+item.img, alt="")
+
+											span.catalog-slider-item__sticker New
+											span.catalog-slider-item__wish
+												+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+										.catalog-slider-item__content
+											.catalog-slider-item__label= item.label
+											.catalog-slider-item__title
+												a(href="#")= item.title
+
+											.catalog-slider-item__prices
+												span.catalog-slider-item__cur-prices= item.price
+													| 
+													| &#8381;
+
+												if(item.old_price)
+													span.catalog-slider-item__old-prices= item.old_price
+														| 
+														| &#8381;
+
+											.catalog-slider-item__btn
+												a(href="#").btn добавить в корзину
+													+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+						.swiper-button-prev.js-catalog-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '57', '38')
+						.swiper-button-next.js-catalog-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '57', '38')
+
+					.catalog-list.d-none.d-lg-grid
+						-
+							var list=[
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+								{
+									img:'catalog-item4.png',
+									label:'Шампунь для объема',
+									title:'Luxury Vol-Up Shampoo',
+									price:'2790',
+									price_old:'3500',
+								},
+							]
+						each item in list
+							.catalog-item
+								.catalog-item__img-wrap
+									a(href="#").catalog-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+									if(item.sticker)
+										.catalog-stickers
+											each sticker in item.sticker
+												.catalog-stickers__item(class=item.sticker=='%'?'catalog-stickers__item_black':'')
+
+									.catalog-item__wish
+										+svg('ic-heart','ic-heart ic-stroke', '26', '23')
+
+									.catalog-item__cart
+										+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+								.catalog-item__content
+									.catalog-item__label= item.label
+
+									.catalog-item__title
+										a(href="#")= item.title
+
+									.catalog-item__price
+										span.catalog-item__cur-price= item.price
+											| 
+											| &#8381;
+
+										if(item.price_old)
+											span.catalog-item__old-price= item.price_old
+												| 
+												| &#8381;
