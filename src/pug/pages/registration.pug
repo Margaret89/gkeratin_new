@@ -1,0 +1,48 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Регистрация нового аккаунта';
+
+block content 
+	section.auth
+		.container-fluid
+			.row
+				.col-lg-6.offset-lg-3.col-xl-4.offset-xl-4
+					.js-valid-form
+						form.form-site
+							.form-site__title Регистрация нового аккаунта
+							.form-site__text После регистрации на сайте вам будет доступно отслеживание состояния заказов, личный кабинет и другие новые возможности.
+							
+							.form-site__content
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="text", placeholder="Фамилия Имя Отчество")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="email", placeholder="Email")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="text", class="js-phone", required="required", placeholder="Телефон*")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="password", placeholder="Пароль")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="password", placeholder="Подтверждение пароля")
+							
+							.form-site__polit.js-form-site-polit
+								label.input-check
+									input(type='checkbox', required="required")
+									span.input-check__mark
+										+svg('ic-tick','ic-tick', '9', '6')
+									span.input-check__text Я согласен на 
+										a(href="#") обработку персональных данных
+
+							.form-site__btn
+								button(type="submit").btn.js-btn-submit
+									span Регистрация
+	

@@ -6,6 +6,8 @@
 		margin-bottom: 3rem;
 	}
 
+	&__text{margin-bottom: 40px;}
+
 	&__content{
 		display: flex;
 		flex-wrap: wrap;
@@ -106,20 +108,20 @@
 		position: relative;
 	}
 
-	// &__polit{
-	// 	position: relative;
+	&__links{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		font-size: 1.2rem;
+		margin-top: 15px;
+	}
 
-	// 	.input-check{
-	// 		&__mark{
-	// 			flex: 0 0 30px;
-	// 			width: 30px;
-	// 			height: 30px;
-	// 		}
-
-	// 		&__label{font-size: 1.3rem;}
-	// 		&__text{margin-left: 10px;}
-	// 	}
-	// }
+	&__note{
+		font-size: 12px;
+		text-align: center;
+		margin-top: 34px;
+	}
 
 	.form-site-msg-error{
 		@include font(normal, normal, 1.2rem, 1.2, var(--color-dander));
@@ -201,6 +203,28 @@
 			border-radius: 2rem;
 			font-size: 1rem;
 			padding: 0 15px;
+		}
+
+		&__note,
+		&__links{
+			font-size: 0.85rem;
+		}
+
+		&__links{
+			margin-top: 10px;
+
+			.input-check,
+			.input-radio,
+			.subscribe__title{
+				font-size: 0.85rem;
+			}
+		}
+
+		&__note{margin-top: 22px;}
+
+		&__text{
+			font-size: 1.1rem;
+			margin-bottom: 28px;
 		}
 	}
 

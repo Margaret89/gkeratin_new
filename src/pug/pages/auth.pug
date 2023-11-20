@@ -1,0 +1,39 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вход в личный кабинет';
+
+block content 
+	section.auth
+		.container-fluid
+			.row
+				.col-lg-6.offset-lg-3.col-xl-4.offset-xl-4
+					.js-valid-form
+						form.form-site
+							.form-site__title Вход в личный кабинет
+							
+							.form-site__content
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="email", placeholder="Email")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="password", placeholder="Пароль")
+
+							.form-site__links
+								label.input-check
+									input(type='checkbox', required="required")
+									span.input-check__mark
+										+svg('ic-tick','ic-tick', '9', '6')
+									span.input-check__text Запомнить меня
+
+								.form-site__member
+									a(href="#") Забыли пароль?
+
+							.form-site__btn
+								button(type="submit").btn.js-btn-submit
+									span Войти
+	
+							.form-site__note
+								a(href="#") Нет аккаунта? Зарегестрируйте аккаунт
