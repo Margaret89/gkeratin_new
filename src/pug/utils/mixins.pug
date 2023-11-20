@@ -1,5 +1,5 @@
 mixin h1(v)
-	.page-header(class=h1_bg=='grey'?'bg-grey':'')
+	.page-header(class=h1_bg=='grey'?'bg-grey':'', class=h1_white=='true'?'page-header_white':'')
 		.container-fluid
 			.row
 				.col-12
@@ -8,7 +8,7 @@ mixin h1(v)
 
 mixin breadcrumbs(links, color)
 	- var len=links.length
-	.breadcrumb-wrap(class=color=='grey'?'bg-grey':'')
+	.breadcrumb-wrap(class=color=='grey'?'bg-grey':'', class=crumb_white=='true'?'breadcrumb-wrap_white':'')
 		.container-fluid
 			.row
 				.col-12

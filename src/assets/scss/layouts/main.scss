@@ -311,6 +311,12 @@ button.btn{
 	z-index: 2;
 
 	h1, .h1{margin-bottom: 0;}
+
+	&_white{
+		color: #fff;
+
+		h1, .h1{color: #fff;}
+	}
 }
 
 .link-site{
@@ -444,7 +450,16 @@ button.btn{
 	main{padding-bottom: 60px;}
 	.last-elem{margin-bottom: -60px;}
 
-	.page-header{padding-bottom: 2.4rem;}
+	.page-header{
+		padding-bottom: 2.4rem;
+	
+		&_white{
+			color: var(--color-text);
+	
+			h1, .h1{color: var(--color-text);}
+		}
+	}
+
 	.font-accent{font-size: 1.6rem;}
 	.font-middle{font-size: 1.2rem;}
 }
