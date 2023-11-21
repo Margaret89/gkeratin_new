@@ -1,0 +1,45 @@
+/*-------------- error-page -----------------*/
+.error-page{
+	text-align: center;
+
+	&__img{margin-bottom: 65px;}
+
+	&__title{
+		font-family: var(--font-header);
+		font-size: 6rem;
+		line-height: 1.1;
+	}
+
+	&__text{
+		font-size: 2.4rem;
+		margin-top: 24px;
+	}
+
+	.btn{margin-top: 42px;}
+}
+
+@media (max-width: 991px) {
+	.error-page{
+		&__img img{max-width: 50%;}
+		&__title{font-size: 5.4rem;}
+		&__text{font-size: 2rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.error-page{
+		&__img img{max-width: 96%;}
+		&__img{margin-bottom: 47px;}
+		&__title{font-size: 2.7rem;}
+
+		&__text{
+			font-size: 1.4rem;
+			margin-top: 12px;
+		}
+
+		.btn{
+			min-width: 275px;
+			margin-top: 25px;
+		}
+	}
+}

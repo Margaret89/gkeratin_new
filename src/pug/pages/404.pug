@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Что-то пошло не так';
+
+block content
+	section.error-page.last-elem.p-indent
+		.container-fluid
+			.row
+				.col-12
+					.error-page__content
+						.error-page__img
+							img(src="assets/img/404.png", alt="")
+						.error-page__title Что-то пошло не так
+						.error-page__text Страница не найдена
+
+						a(href="#").btn На главную
+		
