@@ -103,10 +103,8 @@
 
 	&__wish:hover .icon,
 	&__wish.active .icon{
-		stroke: var(--color-primary);
+		fill: var(--color-primary);
 	}
-
-	&__wish.active .icon{fill: var(--color-primary);}
 
 	&__cart{
 		display: inline-flex;

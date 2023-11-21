@@ -1,0 +1,23 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Избранное';
+	- var h1 = 'Избранное';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'личный кабинет'},
+			{href:'#',name:'избранное'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.wishlist-empty.p-indent.last-elem
+		.container-fluid
+			.row
+				.col-12
+					.wishlist-empty__title В избранном ничего нет
+					a(href="#").btn В интернет магазин

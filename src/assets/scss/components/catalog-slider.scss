@@ -68,10 +68,8 @@
 
 	&__wish:hover .icon,
 	&__wish.active .icon{
-		stroke: var(--color-primary);
+		fill: var(--color-primary);
 	}
-
-	&__wish.active .icon{fill: var(--color-primary);}
 
 	&__content{text-align: center;}
 

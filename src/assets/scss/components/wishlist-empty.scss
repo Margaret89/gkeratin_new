@@ -1,0 +1,15 @@
+/*-------------- wishlist-empty -----------------*/
+.wishlist-empty{
+	display: flex;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+
+	&__title{
+		font-family: var(--font-header);
+		font-size: 4rem;
+		line-height: 1.2;
+	}
+
+	.btn{margin-top: 25px;}
+}

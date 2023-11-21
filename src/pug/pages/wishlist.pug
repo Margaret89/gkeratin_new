@@ -1,0 +1,119 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Избранное';
+	- var h1 = 'Избранное';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'личный кабинет'},
+			{href:'#',name:'избранное'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.catalog
+		.container-fluid
+			.row
+				.col-12
+					.catalog-list.js-catalog-list
+						-
+							var list=[
+								{
+									sticker:['new'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['new','%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item2.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item3.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									sticker:['%'],
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+								},
+								{
+									img:'catalog-item1.png',
+									label:'Кондиционер из веганской линии',
+									title:'Conditioner CBD Vegan line 650 мл',
+									price:'2790',
+									price_old:'4500',
+								},
+								
+							]
+						each item in list
+							.catalog-item
+								.catalog-item__img-wrap
+									a(href="#").catalog-item__img
+										img(src="assets/img/"+item.img, alt="")
+
+									if(item.sticker)
+										.catalog-stickers
+											each sticker in item.sticker
+												.catalog-stickers__item(class=sticker=='%'?'catalog-stickers__item_black':'')= sticker
+
+									.catalog-item__wish.active
+										+svg('ic-heart','ic-heart ic-stroke', '22', '20')
+
+									.catalog-item__cart
+										+svg('ic-cart','ic-cart ic-stroke', '23', '26')
+
+
+								.catalog-item__content
+									.catalog-item__label= item.label
+
+									.catalog-item__title
+										a(href="#")= item.title
+
+									.catalog-item__price
+										span.catalog-item__cur-price= item.price
+											| 
+											| &#8381;
+
+										if(item.price_old)
+											span.catalog-item__old-price= item.price_old
+												| 
+												| &#8381;
+
+		
