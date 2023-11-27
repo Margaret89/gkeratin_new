@@ -1,8 +1,9 @@
 /*-------------- main-menu -----------------*/
+.main-menu-wrap{position: relative;}
+
 .main-menu{
 	margin-top: 30px;
 	font-family: var(--font-evolventa);
-	position: relative;
 
 	&__list,
 	&__item,

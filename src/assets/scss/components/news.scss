@@ -7,6 +7,7 @@
 	&__img{
 		width: 100%;
 		height: calc(100% + 200px);
+		background-color: var(--bg-grey);
 		background-repeat: no-repeat;
 		background-position: bottom right;
 		background-size: cover;
@@ -83,6 +84,8 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		transition: transform 0.2s ease 0s;
+
+		&_empty{background-size: 50%;}
 	}
 
 	&__img-wrap:hover &__img{transform: translate(-50%, -50%) scale(1.05);}

@@ -1,7 +1,8 @@
-import {$, Inputmask, Fancybox, Swiper, Cookies, noUiSlider} from './common';
+// import {$, Inputmask, Fancybox, Swiper, Cookies, noUiSlider} from './common';
+import {$, Fancybox, Swiper, Cookies, noUiSlider} from './common';
 
 // Маска для телефона
-Inputmask('+7 (999) 999-9999').mask('.js-phone');
+// Inputmask('+7 (999) 999-9999').mask('.js-phone');
 
 // Валидация форм
 function errorField(form, event) {
@@ -79,8 +80,8 @@ if($('.js-valid-form').length){
 		Fancybox.close();
 		Fancybox.show([{ src: "#msg-success", type: "inline" }]);
 
-		$(this)[0].reset();
-		e.preventDefault();
+		// $(this)[0].reset();
+		// e.preventDefault();
 	});
 }
 

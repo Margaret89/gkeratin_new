@@ -27,6 +27,8 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		transition: transform 0.2s ease 0s;
+
+		&_empty{background-size: 50%;}
 	}
 
 	&__img-wrap:hover &__img{transform: translate(-50%, -50%) scale(1.05);}

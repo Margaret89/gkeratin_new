@@ -45,18 +45,6 @@
 		img{max-height: 100%;}
 	}
 
-	&__sticker{
-		padding: 18px 10px 12px;
-		background: var(--color-primary);
-		font-size: 1.4rem;
-		font-weight: 500;
-		color: #fff;
-		text-transform: uppercase;
-		position: absolute;
-		top: 0;
-		left: 24px;
-	}
-
 	&__wish{
 		position: absolute;
 		top: 16px;
@@ -121,6 +109,45 @@
 	}
 }
 
+.catalog-slider-sticker{
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 24px;
+	z-index: 2;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		// height: 3.5rem;
+		// min-width: 3.5rem;
+		// padding: 5px;
+		// font-size: 0.8rem;
+		// font-weight: 500;
+		// color: #fff;
+		// background: var(--color-primary);
+
+		padding: 18px 10px 12px;
+		background: var(--color-primary);
+		font-size: 1.4rem;
+		font-weight: 500;
+		color: #fff;
+		text-transform: uppercase;
+		
+
+		&_black{
+			font-size: 1.3rem;
+			background: var(--color-text);
+		}
+
+		&_blue{background: #2992d9;}
+		&_purple{background: #893ca9;}
+		&_yellow{background: #dfa800;}
+		&_pink{background: #df00a6;}
+	}
+}
+
 @media (max-width: 1279px) {
 	.catalog-slider-item{
 		&__btn{
@@ -167,12 +194,6 @@
 
 		&__img-wrap{transform: scale(0.9);}
 
-		&__sticker{
-			font-size: 0.8rem;
-			left: 0;
-			padding: 9px 6px;
-		}
-
 		&__wish{
 			top: 9px;
 			right: 14px;
@@ -196,6 +217,15 @@
 
 				.icon{max-width: 17px;}
 			}
+		}
+	}
+
+	.catalog-slider-sticker{
+		left: 0;
+		
+		&__item{
+			font-size: 0.8rem;
+			padding: 9px 6px;
 		}
 	}
 }
