@@ -33,6 +33,7 @@
 	left: -600px;
 	z-index: 100;
 	transition: left 0.3s ease 0s;
+	scrollbar-width: thin;
 
 	&.open{left: 0;}
 

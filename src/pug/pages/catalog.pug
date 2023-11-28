@@ -82,6 +82,32 @@ block content
 														.range__slider
 															#slider-range.js-slider-range(data-min="952", data-max="1404",data-cur-min="982",data-cur-max="1104", autocomplete="off")
 
+											.filter__item.js-filter-item.active
+												//- .filter__head.js-filter-head
+												//- 	.filter__title Цена, руб
+												//- 	.filter__arr
+												//- 		+svg('ic-arrow-down','ic-arrow-down', '16', '8')
+												
+												.filter__content.js-filter-content(style="display: block; padding: 0;")
+													.range.js-range
+														.range__fields
+															.range__val
+																|от 
+																//- input(type="text", autocomplete="off", disabled="disabled")
+																span#slider-range-min.js-slider-range-min
+																| 
+																| &#8381;
+
+															.range__val
+																|до 
+																//- input(type="text", autocomplete="off", disabled="disabled")
+																span#slider-range-max.js-slider-range-max
+																| 
+																| &#8381;
+
+														.range__slider
+															#slider-range.js-slider-range(data-min="100", data-max="500",data-cur-min="80",data-cur-max="400", autocomplete="off")
+
 											.filter__item.js-filter-item
 												.filter__head.js-filter-head
 													.filter__arr
