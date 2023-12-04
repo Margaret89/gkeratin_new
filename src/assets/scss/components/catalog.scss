@@ -90,6 +90,13 @@
 		img{max-height: 100%;}
 
 		&:hover{opacity: 0.6;}
+
+		&_empty{
+			img{
+				max-width: 45%;
+				max-height: 45%;
+			}
+		}
 	}
 
 	&__wish{
@@ -195,7 +202,14 @@
 			font-size: 1.3rem;
 			background: var(--color-text);
 		}
+
+		&_blue{background: #2992d9;}
+		&_purple{background: #893ca9;}
+		&_yellow{background: #dfa800;}
+		&_pink{background: #df00a6;}
 	}
+
+
 }
 
 .other-products{
