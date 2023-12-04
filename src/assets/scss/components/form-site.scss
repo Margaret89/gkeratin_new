@@ -69,7 +69,7 @@
 		input[type="password"],
 		input[type="time"],
 		textarea{
-			border-color: var(--color-dander);
+			border-color: var(--color-danger);
 		}
 
 		input[type="text"]::placeholder,
@@ -78,7 +78,7 @@
 		input[type="password"]::placeholder,
 		input[type="time"]::placeholder,
 		textarea::placeholder{
-			color: var(--color-dander);
+			color: var(--color-danger);
 		}
 	}
 
@@ -124,7 +124,7 @@
 	}
 
 	.form-site-msg-error{
-		@include font(normal, normal, 1.2rem, 1.2, var(--color-dander));
+		@include font(normal, normal, 1.2rem, 1.2, var(--color-danger));
 		margin-top: 5px;
 		position: absolute;
 		top: 100%;
@@ -133,10 +133,10 @@
 
 	&__btn{margin-top: 30px;}
 
-	&__req{color: var(--color-dander);}
+	&__req{color: var(--color-danger);}
 
 	&__error{
-		@include font(normal, normal, 1.6rem, 1.2, var(--color-dander));
+		@include font(normal, normal, 1.6rem, 1.2, var(--color-danger));
 		margin-bottom: 10px;
 	}
 }

@@ -13,7 +13,7 @@
 	--color-link-hover: var(--color-text);
 	// --color-link-active: var(--color-semi-gold);
 
-	--color-dander: #E01E1E;
+	--color-danger: #E01E1E;
 	--margin-indent: 140px;
 	--bg-grey: #F2F2F2;
 }
@@ -245,6 +245,46 @@ button.btn{
 	&_black:hover{
 		border-color: var(--color-primary);
 		background: var(--color-primary);
+	}
+
+	&_no-hover{
+		cursor: auto;
+		box-shadow: none;
+		color: #fff;
+
+		.icon{fill: #fff;}
+
+		.icon.ic-stroke{
+			fill: transparent;
+			stroke: #fff;
+		}
+	}
+
+	&_border.btn_no-hover{
+		cursor: auto;
+		box-shadow: none;
+		color: var(--color-text);
+
+		.icon{fill: var(--color-text);}
+
+		.icon.ic-stroke{
+			fill: transparent;
+			stroke: var(--color-text);
+		}
+	}
+
+	&_disable{
+		cursor: auto;
+		box-shadow: none;
+		color: #fff;
+		opacity: 0.5;
+
+		.icon{fill: #fff;}
+
+		.icon.ic-stroke{
+			fill: transparent;
+			stroke: #fff;
+		}
 	}
 }
 

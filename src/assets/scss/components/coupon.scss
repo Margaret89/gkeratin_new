@@ -1,12 +1,13 @@
 /*-------------- coupon -----------------*/
 .coupon{
+	width: 290px;
+
 	&__label{
 		font-size: 1.6rem;
 		margin-bottom: 5px;
 	}
 
 	&__field{
-		width: 290px;
 		position: relative;
 
 		input[type="text"]{
@@ -40,13 +41,24 @@
 		.icon{fill: var(--color-primary);}
 	}
 
-	&__success{
-		font-size: 2rem;
-		color: var(--color-primary);
-		margin-top: 12px;
-	}
-
 	&.success &__icon{opacity: 1;}
+}
+
+.coupon-alert{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-size: 2rem;
+	color: var(--color-primary);
+	margin-top: 12px;
+
+	&.BAD{color: var(--color-danger);}
+
+	&__del{
+		font-size: 1.6rem;
+		color: var(--color-text);
+		cursor: pointer;
+	}
 }
 
 @media (max-width: 767px) {

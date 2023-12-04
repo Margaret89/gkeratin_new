@@ -136,6 +136,8 @@
 		justify-content: center;
 		width: 40px;
 		height: 40px;
+		cursor: pointer;
+		
 		.icon{transition: fill 0.2s ease 0s;}
 		&:hover .icon{fill: var(--color-primary);}
 	}
