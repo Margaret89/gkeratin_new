@@ -476,3 +476,8 @@ $(".js-unwrap-block").on('click','.js-unwrap-head',function(event){
         $(this).parent().children(".js-unwrap-content").slideUp(400);
     }
 });
+
+//Очищаем поле поиска
+$('.js-form-search-cancel').on('click', function(){
+	$(this).siblings('.js-search-input').val('');
+});

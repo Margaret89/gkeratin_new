@@ -12,10 +12,10 @@ block content
 				.col-12
 					form.form-search
 						input(type="text", placeholder="Начните искать что-нибудь", class="js-search-input")
-						button(type="submit", class="js-search-submit")
+						button(type="submit")
 							+svg('ic-search','ic-search', '24', '24')
 
-						.form-search__cancel
+						.form-search__cancel.js-form-search-cancel
 							+svg('ic-close','ic-close', '17', '17')
 
 					.page-search__top

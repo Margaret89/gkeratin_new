@@ -27,3 +27,7 @@
 	left: auto;
 	right: 0;
 }
+
+.bx-pagination{margin: 90px 0 0;}
+.bx-pagination .bx-pagination-container ul li::before{display: none;}
+.bx-pagination.bx-blue .bx-pagination-container ul li.bx-active span{background: var(--color-primary);}

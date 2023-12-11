@@ -63,7 +63,19 @@
 	gap: 28px;
 
 	&__item{flex-shrink: 0;}
-	&__icon{position: relative;}
+
+	&__icon{
+		position: relative;
+		cursor: pointer;
+
+		.icon{transition: all 0.2s ease 0s;}
+		&:hover .icon{fill: var(--color-primary);}
+
+		&:hover .icon.ic-stroke{
+			fill: transparent;
+			stroke: var(--color-primary);
+		}
+	}
 
 	&__count{
 		display: inline-flex;
