@@ -1,0 +1,32 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Каталог';
+	- var h1 = 'Интернет магазин';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Интернет магазин'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.catalog
+		.container-fluid
+			.row
+				.col-lg-6
+					.catalog-sect
+						-
+							var list=[
+								{text:'домашний уход'},
+								{text:'салонный уход'},
+								{text:'приборы и аксессуары для волос'},
+							]
+						each item in list
+							a(href="#").catalog-sect__item
+								span.catalog-sect__text= item.text
+								span.catalog-sect__arr
+									+svg('ic-arrow-right','ic-arrow-right', '44', '30')

@@ -459,6 +459,23 @@ block content
 		.container-fluid
 			.row
 				.col-12
+					.pager
+						.pager__list
+							a.pager__item.active(href='#') 1
+							a.pager__item(href='#') 2
+							a.pager__item(href='#') 3
+							a.pager__item(href='#') 4
+							//- a.pager__item(href='#') 5
+
+						.pager__nav
+							a.pager__arr.disable
+								+svg('ic-arrow-left','ic-arrow-left', '58', '38')
+							a.pager__arr
+								+svg('ic-arrow-right','ic-arrow-right', '58', '38')
+
+		.container-fluid
+			.row
+				.col-12
 					.catalog__text-bottom GKhair - все о красоте волос! Инновационные технологии + Кератин Juvexin GKhair, представляет линию средств, специально разработанную для осуществления профессионального ухода. Все продукты обогащены кератином Juvexin – инновационная комбинация органических соединений которого способствует активному взаимодействию формулы продукта с волосами, глубокому восстановлению, увлажнению, усилению блеска. Волосы идеально гладкие и послушные. Продукция предназначена для использования, как в салонах, так и в домашних условиях. Все продукты содержат кератин Juvexin и не содержат SLS, SLES, хлорида натрия. Продукция не тестируется на животных.
 
 	section.special-products.mt-indent

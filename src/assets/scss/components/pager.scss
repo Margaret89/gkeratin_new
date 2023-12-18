@@ -1,0 +1,105 @@
+/*-------------- pager -----------*/
+.pager{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	margin-top: 50px;
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 16px;
+	}
+
+	&__item{
+		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: top;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 1.5px solid var(--color-primary);
+		@include font(none, none, 2.6rem, 1, var(--color-primary));
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	&__item.active,
+	&__item:hover{
+		box-shadow: inset 0 -3.4em 0 0 var(--color-primary);
+		color: #fff;
+	}
+
+	&__nav{
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__arr{
+		flex-shrink: 0;
+		cursor: pointer;
+
+		.icon{
+			fill: var(--color-text);
+			transition: fill 0.2s ease 0s;
+		}
+
+		&:hover .icon{fill: var(--color-primary);}
+
+		&.disable{
+			opacity: 0.3;
+			cursor: auto;
+		}
+
+		&.disable .icon{fill: var(--color-text);}
+	}
+}
+
+
+@media (max-width: 991px) {
+	.pager{
+		&__item{
+			width: 48px;
+			height: 48px;
+			font-size: 2.1rem;
+		}
+
+		&__arr{
+			.icon{
+				width: 44px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.pager{
+		margin-top: 30px;
+
+		&__list{gap: 8px;}
+
+		&__item{
+			width: 34px;
+			height: 34px;
+			font-size: 1.6rem;
+		}
+
+		&__nav{gap: 16px;}
+
+		&__arr{
+			.icon{
+				width: 24px;
+				height: 16px;
+			}
+		}
+	}
+
+}

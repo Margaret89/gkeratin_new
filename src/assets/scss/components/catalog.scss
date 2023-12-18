@@ -179,6 +179,19 @@
 	}
 }
 
+.catalog-item-prices{
+	margin-top: 15px;
+
+	&__item:not(:last-child){margin-bottom: 5px;}
+
+	&__label{font-size: 1.3rem;}
+
+	&__val{
+		font-size: 2rem;
+		font-weight: 700;
+	}
+}
+
 .catalog-stickers{
 	display: flex;
 	position: absolute;
