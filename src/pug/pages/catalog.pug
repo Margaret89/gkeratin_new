@@ -68,28 +68,30 @@ block content
 															.range__val
 																|от 
 																//- input(type="text", autocomplete="off", disabled="disabled")
-																span#slider-range-min.js-slider-range-min
+																span.js-slider-range-input-min
 																| 
 																| &#8381;
+																input#slider-range-min.js-slider-range-min(type="text")
 
 															.range__val
 																|до 
 																//- input(type="text", autocomplete="off", disabled="disabled")
-																span#slider-range-max.js-slider-range-max
+																span.js-slider-range-input-max
 																| 
 																| &#8381;
+																input#slider-range-max.js-slider-range-max(type="text")
 
 														.range__slider
 															#slider-range.js-slider-range(data-min="952", data-max="1404",data-cur-min="982",data-cur-max="1104", autocomplete="off")
 
-											.filter__item.js-filter-item.active
-												//- .filter__head.js-filter-head
-												//- 	.filter__title Цена, руб
-												//- 	.filter__arr
-												//- 		+svg('ic-arrow-down','ic-arrow-down', '16', '8')
+											//- .filter__item.js-filter-item.active
+											//- 	//- .filter__head.js-filter-head
+											//- 	//- 	.filter__title Цена, руб
+											//- 	//- 	.filter__arr
+											//- 	//- 		+svg('ic-arrow-down','ic-arrow-down', '16', '8')
 												
-												.filter__content.js-filter-content(style="display: block; padding: 0;")
-													.range.js-range
+											//- 	.filter__content.js-filter-content(style="display: block; padding: 0;")
+											//- 		.range.js-range
 														.range__fields
 															.range__val
 																|от 

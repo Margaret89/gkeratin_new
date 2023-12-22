@@ -319,18 +319,18 @@ if($('.js-select').length){
 }
 
 // Переключение вида списка каталога
-$(".js-view-item").on('click', function(e) {
-	e.preventDefault();
-	let catalogView = $(this).data('type');
+// $(".js-view-item").on('click', function(e) {
+// 	e.preventDefault();
+// 	let catalogView = $(this).data('type');
 
-	Cookies.set('catalog-view', catalogView);
+// 	Cookies.set('catalog-view', catalogView);
 
-	$('.js-view-item').removeClass('active');
-	$(this).addClass('active');
+// 	$('.js-view-item').removeClass('active');
+// 	$(this).addClass('active');
 
-	$('.js-catalog-list').removeClass('catalog-list_grid catalog-list_tile');
-	$('.js-catalog-list').addClass('catalog-list_'+catalogView);
-});
+// 	$('.js-catalog-list').removeClass('catalog-list_grid catalog-list_tile');
+// 	$('.js-catalog-list').addClass('catalog-list_'+catalogView);
+// });
 
 // range-slider
 if($('.js-slider-range').length){
@@ -369,47 +369,57 @@ if($('.js-slider-range').length){
 				initRange = true;
 				}
 			}else{
-				// $('.js-slider-range-min').trigger("change");
-				// $('.js-slider-range-max').trigger("change");
+				$('.js-slider-range-min').trigger("change");
+				$('.js-slider-range-max').trigger("change");
 			}
 
 			$('#'+snapValues[handle].id).text(snapValues[handle].value);
 		});
 
-		// snapValues.forEach(function (input, handle) {
-		// 	input.addEventListener('change', function () {
-		// 		var valItem = this.value;
-		// 		var minValItem = parseFloat(snapValues[0].value);
-		// 		var maxValItem = parseFloat(snapValues[1].value);
+		snapValues.forEach(function (input, handle) {
+			input.addEventListener('change', function () {
+				var valItem = this.value;
+				var minValItem = parseFloat(snapValues[0].value);
+				var maxValItem = parseFloat(snapValues[1].value);
 
-		// 		if(handle == 0){
-		// 			if((valItem < minRange) || (valItem > maxRange) || (valItem >= maxValItem)){
-		// 				valItem = minRange;
-		// 			}
-		// 		}else{
-		// 			if((valItem < minRange) || (valItem > maxRange) || (valItem <= minValItem)){
-		// 				valItem = maxRange;
-		// 			}
-		// 		}
-		// 		slider.noUiSlider.setHandle(handle, valItem);
-		// 	});
-		// });
+				if(handle == 0){
+					if((valItem < minRange) || (valItem > maxRange) || (valItem >= maxValItem)){
+						valItem = minRange;
+					}
+				}else{
+					if((valItem < minRange) || (valItem > maxRange) || (valItem <= minValItem)){
+						valItem = maxRange;
+					}
+				}
+				slider.noUiSlider.setHandle(handle, valItem);
+			});
+		});
 	});
 
+	$(".js-slider-range-input-min").html($(".js-slider-range-min").val());
+	$(".js-slider-range-input-max").html($(".js-slider-range-max").val()),
 
 	// Проверка полей на ввод цифор
-	// $('.js-slider-range-min').on("change keyup input click", function() {
-	// 	if (this.value.match(/[^0-9. ]/g)) {
-	// 		this.value = this.value.replace(/[^0-9. ]/g, '');
-	// 	}
-	// });
+	$('.js-slider-range-min').on("change keyup input click", function() {
+		if (this.value.match(/[^0-9. ]/g)) {
+			this.value = this.value.replace(/[^0-9. ]/g, '');
+		}
 
-	// $('.js-slider-range-max').on("change keyup input click", function() {
-	// 	if (this.value.match(/[^0-9. ]/g)) {
-	// 		this.value = this.value.replace(/[^0-9. ]/g, '');
-	// 	}
-	// });
+		$(".js-slider-range-input-min").html(this.value);
+	});
+
+	$('.js-slider-range-max').on("change keyup input click", function() {
+		if (this.value.match(/[^0-9. ]/g)) {
+			this.value = this.value.replace(/[^0-9. ]/g, '');
+		}
+
+		$(".js-slider-range-input-max").html(this.value);
+	});
+
+	$(".js-slider-range-min-empty").val("");
+	$(".js-slider-range-max-empty").val("");
 }
+
 
 // Открыть/Закрыть пункты фильтра
 if($('.js-filter-head').length){
