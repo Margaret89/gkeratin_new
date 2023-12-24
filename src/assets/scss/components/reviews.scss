@@ -43,6 +43,19 @@
 	}
 }
 
+.review-form{
+	padding: 40px 55px;
+
+	.form-site{
+		&__col{width: 100%;}
+
+		&__col:first-child{
+			flex-shrink: 0;
+			width: 80%;
+		}
+	}
+}
+
 @media (max-width: 991px) {
 	.review-item{
 		width: 100%;

@@ -322,16 +322,20 @@
 	&__val{
 		text-align: right;
 		margin-top: -2px;
-	}
-
-	&__cur-price{
 		font-size: 2.4rem;
 		font-weight: 600;
 		line-height: 1.2;
 	}
 
+	// &__cur-price{
+	// 	font-size: 2.4rem;
+	// 	font-weight: 600;
+	// 	line-height: 1.2;
+	// }
+
 	&__old-price{
 		font-size: 1.6rem;
+		font-weight: 400;
 		color: #6C6C6C;
 		text-decoration: line-through;
 		margin-top: -3px;

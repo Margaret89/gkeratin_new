@@ -28,6 +28,7 @@
 	input[type="number"],
 	input[type="password"],
 	input[type="time"],
+	input[type="date"],
 	textarea{
 		display: inline-flex;
 		align-items: center;
@@ -51,6 +52,7 @@
 		line-height: 1.6;
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
+		border-radius: 1.8rem;
 	}
 
 	input[type="text"]:focus,
@@ -58,6 +60,7 @@
 	input[type="email"]:focus,
 	input[type="password"]:focus,
 	input[type="time"]:focus,
+	input[type="date"]:focus,
 	textarea:focus{
 		border-color: var(--color-text);
 	}
@@ -68,6 +71,7 @@
 		input[type="email"],
 		input[type="password"],
 		input[type="time"],
+		input[type="date"],
 		textarea{
 			border-color: var(--color-danger);
 		}
@@ -77,6 +81,7 @@
 		input[type="email"]::placeholder,
 		input[type="password"]::placeholder,
 		input[type="time"]::placeholder,
+		input[type="date"]::placeholder,
 		textarea::placeholder{
 			color: var(--color-danger);
 		}
@@ -138,6 +143,19 @@
 	&__error{
 		@include font(normal, normal, 1.6rem, 1.2, var(--color-danger));
 		margin-bottom: 10px;
+	}
+
+	&_hor{
+		display: flex;
+		gap: 40px;
+	}
+
+	&__col &__item:not(:last-child){margin-bottom: 10px;}
+
+	&__item_full-height,
+	&__item_full-height &__field,
+	&__item_full-height textarea{
+		height: 100%;
 	}
 }
 

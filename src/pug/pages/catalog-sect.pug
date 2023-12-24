@@ -17,7 +17,7 @@ block content
 	section.catalog
 		.container-fluid
 			.row
-				.col-lg-6
+				.col-12
 					.catalog-sect
 						-
 							var list=[
@@ -26,7 +26,8 @@ block content
 								{text:'приборы и аксессуары для волос'},
 							]
 						each item in list
-							a(href="#").catalog-sect__item
-								span.catalog-sect__text= item.text
-								span.catalog-sect__arr
-									+svg('ic-arrow-right','ic-arrow-right', '44', '30')
+							a(href="#").catalog-sect__item= item.text
+							//- a(href="#").catalog-sect__item
+							//- 	span.catalog-sect__text= item.text
+							//- 	span.catalog-sect__arr
+							//- 		+svg('ic-arrow-right','ic-arrow-right', '44', '30')

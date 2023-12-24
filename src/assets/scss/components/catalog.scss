@@ -36,6 +36,7 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 40px;
+	margin-bottom: 40px;
 
 	&_grid{
 		grid-template-rows: auto 176px auto auto;
@@ -252,6 +253,7 @@
 	.catalog-list{
 		grid-template-columns: repeat(3,1fr);
 		gap: 30px;
+		margin-bottom: 30px;
 
 		&_grid{
 			grid-template-columns: repeat(4, 1fr);
@@ -318,6 +320,12 @@
 	.catalog-actions{
 		position: relative;
 		margin-bottom: 12px;
+
+		&__item{
+			position: relative;
+
+			.btn-filter{z-index: 2;}
+		}
 
 		&__count{
 			width: 100%;

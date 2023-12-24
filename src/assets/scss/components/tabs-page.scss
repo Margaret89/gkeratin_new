@@ -44,6 +44,8 @@
 	&__content-item{
 		display: none;
 		padding: 50px 0 0;
+
+		.unwrap-block{margin-bottom: 20px;}
 	}
 
 	&_line &__list{

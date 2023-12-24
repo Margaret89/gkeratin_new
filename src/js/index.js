@@ -51,6 +51,7 @@ function errorField(form, event) {
 
 	if(form.find('.js-form-site-item.error').length){
 		event.preventDefault();
+		console.log('error form');
 	}
 }
 
