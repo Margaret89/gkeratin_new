@@ -36,8 +36,25 @@
 	}
 
 	input[type=checkbox]:checked ~ &__mark .icon{display: inline-block;}
+
+	&_big &__mark{
+		width: 40px;
+		height: 40px;
+	}
 }
 
 @media (max-width: 767px) {
-	.input-check{font-size: 1rem;}
+	.input-check{
+		font-size: 1rem;
+
+		&_big &__mark{
+			width: 20px;
+			height: 20px;
+
+			.icon{
+				max-width: 9px;
+				max-height: 6px;
+			}
+		}
+	}
 }

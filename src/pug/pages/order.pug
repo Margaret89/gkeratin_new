@@ -77,58 +77,75 @@ block content
 								.order__sect
 									.order__title Доставка
 
-									.order-info-list
-										.order-info
-											.order-info__title Бесконтактная курьерская доставка
+									.order-delivery-list
+										.order-delivery
+											label.input-check.input-check_big
+												input(type='checkbox', checked='checked')
+												span.input-check__mark
+													+svg('ic-tick-big','ic-tick-big', '20', '15')
 
-											.order-info__info
-												.order-info__item
-													.order-info__label Цена:
-													.order-info__val 200 &#8381;
+											.order-delivery__content
+												.order-delivery__title Бесконтактная курьерская доставка
 
-												.order-info__item
-													.order-info__label сроки доставки:
-													.order-info__val от 1 до 2 дней
+												.order-delivery__info
+													.order-delivery__item
+														.order-delivery__label Цена:
+														.order-delivery__val 200 &#8381;
 
-											.order-info__btn
-												a(href="#").btn.btn_border Выбрать
+													.order-delivery__item
+														.order-delivery__label сроки доставки:
+														.order-delivery__val от 1 до 2 дней
 
-										.order-info
-											.order-info__title Доставка курьером
+										.order-delivery
+											label.input-check.input-check_big
+												input(type='checkbox')
+												span.input-check__mark
+													+svg('ic-tick-big','ic-tick-big', '20', '15')
 
-											.order-info__info
-												.order-info__item
-													.order-info__label Цена:
-													.order-info__val 200 &#8381;
+											.order-delivery__content
+												.order-delivery__title Доставка курьером
 
-												.order-info__item
-													.order-info__label сроки доставки:
-													.order-info__val от 1 до 2 дней
+												.order-delivery__info
+													.order-delivery__item
+														.order-delivery__label Цена:
+														.order-delivery__val 200 &#8381;
 
-											.order-info__btn
-												a(href="#").btn.btn_border Выбрать
+													.order-delivery__item
+														.order-delivery__label сроки доставки:
+														.order-delivery__val от 1 до 2 дней
 
-										.order-info
-											.order-info__title Самовывоз из магазина
+										.order-delivery
+											label.input-check.input-check_big
+												input(type='checkbox')
+												span.input-check__mark
+													+svg('ic-tick-big','ic-tick-big', '20', '15')
 
-											.order-info__text Вы можете самостоятельно забрать заказ из нашего магазина с 10-00 до 19-00 ежедневно, кроме выходных, Санкт-Петербург, ул. Ефимова, 4а м. Сенная, БЦ, 1 этаж офис 209
+											.order-delivery__content
+												.order-delivery__title Самовывоз из магазина
 
-											.order-info__info
-												.order-info__item
-													.order-info__label Стоимость:
-													.order-info__val бесплатно
+												.order-delivery__text Вы можете самостоятельно забрать заказ из нашего магазина с 10-00 до 19-00 ежедневно, кроме выходных, Санкт-Петербург, ул. Ефимова, 4а м. Сенная, БЦ, 1 этаж офис 209
 
-											.order-info__btn
-												a(href="#").btn.btn_border Выбрать
+												.order-delivery__info
+													.order-delivery__item
+														.order-delivery__label Стоимость:
+														.order-delivery__val бесплатно
 
-										.order-info
-											.order-info__title Почта России (Доставка в отделение)
+	
 
-											.order-info__text Самовывоз из отделения Почты России
+										.order-delivery
+											label.input-check.input-check_big
+												input(type='checkbox')
+												span.input-check__mark
+													+svg('ic-tick-big','ic-tick-big', '20', '15')
 
-											.order-info__btn
-												a(href="#").btn.btn_border Выбрать отделение на карте
-								
+											.order-delivery__content
+												.order-delivery__title Почта России (Доставка в отделение)
+
+												.order-delivery__text Самовывоз из отделения Почты России
+
+												.order-delivery__btn
+													a(href="#").btn.btn_border Выбрать отделение на карте
+									
 								.order__sect
 									.order__title Оплата
 

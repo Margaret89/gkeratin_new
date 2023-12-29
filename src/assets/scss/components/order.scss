@@ -197,6 +197,51 @@
 	}
 }
 
+.order-delivery{
+	display: flex;
+	gap: 12px;
+	max-width: 550px;
+
+	&:not(:last-child){margin-bottom: 65px;}
+	.input-check{flex-shrink: 0;}
+
+	&__title{
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 1.2;
+		margin-bottom: 22px;
+	}
+
+	&__info{
+		display: flex;
+		gap: 20px 85px;
+	}
+
+	&__label{
+		font-size: 1.2rem;
+		line-height: 1.3;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		margin-bottom: 10px;
+	}
+
+	&__val{
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__text{
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+	}
+
+	&__btn{
+		margin-top: 30px;
+		.btn{min-width: 290px;}
+	}
+}
+
 .order-form{
 	max-width: 880px;
 
@@ -495,6 +540,45 @@
 				font-size: 0.6rem;
 				border-width: 1px;
 				padding: 0 10px;
+			}
+		}
+	}
+
+	.order-delivery{
+		gap: 6px;
+
+		&:not(:last-child){margin-bottom: 27px;}
+
+		&__title{
+			font-size: 1.2rem;
+			margin-bottom: 13px;
+		}
+
+		&__info{gap: 20px 45px;}
+	
+		&__label{
+			font-size: 0.6rem;
+			letter-spacing: 0.5px;
+			margin-bottom: 3px;
+		}
+	
+		&__val{font-size: 1.25rem;}
+	
+		&__text{
+			font-size: 0.8rem;
+			margin-bottom: 12px;
+		}
+	
+		&__btn{
+			margin-top: 14px;
+
+			.btn{
+				height: 3rem;
+				border-radius: 1.5rem;
+				min-width: 0;
+				font-size: 0.7rem;
+				border-width: 1px;
+				padding: 0 12px;
 			}
 		}
 	}
