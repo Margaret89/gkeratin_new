@@ -19,7 +19,7 @@
 
 	&__item{
 		height: auto;
-		padding-top: 83.1%;
+		padding-top: 100%;
 		position: relative;
 		background: var(--bg-grey);
 
@@ -122,8 +122,6 @@
 		width: auto;
 		padding-left: 20px;
 		padding-right: 20px;
-
-		&__item{padding-top: 100%;}
 
 		.swiper-button-next,
 		.swiper-button-prev{

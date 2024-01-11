@@ -443,11 +443,16 @@ if($('.js-btn-filter').length){
 
 //Слайдер детального изображения каталога
 var prodDetailSliderThumb = new Swiper('.js-prod-detail-thumb-slider', {
-	slidesPerView: 5,
-	spaceBetween: 10,
+	slidesPerView: 6,
+	spaceBetween: 5,
 	freeMode: true,
 	watchSlidesProgress: true,
 	direction: "vertical",
+	breakpoints: {
+		1280: {
+			spaceBetween: 10,
+		}
+	}
 	// loop: true,
 });
 var prodDetailSlider = new Swiper('.js-prod-detail-slider', {
