@@ -1,4 +1,6 @@
 /*-------------- catalog-detail -----------------*/
+.catalog-detail{--margin-indent: 100px;}
+
 .catalog-detail-top{
 	&__label{
 		font-family: var(--font-evolventa);
@@ -86,9 +88,12 @@
 		font-weight: 500;
 		text-transform: uppercase;
 		color: var(--color-text);
+		list-style: none;
 		transition: all 0.2s ease 0s;
 		cursor: pointer;
 		
+		&::before{display: none;}
+
 		&::before{display: none;}
 
 		&:hover,
@@ -170,6 +175,8 @@
 }
 
 @media (max-width: 991px) {
+	.catalog-detail{--margin-indent: 80px;}
+
 	.catalog-advant{
 		margin-left: 0;
 
@@ -205,6 +212,8 @@
 }
 
 @media (max-width: 767px) {
+	.catalog-detail{--margin-indent: 60px;}
+
 	.catalog-detail-top{
 		&__label{
 			font-size: 1.2rem;
