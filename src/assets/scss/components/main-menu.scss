@@ -231,14 +231,11 @@
 		&__sub{
 			display: none;
 			width: 70%;
+			height: 100%;
 			padding-left: 40px;
 			position: absolute;
 			top: 0;
 			left: 30%;
-		}
-
-		&__sub{
-			max-height: 100%;
 			overflow-x: hidden;
 			overflow-y: auto;
 			scrollbar-width: thin;
