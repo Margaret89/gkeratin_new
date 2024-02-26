@@ -1,2 +1,9 @@
 /*-------------- fancybox -----------------*/
-.fancybox__content{padding: 40px;}
+.fancybox__content{
+	max-width: calc(100% - 30px);
+	padding: 40px;
+}
+
+@media (max-width: 767px) {
+	.fancybox__content{padding: 40px 20px;}
+}

@@ -285,6 +285,11 @@ button.btn{
 			fill: transparent;
 			stroke: #fff;
 		}
+
+		&:hover{
+			box-shadow: none;
+			color: #fff;
+		}
 	}
 }
 
