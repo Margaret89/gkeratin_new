@@ -91,6 +91,9 @@ const topSlider = new Swiper('.js-top-slider',
 {
 	// lazy:{loadPrevNext:true},
 	loop:true,
+	autoplay: {
+		delay: 3000,
+	},
 	pagination:{
 		el:".js-top-slider-pagination",
 		clickable:true
