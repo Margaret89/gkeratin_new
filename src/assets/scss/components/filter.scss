@@ -260,6 +260,7 @@
 		max-height: none;
 		padding: 20px;
 		top: 0;
+		left: -100vw;
 		z-index: 1100;
 
 		&.open{left: 0;}
