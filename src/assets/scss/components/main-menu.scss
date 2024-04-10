@@ -49,9 +49,9 @@
 	font-family: var(--font-site);
 
 	&__img-wrap{
-		width: 76%;
+		// width: 76%;
 		position: relative;
-		margin-left: 24%;
+		// margin-left: 24%;
 	}
 
 	&__img{
@@ -96,6 +96,9 @@
 	}
 
 	&__content:hover &__link{text-decoration: none;}
+
+	&__text{margin-top: 15px;}
+	.btn{margin-top: 20px;}
 }
 
 .catalog-menu{

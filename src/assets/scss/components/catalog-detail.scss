@@ -2,6 +2,12 @@
 .catalog-detail{--margin-indent: 100px;}
 
 .catalog-detail-top{
+	&__info{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
 	&__label{
 		font-family: var(--font-evolventa);
 		font-size: 2rem;
@@ -43,6 +49,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 16px;
+		margin-top: auto;
 
 		.link-site{
 			font-size: 1.2rem;
@@ -196,6 +203,7 @@
 		&__btn{
 			order: 5;
 			margin-bottom: 32px;
+			margin-top: 0;
 		}
 
 		&__brand{order: 6;}
