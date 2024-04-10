@@ -67,6 +67,32 @@
 			}
 		}
 	}
+
+	.catalog-slider-item{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		&__img-wrap{flex-shrink: 0;}
+
+		&__content{
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		&__prices{margin-bottom: 20px;}
+
+		&__btn{
+			opacity: 1;
+			margin-top: auto;
+
+			.btn{gap: 20px;}
+		}
+	}
+
+
+	.swiper-slide > div{height: 100%!important;}
 }
 
 .catalog-item{

@@ -10,6 +10,7 @@ import { Fancybox } from "@fancyapps/ui";
 import Cookies from 'js-cookie';
 import noUiSlider from 'nouislider';
 
+window.Swiper = Swiper;
 window.Fancybox = Fancybox;
 window.Cookies = Cookies;
 
