@@ -15,6 +15,7 @@
 
 	--color-danger: #E01E1E;
 	--margin-indent: 140px;
+	--margin-indent-min: 70px;
 	--bg-grey: #F2F2F2;
 }
 
@@ -330,6 +331,22 @@ button.btn{
 .pt-indent{padding-top: var(--margin-indent);}
 .pb-indent{padding-bottom: var(--margin-indent);}
 
+.m-indent-min{
+	margin-top: var(--margin-indent-min);
+	margin-bottom: var(--margin-indent-min);
+}
+
+.mt-indent-min{margin-top: var(--margin-indent-min);}
+.mb-indent-min{margin-bottom: var(--margin-indent-min);}
+
+.p-indent-min{
+	padding-top: var(--margin-indent-min);
+	padding-bottom: var(--margin-indent-min);
+}
+
+.pt-indent-min{padding-top: var(--margin-indent-min);}
+.pb-indent-min{padding-bottom: var(--margin-indent-min);}
+
 .bg-grey{background-color: var(--bg-grey);}
 
 .code{
@@ -389,6 +406,7 @@ button.btn{
 @media (max-width: 991px) {
 	:root{
 		--margin-indent: 80px;
+		--margin-indent-min: 50px;
 	}
 
 	.row{
@@ -429,6 +447,7 @@ button.btn{
 @media (max-width: 767px) {
 	:root{
 		--margin-indent: 60px;
+		--margin-indent-min: 40px;
 	}
 
 	.row{
