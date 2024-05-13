@@ -10,10 +10,14 @@
 }
 
 .brand-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: calc(33.33% - 26.66px);
 	text-align: center;
 
 	&__logo-wrap{
+		width: 100%;
 		position: relative;
 		padding-bottom: 40%;
 		margin-bottom: 23px;
@@ -38,9 +42,10 @@
 		margin: 0 auto;
 		font-size: 1.6rem;
 		line-height: 1.5;
+		margin-bottom: 42px;
 	}
 
-	.btn{margin-top: 42px;}
+	.btn{margin-top: auto;}
 }
 
 @media (max-width: 991px) {
