@@ -2,6 +2,7 @@
 .prices-list{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 40px;
 
 	&__item{width: calc(33.33% - 26.66px);}
