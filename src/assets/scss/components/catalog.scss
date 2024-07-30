@@ -38,36 +38,6 @@
 	gap: 40px;
 	margin-bottom: 40px;
 
-	&_grid{
-		grid-template-rows: auto 176px auto auto;
-		gap: 80px 40px;
-
-		.catalog-item:nth-child(10n+3),
-		.catalog-item:nth-child(10n+4){
-			grid-column: span 2;
-			grid-row: span 2;
-
-			.catalog-item{
-				&__label{font-size: 1.6rem;}
-				&__title{font-size: 2.4rem;}
-
-				&__cur-price,
-				&__old-price{
-					font-size: 2.4rem;
-				}
-
-				&__content{
-					margin-top: -68px;
-					// margin-bottom: 40px;
-					padding-left: 60px;
-					padding-right: 90px;
-					position: relative;
-					z-index: 2;
-				}
-			}
-		}
-	}
-
 	.catalog-slider-item{
 		display: flex;
 		flex-direction: column;
@@ -259,46 +229,7 @@
 	}
 }
 
-@media (max-width: 991px) {
-	.catalog-actions{
-		font-size: 1.6rem;
-
-		&__item{gap: 20px;}
-		&__item_sb{justify-content: flex-end;}
-		&__count{font-size: 1.6rem;}
-
-		.select2-container--default .select2-selection--single .select2-selection__rendered,
-		.select2-container .select2-selection--single{
-			font-size: 1.6rem;
-			font-weight: 500;
-		}
-
-		.select2-container .select2-selection--single{height: 4rem;}
-	}
-
-	.catalog-list{
-		grid-template-columns: repeat(3,1fr);
-		gap: 30px;
-		margin-bottom: 30px;
-
-		&_grid{
-			grid-template-columns: repeat(4, 1fr);
-
-			.catalog-item:nth-child(10n+3),
-			.catalog-item:nth-child(10n+4){
-				.catalog-item{
-					&__content{padding-left: 30px;}
-				}
-			}
-		}
-	}
-
-	.other-products{
-		.catalog-item:not(:nth-last-child(-n+3)){display: none;}
-	}
-}
-
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.catalog-list:not(.catalog-list_grid) .catalog-item{
 		&:nth-child(4n+1) .catalog-item__content,
 		&:nth-child(4n+2) .catalog-item__content{
@@ -327,6 +258,38 @@
 		}
 	}
 
+	.catalog-list{
+		&_grid{
+			grid-template-rows: auto 176px auto auto;
+			gap: 80px 40px;
+	
+			.catalog-item:nth-child(10n+3),
+			.catalog-item:nth-child(10n+4){
+				grid-column: span 2;
+				grid-row: span 2;
+	
+				.catalog-item{
+					&__label{font-size: 1.6rem;}
+					&__title{font-size: 2.4rem;}
+	
+					&__cur-price,
+					&__old-price{
+						font-size: 2.4rem;
+					}
+	
+					&__content{
+						margin-top: -68px;
+						// margin-bottom: 40px;
+						padding-left: 60px;
+						padding-right: 90px;
+						position: relative;
+						z-index: 2;
+					}
+				}
+			}
+		}
+	}
+
 	.other-products{
 		.catalog-item{
 			&:nth-child(4n+1) .catalog-item__content,
@@ -341,6 +304,56 @@
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.catalog-actions{
+		font-size: 1.6rem;
+
+		&__item{gap: 20px;}
+		&__item_sb{justify-content: flex-end;}
+		&__count{font-size: 1.6rem;}
+
+		.select2-container--default .select2-selection--single .select2-selection__rendered,
+		.select2-container .select2-selection--single{
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+
+		.select2-container .select2-selection--single{height: 4rem;}
+	}
+
+	.catalog-list{
+		grid-template-columns: repeat(2,1fr);
+		gap: 30px;
+		margin-bottom: 30px;
+
+		&_grid{
+			grid-template-columns: repeat(3, 1fr);
+			gap: 10px;
+	
+			.catalog-item:nth-child(6n+2),
+			.catalog-item:nth-child(6n+4){
+				grid-column: span 2;
+				grid-row: span 2;
+	
+				.catalog-item{
+					&__label{font-size: 1.6rem;}
+					&__title{font-size: 2.4rem;}
+	
+					&__cur-price,
+					&__old-price{
+						font-size: 2.4rem;
+					}
+				}
+			}
+		}
+	}
+
+	.other-products{
+		.catalog-item:not(:nth-last-child(-n+3)){display: none;}
+	}
+}
+
 
 @media (max-width: 767px) {
 	.catalog-actions{
@@ -380,6 +393,11 @@
 			margin-right: -20px;
 			grid-template-columns: repeat(2,1fr);
 			gap: 30px 10px;
+
+			&_grid{
+				grid-template-columns: repeat(3, 1fr);
+				gap: 10px;
+			}
 		}
 
 		.btn-more{margin-top: 40px;}
@@ -430,7 +448,7 @@
 		}
 
 		&__title{font-size: 1.1rem;}
-		&__content{padding: 0 20px;}
+		&__content{padding: 0;}
 
 		&__price{
 			gap: 5px;
@@ -443,11 +461,8 @@
 
 	.catalog-list{
 		&_grid{
-			.catalog-item:nth-child(10n+3),
-			.catalog-item:nth-child(10n+4){
-				margin-left: 20px;
-				margin-right: 20px;
-
+			.catalog-item:nth-child(6n+2),
+			.catalog-item:nth-child(6n+4){
 				.catalog-item{
 					&__content{
 						padding: 0;
