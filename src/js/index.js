@@ -49,6 +49,18 @@ function errorField(form, event) {
 		}
 	});
 
+	// var idRecaptcha = form.find('.g-recaptcha').attr('data-widget');
+
+	// console.log('idRecaptcha = ', idRecaptcha);
+	var response = grecaptcha.getResponse();
+	// var response = grecaptcha.getResponse(idRecaptcha);
+	var captcha = form.find('.js-form-site-captcha');
+
+	if(response.length == 0) {
+		captcha.addClass('error');
+		captcha.append('<div class="form-site-msg-error">Пройдите проверку</div>')
+	}
+
 	if(form.find('.js-form-site-item.error').length){
 		event.preventDefault();
 		console.log('error form');
