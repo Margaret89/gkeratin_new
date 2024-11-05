@@ -1,0 +1,17 @@
+/*-------------- partners -----------------*/
+.partners-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px 33px;
+}
+
+.partner-item{flex-shrink: 0;}
+
+@media (max-width: 991px) {
+	.partner-item{max-width: calc(25% - 25px);}
+}
+
+@media (max-width: 767px) {
+	.partners-list{gap: 14px 16px;}
+	.partner-item{max-width: calc(33.33% - 11px);}
+}
